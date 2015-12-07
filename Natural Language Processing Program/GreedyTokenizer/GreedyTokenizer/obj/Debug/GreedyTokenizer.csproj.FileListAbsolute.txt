@@ -1,0 +1,31 @@
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\GreedyTokenizer\bin\Debug\GreedyTokenizer.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\GreedyTokenizer\bin\Debug\GreedyTokenizer.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\GreedyTokenizer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.Properties.Resources.resources
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.csproj.GenerateResource.Cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.pdb
+G:\NlpDotNet_Annex\NlpSampleCode\GreedyTokenizer\obj\Debug\ResolveAssemblyReference.cache
+G:\NlpDotNet_Annex\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.Properties.Resources.resources
+G:\NlpDotNet_Annex\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.csproj.GenerateResource.Cache
+G:\NlpDotNet_Annex\NlpSampleCode\GreedyTokenizer\bin\Debug\GreedyTokenizer.exe
+G:\NlpDotNet_Annex\NlpSampleCode\GreedyTokenizer\bin\Debug\GreedyTokenizer.pdb
+G:\NlpDotNet_Annex\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.exe
+G:\NlpDotNet_Annex\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.Form1.resources
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\bin\Debug\GreedyTokenizer.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\bin\Debug\GreedyTokenizer.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.Form1.resources
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.Properties.Resources.resources
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.csproj.GenerateResource.Cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\bin\Debug\GreedyTokenizer.exe
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\bin\Debug\GreedyTokenizer.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\ResolveAssemblyReference.cache
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.Form1.resources
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.Properties.Resources.resources
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.csproj.GenerateResource.Cache
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.exe
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\GreedyTokenizer\obj\Debug\GreedyTokenizer.pdb

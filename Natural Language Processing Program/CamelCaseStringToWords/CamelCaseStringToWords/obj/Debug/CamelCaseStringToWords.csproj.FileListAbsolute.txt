@@ -1,0 +1,15 @@
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\CamelCaseStringToWords\bin\Debug\CamelCaseStringToWords.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\CamelCaseStringToWords\bin\Debug\CamelCaseStringToWords.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\CamelCaseStringToWords\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\CamelCaseStringToWords\obj\Debug\CamelCaseStringToWords.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\CamelCaseStringToWords\obj\Debug\CamelCaseStringToWords.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\CamelCaseStringToWords\bin\Debug\CamelCaseStringToWords.exe
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\CamelCaseStringToWords\bin\Debug\CamelCaseStringToWords.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\CamelCaseStringToWords\obj\Debug\ResolveAssemblyReference.cache
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\CamelCaseStringToWords\obj\Debug\CamelCaseStringToWords.exe
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\CamelCaseStringToWords\obj\Debug\CamelCaseStringToWords.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\CamelCaseStringToWords\bin\Debug\CamelCaseStringToWords.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\CamelCaseStringToWords\bin\Debug\CamelCaseStringToWords.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\CamelCaseStringToWords\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\CamelCaseStringToWords\obj\Debug\CamelCaseStringToWords.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\CamelCaseStringToWords\obj\Debug\CamelCaseStringToWords.pdb

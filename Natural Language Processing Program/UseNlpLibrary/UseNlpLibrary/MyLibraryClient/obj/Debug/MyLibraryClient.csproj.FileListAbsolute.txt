@@ -1,0 +1,30 @@
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\MyLibraryClient\bin\Debug\MyLibraryClient.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\MyLibraryClient\bin\Debug\MyLibraryClient.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\MyLibraryClient\bin\Debug\MyLibrary.dll
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\MyLibraryClient\bin\Debug\MyLibrary.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\MyLibraryClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\MyLibraryClient\obj\Debug\MyLibraryClient.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\MyLibraryClient\obj\Debug\MyLibraryClient.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibraryClient\obj\Debug\MyLibraryClient.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibraryClient\obj\Debug\MyLibraryClient.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibraryClient\bin\Debug\MyLibraryClient.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibraryClient\bin\Debug\MyLibraryClient.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibraryClient\bin\Debug\MyLibrary.dll
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibraryClient\bin\Debug\MyLibrary.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibraryClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibraryClient\bin\Debug\MyLibraryClient.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibraryClient\bin\Debug\MyLibraryClient.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibraryClient\bin\Debug\MyLibrary.dll
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibraryClient\bin\Debug\MyLibrary.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibraryClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibraryClient\obj\Debug\MyLibraryClient.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibraryClient\obj\Debug\MyLibraryClient.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\UseNlpLibrary\MyLibraryClient\obj\Debug\MyLibraryClient.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\UseNlpLibrary\MyLibraryClient\obj\Debug\MyLibraryClient.pdb
+C:\Users\Wisely\Downloads\Compressed\UseNlpLibrary\UseNlpLibrary\MyLibraryClient\obj\Debug\MyLibraryClient.exe
+C:\Users\Wisely\Downloads\Compressed\UseNlpLibrary\UseNlpLibrary\MyLibraryClient\obj\Debug\MyLibraryClient.pdb
+C:\Users\Wisely\Downloads\Compressed\UseNlpLibrary\UseNlpLibrary\MyLibraryClient\bin\Debug\MyLibraryClient.exe
+C:\Users\Wisely\Downloads\Compressed\UseNlpLibrary\UseNlpLibrary\MyLibraryClient\bin\Debug\MyLibraryClient.pdb
+C:\Users\Wisely\Downloads\Compressed\UseNlpLibrary\UseNlpLibrary\MyLibraryClient\bin\Debug\MyLibrary.dll
+C:\Users\Wisely\Downloads\Compressed\UseNlpLibrary\UseNlpLibrary\MyLibraryClient\bin\Debug\MyLibrary.pdb
+C:\Users\Wisely\Downloads\Compressed\UseNlpLibrary\UseNlpLibrary\MyLibraryClient\obj\Debug\MyLibraryClient.csprojResolveAssemblyReference.cache

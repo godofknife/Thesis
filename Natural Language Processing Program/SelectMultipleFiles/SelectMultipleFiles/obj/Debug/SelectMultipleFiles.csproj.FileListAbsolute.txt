@@ -1,0 +1,5 @@
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\SelectMultipleFiles\bin\Debug\SelectMultipleFiles.dll
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\SelectMultipleFiles\bin\Debug\SelectMultipleFiles.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\SelectMultipleFiles\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\SelectMultipleFiles\obj\Debug\SelectMultipleFiles.dll
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpDotNet\Downloads\SelectMultipleFiles\obj\Debug\SelectMultipleFiles.pdb

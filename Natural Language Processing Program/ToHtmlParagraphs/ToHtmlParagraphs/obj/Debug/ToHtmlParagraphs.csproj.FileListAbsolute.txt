@@ -1,0 +1,16 @@
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\bin\Debug\ToHtmlParagraphs.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\bin\Debug\ToHtmlParagraphs.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ToHtmlParagraphs.Form1.resources
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ToHtmlParagraphs.Properties.Resources.resources
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ToHtmlParagraphs.csproj.GenerateResource.Cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ToHtmlParagraphs.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ToHtmlParagraphs.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\bin\Debug\ToHtmlParagraphs.exe
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\bin\Debug\ToHtmlParagraphs.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ResolveAssemblyReference.cache
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ToHtmlParagraphs.Form1.resources
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ToHtmlParagraphs.Properties.Resources.resources
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ToHtmlParagraphs.csproj.GenerateResource.Cache
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ToHtmlParagraphs.exe
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\ToHtmlParagraphs\obj\Debug\ToHtmlParagraphs.pdb

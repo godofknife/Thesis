@@ -1,0 +1,15 @@
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibrary\bin\Debug\MyLibrary.dll
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibrary\bin\Debug\MyLibrary.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibrary\obj\Debug\MyLibrary.dll
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibrary\obj\Debug\MyLibrary.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibrary\bin\Debug\MyLibrary.dll
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibrary\bin\Debug\MyLibrary.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibrary\obj\Debug\ResolveAssemblyReference.cache
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibrary\obj\Debug\MyLibrary.dll
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\MyLibrary\obj\Debug\MyLibrary.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibrary\bin\Debug\MyLibrary.dll
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibrary\bin\Debug\MyLibrary.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibrary\obj\Debug\MyLibrary.dll
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\UseNlpLibrary\MyLibrary\obj\Debug\MyLibrary.pdb

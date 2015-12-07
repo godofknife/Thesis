@@ -1,0 +1,15 @@
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\SplitWordSuccessively\bin\Debug\SplitWordSuccessively.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\SplitWordSuccessively\bin\Debug\SplitWordSuccessively.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\SplitWordSuccessively\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\SplitWordSuccessively\obj\Debug\SplitWordSuccessively.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\SplitWordSuccessively\obj\Debug\SplitWordSuccessively.pdb
+C:\Users\Han\Documents\Visual Studio 2008\Projects\NlpSampleCode\SplitWordSuccessively\obj\Debug\SplitWordSuccessively.exe
+C:\Users\Han\Documents\Visual Studio 2008\Projects\NlpSampleCode\SplitWordSuccessively\obj\Debug\SplitWordSuccessively.pdb
+C:\Users\Han\Documents\Visual Studio 2008\Projects\NlpSampleCode\SplitWordSuccessively\bin\Debug\SplitWordSuccessively.exe
+C:\Users\Han\Documents\Visual Studio 2008\Projects\NlpSampleCode\SplitWordSuccessively\bin\Debug\SplitWordSuccessively.pdb
+C:\Users\Han\Documents\Visual Studio 2008\Projects\NlpSampleCode\SplitWordSuccessively\obj\Debug\ResolveAssemblyReference.cache
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\SplitWordSuccessively\bin\Debug\SplitWordSuccessively.exe
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\SplitWordSuccessively\bin\Debug\SplitWordSuccessively.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\SplitWordSuccessively\obj\Debug\ResolveAssemblyReference.cache
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\SplitWordSuccessively\obj\Debug\SplitWordSuccessively.exe
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\SplitWordSuccessively\obj\Debug\SplitWordSuccessively.pdb

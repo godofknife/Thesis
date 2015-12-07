@@ -1,0 +1,20 @@
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\PurgeString\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\PurgeString\bin\Debug\PurgeString.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\PurgeString\bin\Debug\PurgeString.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\PurgeString\obj\Debug\PurgeString.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpSampleCode\PurgeString\obj\Debug\PurgeString.pdb
+G:\NlpDotNet_Annex\NlpSampleCode\PurgeString\obj\Debug\PurgeString.exe
+G:\NlpDotNet_Annex\NlpSampleCode\PurgeString\obj\Debug\PurgeString.pdb
+G:\NlpDotNet_Annex\NlpSampleCode\PurgeString\bin\Debug\PurgeString.exe
+G:\NlpDotNet_Annex\NlpSampleCode\PurgeString\bin\Debug\PurgeString.pdb
+G:\NlpDotNet_Annex\NlpSampleCode\PurgeString\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\PurgeString\bin\Debug\PurgeString.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\PurgeString\bin\Debug\PurgeString.pdb
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\PurgeString\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\PurgeString\obj\Debug\PurgeString.exe
+C:\Users\Raymond\Documents\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\PurgeString\obj\Debug\PurgeString.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\PurgeString\bin\Debug\PurgeString.exe
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\PurgeString\bin\Debug\PurgeString.pdb
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\PurgeString\obj\Debug\ResolveAssemblyReference.cache
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\PurgeString\obj\Debug\PurgeString.exe
+F:\Visual Studio 2008\Projects\NlpDotNetPackage\NlpSampleCode\PurgeString\obj\Debug\PurgeString.pdb
