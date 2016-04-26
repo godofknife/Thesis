@@ -1,0 +1,8 @@
+C:\Users\ASUS_A455LD\Desktop\Plagiatrism checker\Plagiatrism checker\bin\Debug\Plagiatrism checker.exe.config
+C:\Users\ASUS_A455LD\Desktop\Plagiatrism checker\Plagiatrism checker\bin\Debug\Plagiatrism checker.exe
+C:\Users\ASUS_A455LD\Desktop\Plagiatrism checker\Plagiatrism checker\bin\Debug\Plagiatrism checker.pdb
+C:\Users\ASUS_A455LD\Desktop\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism_checker.Form1.resources
+C:\Users\ASUS_A455LD\Desktop\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism_checker.Properties.Resources.resources
+C:\Users\ASUS_A455LD\Desktop\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism checker.csproj.GenerateResource.Cache
+C:\Users\ASUS_A455LD\Desktop\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism checker.exe
+C:\Users\ASUS_A455LD\Desktop\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism checker.pdb
