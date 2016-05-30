@@ -1,0 +1,19 @@
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\bin\x64\Debug\Plagiatrism checker.exe.config
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Interop.NitroPDFLib.dll
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\AxInterop.NitroPDFLib.dll
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiarism checker.csproj.ResolveComReference.cache
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\bin\x64\Debug\Plagiatrism checker.exe
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\bin\x64\Debug\Plagiatrism checker.pdb
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\bin\x64\Debug\itextsharp.dll
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\bin\x64\Debug\Interop.NitroPDFLib.dll
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\bin\x64\Debug\AxInterop.NitroPDFLib.dll
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism_checker.Form2.resources
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism_checker.Form1.resources
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism_checker.Hasil.resources
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism_checker.Home.resources
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism_checker.Properties.Resources.resources
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism_checker.Review1.resources
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiarism checker.csproj.GenerateResource.Cache
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism checker.exe
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism checker.pdb
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiarism checker.csprojResolveAssemblyReference.cache

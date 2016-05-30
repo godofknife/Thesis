@@ -14,3 +14,13 @@ F:\Testing reader in textbox or richtext\Testing reader in textbox or richtext\o
 C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\bin\Debug\Testing reader in textbox or richtext.exe.config
 C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\obj\Debug\Testing reader in textbox or richtext.exe
 C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\obj\Debug\Testing reader in textbox or richtext.pdb
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\bin\Debug\Testing reader in textbox or richtext.exe.config
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\obj\Debug\Testing reader in textbox or richtext.exe
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\obj\Debug\Testing reader in textbox or richtext.pdb
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\bin\Debug\Testing reader in textbox or richtext.exe
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\bin\Debug\Testing reader in textbox or richtext.pdb
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\bin\Debug\itextsharp.dll
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\obj\Debug\Testing reader in textbox or richtext.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\obj\Debug\Testing_reader_in_textbox_or_richtext.Form1.resources
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\obj\Debug\Testing_reader_in_textbox_or_richtext.Properties.Resources.resources
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing pdf reader in textbox or richtext\Testing reader in textbox or richtext\obj\Debug\Testing reader in textbox or richtext.csproj.GenerateResource.Cache
