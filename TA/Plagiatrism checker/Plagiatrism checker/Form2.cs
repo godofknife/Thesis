@@ -321,6 +321,24 @@ namespace Plagiatrism_checker
 
                     
                     textBoxOutput.Text = resultSb.ToString();
+                    //string[] arrteammembers = new string[] { textBoxInput.Text };
+                    //foreach (var value in arrteammembers)
+                    //{
+                    //    bool endsInPeriod = value.EndsWith(".");
+                    //    Console.WriteLine("'{0}' ends in a period: {1}",
+                    //                      value, endsInPeriod);
+                    //}
+                    string stringtocheck = ".";
+                    string[] tobechecked = new string[] { textBoxInput.Text };
+                    foreach(string x in tobechecked)
+                    {
+                        if(x.Contains(stringtocheck))
+                        {
+                            textBox7.Text = "True";
+                        }
+                    }
+            
+                    
                 }
             }
             
@@ -347,6 +365,8 @@ namespace Plagiatrism_checker
 
 
                     textBox2.Text = resultSb.ToString();
+
+                    string[] arrteammembers = new string[] { textBox1.Text };
                 }
             }
         }

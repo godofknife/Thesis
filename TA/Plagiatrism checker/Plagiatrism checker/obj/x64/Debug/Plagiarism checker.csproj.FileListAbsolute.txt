@@ -17,3 +17,4 @@ C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\
 C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism checker.exe
 C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism checker.pdb
 C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiarism checker.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\x64\Debug\Plagiatrism_checker.Form3.resources
