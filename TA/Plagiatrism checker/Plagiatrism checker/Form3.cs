@@ -24,17 +24,24 @@ namespace Plagiatrism_checker
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            AllocConsole();
+            //AllocConsole();
         }
-        [DllImport("kernel32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool AllocConsole();
+        //[DllImport("kernel32.dll", SetLastError = true)]
+        //[return: MarshalAs(UnmanagedType.Bool)]
+        //static extern bool AllocConsole();
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] ret = textBox1.Text.Split('.');
-            foreach (var item in ret)
+            listBox1.Items.Clear();
+            Char chr = textBox1.Text[0];
+            string[] word = textBox1.Text.Split('.');
+            
+            foreach (string item in word)
             {
-                Console.WriteLine(item.ToString());
+                
+                //Console.WriteLine(item.ToString());
+                //MessageBox.Show(item.ToString());
+                //richTextBox1.Text=(ret.ToString());
+                listBox1.Items.Add(item);
             }
 
         }
@@ -70,5 +77,26 @@ namespace Plagiatrism_checker
                 }
             }
     }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            Char chr = listBox1.Text[0];
+            string[] word = textBox1.Text.Split(' ');
+            foreach (string item in word)
+            {
+
+                //Console.WriteLine(item.ToString());
+                //MessageBox.Show(item.ToString());
+                //richTextBox1.Text=(ret.ToString());
+                
+                
+            }
+        }
 }
     }

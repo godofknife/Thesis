@@ -31,3 +31,19 @@ C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\Debug\AxIn
 C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiarism checker.csproj.ResolveComReference.cache
 C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism_checker.Review1.resources
 C:\Users\Wisely\Downloads\Plagiatrism checker\Plagiatrism checker\bin\Debug\itextsharp.dll
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\bin\Debug\Plagiatrism checker.exe.config
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiarism checker.csproj.ResolveComReference.cache
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism checker.exe
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism checker.pdb
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\bin\Debug\Plagiatrism checker.exe
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\bin\Debug\Plagiatrism checker.pdb
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\bin\Debug\itextsharp.dll
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiarism checker.csprojResolveAssemblyReference.cache
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism_checker.Form2.resources
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism_checker.Form3.resources
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism_checker.Form1.resources
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism_checker.Hasil.resources
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism_checker.Home.resources
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism_checker.Properties.Resources.resources
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiatrism_checker.Review1.resources
+D:\Tugas kul\TA\Plagiatrism checker\Plagiatrism checker\obj\Debug\Plagiarism checker.csproj.GenerateResource.Cache
