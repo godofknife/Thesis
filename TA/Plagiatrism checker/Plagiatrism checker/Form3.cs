@@ -42,10 +42,19 @@ namespace Plagiatrism_checker
                 //MessageBox.Show(item.ToString());
                 //richTextBox1.Text=(ret.ToString());
                 listBox1.Items.Add(item);
+                
             }
 
         }
-
+        public string[] get()
+        {
+            string[] arr = new string[listBox1.Items.Count];
+            for (int i = 0; i < listBox1.Items.Count; i++)
+            {
+                arr[i] = listBox1.Items[i].ToString();
+            }
+            return arr;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog openDlg = new OpenFileDialog();
