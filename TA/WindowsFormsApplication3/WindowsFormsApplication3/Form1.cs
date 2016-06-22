@@ -32,7 +32,8 @@ namespace WindowsFormsApplication3
             OleDbDataReader reader = cmd.ExecuteReader();
             while(reader.Read())
             {
-                jumlah = Convert.ToInt16(reader.GetString(0));
+                jumlah = Convert.ToInt32(reader.GetString(0));
+             
             }
             db.Close();
             return jumlah;
@@ -80,6 +81,35 @@ namespace WindowsFormsApplication3
             }
             return HapusAkhiranKepunyaan(kata);
         }
+        private string hapus_derivation_prefix(string kata)
+        {
+            string kataasal = kata;
+            if(Regex.IsMatch(kata,"(me)$"))
+            {
+                string kata1 = Regex.Replace(kata, "(me)$", "");
+                if(cekkatadasar(kata1))
+                {
+                    return kata1;
+                }
+            }
+            if (Regex.IsMatch(kata, "(di)$"))
+            {
+                string kata1 = Regex.Replace(kata, "(di)$", "");
+                if (cekkatadasar(kata1))
+                {
+                    return kata1;
+                }
+            }
+            if (Regex.IsMatch(kata, "(ke)$"))
+            {
+                string kata1 = Regex.Replace(kata, "(ke)$", "");
+                if (cekkatadasar(kata1))
+                {
+                    return kata1;
+                }
+            }
+            return kataasal;
+        }
 
         private string HapusAkhiranIanKan(string kata)
         {
@@ -111,6 +141,7 @@ namespace WindowsFormsApplication3
             }
             kata = HapusAkhiranKepunyaan(kata);
             kata = HapusAkhiranIanKan(kata);
+            kata = hapus_derivation_prefix(kata);
             return kata;
         }
 
