@@ -31,6 +31,7 @@ namespace Plagiatrism_checker
         //static extern bool AllocConsole();
         private void button1_Click(object sender, EventArgs e)
         {
+            
             listBox1.Items.Clear();
             Char chr = textBox1.Text[0];
             string[] word = textBox1.Text.Split('.');
@@ -43,6 +44,7 @@ namespace Plagiatrism_checker
                 //richTextBox1.Text=(ret.ToString());
                 listBox1.Items.Add(item);
                 
+
             }
 
         }
@@ -52,7 +54,10 @@ namespace Plagiatrism_checker
             for (int i = 0; i < listBox1.Items.Count; i++)
             {
                 arr[i] = listBox1.Items[i].ToString();
+                textBox2.Text = arr[i];
             }
+            
+
             return arr;
         }
         private void button2_Click(object sender, EventArgs e)
@@ -107,5 +112,16 @@ namespace Plagiatrism_checker
                 
             }
         }
-}
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            string[] domains = new string[listBox1.SelectedIndices.Count];
+            for (int i = 0; i < listBox1.SelectedIndices.Count; i++)
+            {
+                domains[i] = listBox1.Items[listBox1.SelectedIndices[i]].ToString();
+                textBox2.Text = domains[i];
+            }
+            
+        }
+    }
     }
