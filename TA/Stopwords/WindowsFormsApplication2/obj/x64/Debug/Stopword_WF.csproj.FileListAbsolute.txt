@@ -1,0 +1,10 @@
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Stopwords\WindowsFormsApplication2\bin\x64\Debug\WindowsFormsApplication2.exe.config
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Stopwords\WindowsFormsApplication2\obj\x64\Debug\WindowsFormsApplication2.exe
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Stopwords\WindowsFormsApplication2\obj\x64\Debug\WindowsFormsApplication2.pdb
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Stopwords\WindowsFormsApplication2\obj\x64\Debug\Stopword_WF.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Stopwords\WindowsFormsApplication2\obj\x64\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Stopwords\WindowsFormsApplication2\obj\x64\Debug\Stopword_WF.csproj.GenerateResource.Cache
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Stopwords\WindowsFormsApplication2\bin\x64\Debug\WindowsFormsApplication2.exe
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Stopwords\WindowsFormsApplication2\bin\x64\Debug\WindowsFormsApplication2.pdb
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Stopwords\WindowsFormsApplication2\bin\x64\Debug\itextsharp.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Stopwords\WindowsFormsApplication2\bin\x64\Debug\itextsharp.xml
