@@ -1,9 +1,0 @@
-C:\Users\Wisely\Documents\GitHub\Thesis\TA\WindowsFormsApplication3\WindowsFormsApplication3\bin\x64\Debug\WindowsFormsApplication3.exe.config
-C:\Users\Wisely\Documents\GitHub\Thesis\TA\WindowsFormsApplication3\WindowsFormsApplication3\bin\x64\Debug\WindowsFormsApplication3.exe
-C:\Users\Wisely\Documents\GitHub\Thesis\TA\WindowsFormsApplication3\WindowsFormsApplication3\bin\x64\Debug\WindowsFormsApplication3.pdb
-C:\Users\Wisely\Documents\GitHub\Thesis\TA\WindowsFormsApplication3\WindowsFormsApplication3\obj\x64\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
-C:\Users\Wisely\Documents\GitHub\Thesis\TA\WindowsFormsApplication3\WindowsFormsApplication3\obj\x64\Debug\WindowsFormsApplication3.Form1.resources
-C:\Users\Wisely\Documents\GitHub\Thesis\TA\WindowsFormsApplication3\WindowsFormsApplication3\obj\x64\Debug\WindowsFormsApplication3.Properties.Resources.resources
-C:\Users\Wisely\Documents\GitHub\Thesis\TA\WindowsFormsApplication3\WindowsFormsApplication3\obj\x64\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache
-C:\Users\Wisely\Documents\GitHub\Thesis\TA\WindowsFormsApplication3\WindowsFormsApplication3\obj\x64\Debug\WindowsFormsApplication3.exe
-C:\Users\Wisely\Documents\GitHub\Thesis\TA\WindowsFormsApplication3\WindowsFormsApplication3\obj\x64\Debug\WindowsFormsApplication3.pdb

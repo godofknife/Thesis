@@ -1,0 +1,20 @@
+F:\WindowsFormsApplication12\WindowsFormsApplication12\bin\Debug\WindowsFormsApplication12.exe
+F:\WindowsFormsApplication12\WindowsFormsApplication12\bin\Debug\WindowsFormsApplication12.pdb
+F:\WindowsFormsApplication12\WindowsFormsApplication12\obj\Debug\csharp-indonesia.com.csprojResolveAssemblyReference.cache
+F:\WindowsFormsApplication12\WindowsFormsApplication12\obj\Debug\WindowsFormsApplication12.Form1.resources
+F:\WindowsFormsApplication12\WindowsFormsApplication12\obj\Debug\WindowsFormsApplication12.Properties.Resources.resources
+F:\WindowsFormsApplication12\WindowsFormsApplication12\obj\Debug\csharp-indonesia.com.csproj.GenerateResource.Cache
+F:\WindowsFormsApplication12\WindowsFormsApplication12\obj\Debug\WindowsFormsApplication12.exe
+F:\WindowsFormsApplication12\WindowsFormsApplication12\obj\Debug\WindowsFormsApplication12.pdb
+F:\WindowsFormsApplication12\NaziefAdriani\obj\Debug\WindowsFormsApplication12.exe
+F:\WindowsFormsApplication12\NaziefAdriani\obj\Debug\WindowsFormsApplication12.pdb
+C:\Users\ASUS_A455LD\Desktop\New folder (5)\NaziefAdriani\obj\Debug\WindowsFormsApplication12.exe
+C:\Users\ASUS_A455LD\Desktop\New folder (5)\NaziefAdriani\obj\Debug\WindowsFormsApplication12.pdb
+C:\Users\ASUS_A455LD\Desktop\New folder (5)\NaziefAdriani\bin\Debug\WindowsFormsApplication12.exe
+C:\Users\ASUS_A455LD\Desktop\New folder (5)\NaziefAdriani\bin\Debug\WindowsFormsApplication12.pdb
+C:\Users\ASUS_A455LD\Desktop\New folder (5)\NaziefAdriani\obj\Debug\csharp-indonesia.com.csprojResolveAssemblyReference.cache
+C:\Users\ASUS_A455LD\Desktop\New folder (5)\NaziefAdriani\obj\Debug\WindowsFormsApplication12.Form1.resources
+C:\Users\ASUS_A455LD\Desktop\New folder (5)\NaziefAdriani\obj\Debug\WindowsFormsApplication12.Properties.Resources.resources
+C:\Users\ASUS_A455LD\Desktop\New folder (5)\NaziefAdriani\obj\Debug\csharp-indonesia.com.csproj.GenerateResource.Cache
+C:\Users\ASUS_A455LD\Desktop\Stemming\NaziefAdriani\obj\Debug\WindowsFormsApplication12.exe
+C:\Users\ASUS_A455LD\Desktop\Stemming\NaziefAdriani\obj\Debug\WindowsFormsApplication12.pdb

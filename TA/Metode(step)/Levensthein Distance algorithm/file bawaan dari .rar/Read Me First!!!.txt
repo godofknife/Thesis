@@ -1,0 +1,10 @@
+The following are included in this folder:
+
+1. The source code / Microsoft Visual Studio 2012 project files
+	- This is found within the folder entitled "Mini Spell Checker .NET Project Files"
+
+2. The application binary
+	- This is the file called "Spell Checker.application"
+
+3. The Report
+	-This is "Report.docx"

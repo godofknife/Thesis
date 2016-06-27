@@ -1,0 +1,29 @@
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Form1.resources
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Mini Spell Checker.csproj.GenerateResource.Cache
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Mini Spell Checker.csprojResolveAssemblyReference.cache
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.exe.config
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.exe.manifest
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.application
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.exe
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.pdb
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\SpellChecker.Properties.Resources.resources
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Spell Checker.exe.manifest
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Spell Checker.application
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Spell Checker.exe
+c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Spell Checker.pdb
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.exe.config
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Spell Checker.exe
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Spell Checker.pdb
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.exe.manifest
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.application
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.exe
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.pdb
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Mini Spell Checker.csprojResolveAssemblyReference.cache
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\SpellChecker.Properties.Resources.resources
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Mini Spell Checker.csproj.GenerateResource.Cache
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Spell Checker.exe.manifest
+C:\Users\DENNY ADN DICKY\Desktop\New folder (2)\New folder\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Spell Checker.application
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Metode(step)\Levensthein Distance algorithm\New folder\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\Spell Checker.exe.config
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Metode(step)\Levensthein Distance algorithm\New folder\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Spell Checker.exe
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Metode(step)\Levensthein Distance algorithm\New folder\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\Spell Checker.pdb

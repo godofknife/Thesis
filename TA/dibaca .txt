@@ -1,0 +1,7 @@
+Team TA Skripsi TI Mikroskil 
+
+27/6/2016
+	folder metode isinya Stemming, Stopword, Levensthein Distance algorithm
+	ganti database baru complete edition(tesaurus, stopword list, kata dasar)
+	 
+	
