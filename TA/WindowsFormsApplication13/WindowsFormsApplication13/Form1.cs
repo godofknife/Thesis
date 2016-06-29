@@ -72,8 +72,6 @@ namespace WindowsFormsApplication13
                 filePath = openDlg.FileName.ToString();
                 metroTextBox1.Text = filePath;
                 metroTextBox1.Enabled = false;
-                richTextBox1.Enabled = false;
-                richTextBox2.Enabled = false;
                 string strText = string.Empty;
                 try
                 {
