@@ -22,6 +22,7 @@ namespace WindowsFormsApplication13
         
         public Form1()
         {
+           
             InitializeComponent();
             metroTextBox2.Hide();
             richTextBox2.Hide();
@@ -34,6 +35,7 @@ namespace WindowsFormsApplication13
         public string link = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
         public string sql;
         public string[] list;
+
         #region design
         private void materialCheckBox3_CheckedChanged(object sender, EventArgs e)
         {
@@ -59,7 +61,7 @@ namespace WindowsFormsApplication13
         }
         private void metroTile1_Click(object sender, EventArgs e)
         {
-
+            
             OpenFileDialog openDlg = new OpenFileDialog();
             openDlg.Filter = "PDF Files(*.PDF)|*.PDF|ALL Files(*.*)|*.*";
 
@@ -129,8 +131,28 @@ namespace WindowsFormsApplication13
                 }
             }
         }
+
         private void metroTile3_Click(object sender, EventArgs e)
         {
+            #region
+            label3.Hide();
+            listBox1.Show();
+            listBox2.Show();
+            listBox3.Show();
+            listBox4.Show();
+            listBox5.Show();
+            listBox6.Show();
+            listBox7.Show();
+            listBox8.Show();
+            listBox9.Show();
+            listBox10.Show();
+            materialLabel1.Show();
+            materialLabel4.Show();
+            materialLabel2.Show();
+            materialLabel3.Show();
+            materialLabel5.Show();
+            
+            #endregion
             this.timer1.Start();
             metroProgressBar1.Show();
             listBox1.Items.Clear();
@@ -147,9 +169,73 @@ namespace WindowsFormsApplication13
             {
                 listBox8.Items.Add(item);
             }
-        }
-        #endregion
+            sql = "SELECT List FROM StopWord_List";
+            conn = new OleDbConnection(link);
+            stoplist(sql);
+            conn.Open();
+            OleDbCommand com = new OleDbCommand(sql, conn);
+            OleDbDataReader reader = com.ExecuteReader();
+            //int z = word.Length;
+            string[] temp = new string[listBox1.Items.Count];
+            string regexCode = string.Format(@"\s?\b(?:{0})\b\s?", string.Join("|", list));
 
+            Regex regex = new Regex(regexCode, RegexOptions.Singleline | RegexOptions.IgnoreCase);
+
+            Regex removeDoubleSpace = new Regex(@"\s{2,}", RegexOptions.Singleline | RegexOptions.IgnoreCase);
+            for (int i = 0; i < listBox1.Items.Count; i++)
+            {
+                temp[i] = regex.Replace(listBox1.Items[i].ToString(), " ");
+                temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
+                listBox3.Items.Add(temp[i]);
+            }
+            for (int i = 0; i < listBox8.Items.Count; i++)
+            {
+                temp[i] = regex.Replace(listBox8.Items[i].ToString(), " ");
+                temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
+                listBox6.Items.Add(temp[i]);
+            }
+            conn.Close();
+        }
+        public int jlhlist(string query)
+        {
+            conn = new OleDbConnection(link);
+            conn.Open();
+            OleDbCommand comm = conn.CreateCommand();
+            sql = query;
+            comm.CommandText = sql;
+            int jlh = (Int32)comm.ExecuteScalar();
+            conn.Close();
+            return jlh;
+        }
+        public void stoplist(string sql)
+        {
+            conn = new OleDbConnection(link);
+            conn.Open();
+            OleDbCommand comm = conn.CreateCommand();
+            sql = "SELECT List FROM StopWord_List";
+            comm.CommandText = sql;
+            OleDbDataReader reader = comm.ExecuteReader();
+            int jlh = jlhlist("SELECT COUNT (List) FROM StopWord_List");
+            list = new String[jlh];
+            int i = 0;
+            while (reader.Read())
+            {
+                list[i] = reader.GetString(0).ToString();
+                i++;
+            }
+            conn.Close();
+        }
+        public string[] get()
+        {
+            string[] arr = new string[listBox1.Items.Count];
+            for (int i = 0; i < listBox1.Items.Count; i++)
+            {
+                arr[i] = listBox1.Items[i].ToString();
+            }
+            return arr;
+        }
+        
+        #endregion
         private void timer1_Tick(object sender, EventArgs e)
         {
             metroProgressBar1.Maximum = 1000;
@@ -162,17 +248,14 @@ namespace WindowsFormsApplication13
             }
                
         }
-
         private void pictureBox2_MouseEnter(object sender, EventArgs e)
         {
             pictureBox2.Image = WindowsFormsApplication13.Properties.Resources.info2;
         }
-
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.Image = WindowsFormsApplication13.Properties.Resources.info;
         }
-
         private void metroTile4_Click(object sender, EventArgs e)
         {
             TabPage t = tabControl1.TabPages[0];
@@ -186,10 +269,28 @@ namespace WindowsFormsApplication13
             materialCheckBox2.Checked = false;
             materialCheckBox3.Checked = false;
         }
-
         private void metroTile5_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void tabControl1_ParentChanged(object sender, EventArgs e)
+        {
+            listBox1.Hide();
+            listBox2.Hide();
+            listBox3.Hide();
+            listBox4.Hide();
+            listBox5.Hide();
+            listBox6.Hide();
+            listBox7.Hide();
+            listBox8.Hide();
+            listBox9.Hide();
+            listBox10.Hide();
+            materialLabel1.Hide();
+            materialLabel2.Hide();
+            materialLabel3.Hide();
+            materialLabel4.Hide();
+            materialLabel5.Hide();
         } 
         
         
