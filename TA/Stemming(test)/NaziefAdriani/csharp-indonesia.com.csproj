@@ -36,10 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itextsharp">
-      <HintPath>C:\Users\ASUS_A455LD\Desktop\itextsharp.dll</HintPath>
+      <HintPath>C:\Users\ACER\Downloads\itextsharp-all-5.5.9\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\SpkGiziBali\MySql.Data.dll</HintPath>
+      <HintPath>C:\Users\ACER\Downloads\Compressed\mysql-connector-net-6.8.7-noinstall\v4.5\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

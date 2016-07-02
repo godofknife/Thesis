@@ -1081,27 +1081,33 @@ namespace WindowsFormsApplication12
             listBox1.Items.Clear();
             Char chr = textBox1.Text[0];
             string[] word = textBox1.Text.Split('.');
-
+            string[,] listkata = new string[0, 0];
             foreach (string item in word)
             {
                 listBox1.Items.Add(item);
             }
             sql = "SELECT List FROM tb_rootword";
             conn = new OleDbConnection(connectionSQL);
-            Stemming(sql);
-            conn.Open();
-            OleDbCommand com = new OleDbCommand(sql, conn);
-            OleDbDataReader reader = com.ExecuteReader();
             //int z = word.Length;
             string[] temp = new string[listBox1.Items.Count];
             listKamus();
-            string kata;
-            kata = textBox1.Text;
-            kata = Stemming(kata);
-            int i = 0;
-            temp[i] = listBox1.Items[i].ToString();
-            listBox2.Items.Add(temp[i]);
-            listBox2.Text=kata;
+            for(int i = 0; i < listBox1.Items.Count-1; i++)
+            {
+
+                string[] kata=listBox1.Items[i].ToString().Split(' ');
+                foreach(string j in kata)
+                {
+                    listBox2.Items.Add(Stemming(j));
+                }
+                //currchar[i]=string.Empty; 
+            }
+            
+            //kata = textBox1.Text;
+            //kata = Stemming(kata);
+            //int i = 0;
+            //temp[i] = listBox1.Items[i].ToString();
+            //listBox2.Items.Add(temp[i]);
+            //listBox2.Text=kata;
             
         }
         public string[] get()
