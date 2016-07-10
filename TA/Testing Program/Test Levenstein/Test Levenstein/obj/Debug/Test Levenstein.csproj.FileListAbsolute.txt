@@ -1,1 +1,10 @@
 c:\users\wisely\documents\visual studio 2015\Projects\Test Levenstein\Test Levenstein\bin\Debug\Test Levenstein.exe.config
+c:\users\wisely\documents\visual studio 2015\Projects\Test Levenstein\Test Levenstein\bin\Debug\Test Levenstein.exe
+c:\users\wisely\documents\visual studio 2015\Projects\Test Levenstein\Test Levenstein\bin\Debug\Test Levenstein.pdb
+c:\users\wisely\documents\visual studio 2015\Projects\Test Levenstein\Test Levenstein\obj\Debug\Test Levenstein.csprojResolveAssemblyReference.cache
+c:\users\wisely\documents\visual studio 2015\Projects\Test Levenstein\Test Levenstein\obj\Debug\Test_Levenstein.Form1.resources
+c:\users\wisely\documents\visual studio 2015\Projects\Test Levenstein\Test Levenstein\obj\Debug\Test_Levenstein.Properties.Resources.resources
+c:\users\wisely\documents\visual studio 2015\Projects\Test Levenstein\Test Levenstein\obj\Debug\Test Levenstein.csproj.GenerateResource.Cache
+c:\users\wisely\documents\visual studio 2015\Projects\Test Levenstein\Test Levenstein\obj\Debug\Test Levenstein.exe
+c:\users\wisely\documents\visual studio 2015\Projects\Test Levenstein\Test Levenstein\obj\Debug\Test Levenstein.pdb
+c:\users\wisely\documents\visual studio 2015\Projects\Test Levenstein\Test Levenstein\bin\Debug\itextsharp.dll
