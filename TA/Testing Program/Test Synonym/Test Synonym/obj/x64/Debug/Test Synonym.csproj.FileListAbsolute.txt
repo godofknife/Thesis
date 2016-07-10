@@ -1,0 +1,9 @@
+c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\bin\x64\Debug\Test Synonym.exe.config
+c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\obj\x64\Debug\Test Synonym.csprojResolveAssemblyReference.cache
+c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\obj\x64\Debug\Test_Synonym.Form1.resources
+c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\obj\x64\Debug\Test_Synonym.Properties.Resources.resources
+c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\obj\x64\Debug\Test Synonym.csproj.GenerateResource.Cache
+c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\bin\x64\Debug\Test Synonym.exe
+c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\bin\x64\Debug\Test Synonym.pdb
+c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\obj\x64\Debug\Test Synonym.exe
+c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\obj\x64\Debug\Test Synonym.pdb
