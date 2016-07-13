@@ -1,0 +1,11 @@
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\bin\Debug\test_DB.exe.config
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\bin\Debug\test_DB.exe
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\bin\Debug\test_DB.pdb
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\obj\Debug\test_DB.csprojResolveAssemblyReference.cache
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\obj\Debug\test_DB.Form1.resources
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\obj\Debug\test_DB.Properties.Resources.resources
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\obj\Debug\test_DB.csproj.GenerateResource.Cache
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\obj\Debug\test_DB.exe
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\obj\Debug\test_DB.pdb
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\bin\Debug\itextsharp.dll
+c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\bin\Debug\itextsharp.xml
