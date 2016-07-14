@@ -1,0 +1,10 @@
+c:\users\wisely\documents\visual studio 2015\Projects\Test Lebenstein 2\Test Lebenstein 2\bin\Debug\Test Lebenstein 2.exe.config
+C:\Users\Wisely\Documents\Visual Studio 2015\Projects\Test Lebenstein 2\Test Lebenstein 2\bin\Debug\Test Lebenstein 2.exe
+C:\Users\Wisely\Documents\Visual Studio 2015\Projects\Test Lebenstein 2\Test Lebenstein 2\bin\Debug\Test Lebenstein 2.pdb
+C:\Users\Wisely\Documents\Visual Studio 2015\Projects\Test Lebenstein 2\Test Lebenstein 2\obj\Debug\Test Lebenstein 2.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Documents\Visual Studio 2015\Projects\Test Lebenstein 2\Test Lebenstein 2\obj\Debug\Test_Lebenstein_2.Form1.resources
+C:\Users\Wisely\Documents\Visual Studio 2015\Projects\Test Lebenstein 2\Test Lebenstein 2\obj\Debug\Test_Lebenstein_2.Properties.Resources.resources
+C:\Users\Wisely\Documents\Visual Studio 2015\Projects\Test Lebenstein 2\Test Lebenstein 2\obj\Debug\Test Lebenstein 2.csproj.GenerateResource.Cache
+C:\Users\Wisely\Documents\Visual Studio 2015\Projects\Test Lebenstein 2\Test Lebenstein 2\obj\Debug\Test Lebenstein 2.exe
+C:\Users\Wisely\Documents\Visual Studio 2015\Projects\Test Lebenstein 2\Test Lebenstein 2\obj\Debug\Test Lebenstein 2.pdb
+C:\Users\Wisely\Documents\Visual Studio 2015\Projects\Test Lebenstein 2\Test Lebenstein 2\bin\Debug\itextsharp.dll

@@ -1,0 +1,13 @@
+C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\Tes SInonim\Tes SInonim\bin\Debug\Tes SInonim.exe.config
+C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\Tes SInonim\Tes SInonim\bin\Debug\Tes SInonim.exe
+C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\Tes SInonim\Tes SInonim\bin\Debug\Tes SInonim.pdb
+C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\Tes SInonim\Tes SInonim\bin\Debug\itextsharp.dll
+C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\Tes SInonim\Tes SInonim\obj\Debug\Tes SInonim.csprojResolveAssemblyReference.cache
+C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\Tes SInonim\Tes SInonim\obj\Debug\Tes_SInonim.Form1.resources
+C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\Tes SInonim\Tes SInonim\obj\Debug\Tes_SInonim.Properties.Resources.resources
+C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\Tes SInonim\Tes SInonim\obj\Debug\Tes SInonim.csproj.GenerateResource.Cache
+C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\Tes SInonim\Tes SInonim\obj\Debug\Tes SInonim.exe
+C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\Tes SInonim\Tes SInonim\obj\Debug\Tes SInonim.pdb
+G:\Tes SInonim\Tes SInonim\bin\Debug\Tes SInonim.exe.config
+G:\Tes SInonim\Tes SInonim\obj\Debug\Tes SInonim.exe
+G:\Tes SInonim\Tes SInonim\obj\Debug\Tes SInonim.pdb

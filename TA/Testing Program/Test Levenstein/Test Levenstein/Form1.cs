@@ -16,7 +16,7 @@ namespace Test_Levenstein
 {
     public partial class Form1 : Form
     {
-        String Dictionary, MisspelledString;
+        String Dictionary;
         Dictionary<int, string> dictionary;
         Dictionary<KeyValuePair<String, int>, List<int>> results;
         public Form1()
@@ -239,15 +239,52 @@ namespace Test_Levenstein
             }
         }
 
-        public Regex makeRegex(String[] words)
+        private void button2_Click(object sender, EventArgs e)
         {
-            String allWords = "";
-            foreach (String w in words)
-            {
-                allWords += w + "|";
-            }
+            List<string> l = new List<string>();
+            l.Add(richTextBox1.Text);
 
-            return new Regex(allWords);
+            foreach (var v in l)
+            {
+                int count = Regex.Matches(richTextBox1.Text, v).Count;//count occurrences of string
+                int WordLen = v.Length;
+                int startFrom = 0;
+                int hitung = 0;
+                for (int i = 0; i < count; i++)
+                {
+                    if(richTextBox1.SelectionColor == Color.Red)
+                    {
+                        richTextBox1.SelectionStart = richTextBox1.Text.IndexOf(v, startFrom);
+                        richTextBox1.SelectionLength = WordLen;
+
+                        startFrom = richTextBox1.Text.IndexOf(v, startFrom) + WordLen;
+                        hitung++;
+                    }
+                    
+
+                }
+                label2.Text = hitung.ToString();
+            }
+            
+            ////String text = richTextBox1.Text.Trim();
+            //int wordCount = 0, index = 0;
+
+            //while (index < richTextBox1.Text.Length)
+            //{
+            //    // check if current char is part of a word
+            //    while (index < richTextBox1.Text.Length && Char.IsWhiteSpace(richTextBox1.Text[index]) == false)
+
+            //            index++;
+            //            wordCount++;
+
+
+            //    // skip whitespace until next word
+            //    while (index < richTextBox1.Text.Length && Char.IsWhiteSpace(richTextBox1.Text[index]) == true)
+            //        index++;
+            //}
+            //label2.Text = wordCount.ToString();
         }
+        
+      
     }
 }
