@@ -44,10 +44,18 @@
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.materialCheckBox3 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox2 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.listBox16 = new System.Windows.Forms.ListBox();
+            this.listBox15 = new System.Windows.Forms.ListBox();
+            this.listBox14 = new System.Windows.Forms.ListBox();
+            this.listBox13 = new System.Windows.Forms.ListBox();
+            this.listBox12 = new System.Windows.Forms.ListBox();
+            this.listBox11 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.listBox10 = new System.Windows.Forms.ListBox();
@@ -75,8 +83,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -222,73 +228,63 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.groupBox1.Controls.Add(this.materialCheckBox3);
-            this.groupBox1.Controls.Add(this.materialCheckBox2);
-            this.groupBox1.Controls.Add(this.materialCheckBox1);
+            this.groupBox1.Controls.Add(this.materialRadioButton2);
+            this.groupBox1.Controls.Add(this.materialRadioButton1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(15, 374);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(262, 151);
+            this.groupBox1.Size = new System.Drawing.Size(250, 125);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
             // 
-            // materialCheckBox3
+            // materialRadioButton2
             // 
-            this.materialCheckBox3.AutoSize = true;
-            this.materialCheckBox3.Depth = 0;
-            this.materialCheckBox3.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox3.Location = new System.Drawing.Point(39, 90);
-            this.materialCheckBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox3.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox3.Name = "materialCheckBox3";
-            this.materialCheckBox3.Ripple = true;
-            this.materialCheckBox3.Size = new System.Drawing.Size(46, 30);
-            this.materialCheckBox3.TabIndex = 2;
-            this.materialCheckBox3.Text = "All";
-            this.materialCheckBox3.UseVisualStyleBackColor = true;
-            this.materialCheckBox3.CheckedChanged += new System.EventHandler(this.materialCheckBox3_CheckedChanged);
+            this.materialRadioButton2.AutoSize = true;
+            this.materialRadioButton2.Depth = 0;
+            this.materialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialRadioButton2.Location = new System.Drawing.Point(43, 64);
+            this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton2.Name = "materialRadioButton2";
+            this.materialRadioButton2.Ripple = true;
+            this.materialRadioButton2.Size = new System.Drawing.Size(156, 30);
+            this.materialRadioButton2.TabIndex = 1;
+            this.materialRadioButton2.TabStop = true;
+            this.materialRadioButton2.Text = "Stemming/Stopword";
+            this.materialRadioButton2.UseVisualStyleBackColor = true;
+            this.materialRadioButton2.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged);
             // 
-            // materialCheckBox2
+            // materialRadioButton1
             // 
-            this.materialCheckBox2.AutoSize = true;
-            this.materialCheckBox2.Depth = 0;
-            this.materialCheckBox2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox2.Location = new System.Drawing.Point(39, 60);
-            this.materialCheckBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox2.Name = "materialCheckBox2";
-            this.materialCheckBox2.Ripple = true;
-            this.materialCheckBox2.Size = new System.Drawing.Size(148, 30);
-            this.materialCheckBox2.TabIndex = 1;
-            this.materialCheckBox2.Text = "Non Preprocessing";
-            this.materialCheckBox2.UseVisualStyleBackColor = true;
-            this.materialCheckBox2.CheckedChanged += new System.EventHandler(this.materialCheckBox2_CheckedChanged);
-            // 
-            // materialCheckBox1
-            // 
-            this.materialCheckBox1.AutoSize = true;
-            this.materialCheckBox1.BackColor = System.Drawing.Color.PeachPuff;
-            this.materialCheckBox1.Depth = 0;
-            this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(39, 30);
-            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox1.Name = "materialCheckBox1";
-            this.materialCheckBox1.Ripple = true;
-            this.materialCheckBox1.Size = new System.Drawing.Size(119, 30);
-            this.materialCheckBox1.TabIndex = 0;
-            this.materialCheckBox1.Text = "Preprocessing";
-            this.materialCheckBox1.UseVisualStyleBackColor = false;
-            this.materialCheckBox1.CheckedChanged += new System.EventHandler(this.materialCheckBox1_CheckedChanged);
+            this.materialRadioButton1.AutoSize = true;
+            this.materialRadioButton1.Depth = 0;
+            this.materialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialRadioButton1.Location = new System.Drawing.Point(43, 22);
+            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton1.Name = "materialRadioButton1";
+            this.materialRadioButton1.Ripple = true;
+            this.materialRadioButton1.Size = new System.Drawing.Size(185, 30);
+            this.materialRadioButton1.TabIndex = 0;
+            this.materialRadioButton1.TabStop = true;
+            this.materialRadioButton1.Text = "Non Stemming/Stopword";
+            this.materialRadioButton1.UseVisualStyleBackColor = true;
+            this.materialRadioButton1.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged);
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.textBox2);
-            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Controls.Add(this.materialLabel8);
+            this.tabPage4.Controls.Add(this.materialLabel7);
+            this.tabPage4.Controls.Add(this.materialLabel6);
+            this.tabPage4.Controls.Add(this.listBox16);
+            this.tabPage4.Controls.Add(this.listBox15);
+            this.tabPage4.Controls.Add(this.listBox14);
+            this.tabPage4.Controls.Add(this.listBox13);
+            this.tabPage4.Controls.Add(this.listBox12);
+            this.tabPage4.Controls.Add(this.listBox11);
             this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.Controls.Add(this.materialLabel5);
             this.tabPage4.Controls.Add(this.listBox10);
@@ -315,10 +311,118 @@
             this.tabPage4.Text = "Details Process";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // materialLabel8
+            // 
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel8.Location = new System.Drawing.Point(622, 66);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(96, 19);
+            this.materialLabel8.TabIndex = 27;
+            this.materialLabel8.Text = "Tokenization";
+            this.materialLabel8.Visible = false;
+            // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel7.Location = new System.Drawing.Point(631, 263);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(70, 19);
+            this.materialLabel7.TabIndex = 26;
+            this.materialLabel7.Text = "Synonym";
+            this.materialLabel7.Visible = false;
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel6.Location = new System.Drawing.Point(592, 152);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(152, 19);
+            this.materialLabel6.TabIndex = 25;
+            this.materialLabel6.Text = "Levensthein Distance";
+            this.materialLabel6.Visible = false;
+            // 
+            // listBox16
+            // 
+            this.listBox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox16.FormattingEnabled = true;
+            this.listBox16.ItemHeight = 15;
+            this.listBox16.Location = new System.Drawing.Point(771, 229);
+            this.listBox16.Name = "listBox16";
+            this.listBox16.Size = new System.Drawing.Size(536, 94);
+            this.listBox16.TabIndex = 24;
+            this.listBox16.Visible = false;
+            // 
+            // listBox15
+            // 
+            this.listBox15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox15.FormattingEnabled = true;
+            this.listBox15.ItemHeight = 15;
+            this.listBox15.Location = new System.Drawing.Point(22, 229);
+            this.listBox15.Name = "listBox15";
+            this.listBox15.Size = new System.Drawing.Size(536, 94);
+            this.listBox15.TabIndex = 23;
+            this.listBox15.Visible = false;
+            // 
+            // listBox14
+            // 
+            this.listBox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox14.FormattingEnabled = true;
+            this.listBox14.ItemHeight = 15;
+            this.listBox14.Location = new System.Drawing.Point(771, 125);
+            this.listBox14.Name = "listBox14";
+            this.listBox14.Size = new System.Drawing.Size(536, 94);
+            this.listBox14.TabIndex = 22;
+            this.listBox14.Visible = false;
+            // 
+            // listBox13
+            // 
+            this.listBox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox13.FormattingEnabled = true;
+            this.listBox13.ItemHeight = 15;
+            this.listBox13.Location = new System.Drawing.Point(22, 125);
+            this.listBox13.Name = "listBox13";
+            this.listBox13.Size = new System.Drawing.Size(536, 94);
+            this.listBox13.TabIndex = 21;
+            this.listBox13.Visible = false;
+            // 
+            // listBox12
+            // 
+            this.listBox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox12.FormattingEnabled = true;
+            this.listBox12.ItemHeight = 15;
+            this.listBox12.Location = new System.Drawing.Point(771, 19);
+            this.listBox12.Name = "listBox12";
+            this.listBox12.Size = new System.Drawing.Size(536, 94);
+            this.listBox12.TabIndex = 20;
+            this.listBox12.Visible = false;
+            // 
+            // listBox11
+            // 
+            this.listBox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox11.FormattingEnabled = true;
+            this.listBox11.ItemHeight = 15;
+            this.listBox11.Location = new System.Drawing.Point(22, 19);
+            this.listBox11.Name = "listBox11";
+            this.listBox11.Size = new System.Drawing.Size(536, 94);
+            this.listBox11.TabIndex = 19;
+            this.listBox11.Visible = false;
+            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(481, 165);
+            this.label3.Location = new System.Drawing.Point(474, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(371, 36);
             this.label3.TabIndex = 18;
@@ -331,7 +435,7 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(633, 265);
+            this.materialLabel5.Location = new System.Drawing.Point(626, 152);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(75, 19);
@@ -361,7 +465,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(481, 215);
+            this.label1.Location = new System.Drawing.Point(474, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(371, 36);
             this.label1.TabIndex = 14;
@@ -426,7 +530,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(633, 165);
+            this.materialLabel2.Location = new System.Drawing.Point(626, 263);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(77, 19);
@@ -461,7 +565,7 @@
             this.listBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox6.FormattingEnabled = true;
             this.listBox6.ItemHeight = 15;
-            this.listBox6.Location = new System.Drawing.Point(771, 235);
+            this.listBox6.Location = new System.Drawing.Point(771, 125);
             this.listBox6.Name = "listBox6";
             this.listBox6.Size = new System.Drawing.Size(536, 94);
             this.listBox6.TabIndex = 6;
@@ -471,7 +575,7 @@
             this.listBox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox7.FormattingEnabled = true;
             this.listBox7.ItemHeight = 15;
-            this.listBox7.Location = new System.Drawing.Point(771, 129);
+            this.listBox7.Location = new System.Drawing.Point(771, 229);
             this.listBox7.Name = "listBox7";
             this.listBox7.Size = new System.Drawing.Size(536, 94);
             this.listBox7.TabIndex = 5;
@@ -501,7 +605,7 @@
             this.listBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 15;
-            this.listBox3.Location = new System.Drawing.Point(22, 235);
+            this.listBox3.Location = new System.Drawing.Point(22, 125);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(536, 94);
             this.listBox3.TabIndex = 2;
@@ -511,7 +615,7 @@
             this.listBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(22, 129);
+            this.listBox2.Location = new System.Drawing.Point(22, 229);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(536, 94);
             this.listBox2.TabIndex = 1;
@@ -636,20 +740,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(170, 569);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 29);
-            this.textBox1.TabIndex = 19;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(365, 569);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 29);
-            this.textBox2.TabIndex = 20;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -692,9 +782,6 @@
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox3;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox2;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
@@ -722,8 +809,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
+        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel7;
+        private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private System.Windows.Forms.ListBox listBox16;
+        private System.Windows.Forms.ListBox listBox15;
+        private System.Windows.Forms.ListBox listBox14;
+        private System.Windows.Forms.ListBox listBox13;
+        private System.Windows.Forms.ListBox listBox12;
+        private System.Windows.Forms.ListBox listBox11;
+        private MaterialSkin.Controls.MaterialLabel materialLabel8;
     }
 }
 

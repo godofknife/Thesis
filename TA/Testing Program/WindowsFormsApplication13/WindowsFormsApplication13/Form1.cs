@@ -36,21 +36,9 @@ namespace WindowsFormsApplication13
         public string sql;
         public string[] list;
         string[] kamus;
+        public string[] kalimat;
 
         #region design
-        private void materialCheckBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (materialCheckBox3.Checked)
-            {
-                materialCheckBox1.Checked = true;
-                materialCheckBox2.Checked = true;
-            }
-            if (materialCheckBox3.Checked == false)
-            {
-                materialCheckBox1.Checked = false;
-                materialCheckBox2.Checked = false;
-            }
-        }
         private void materialCheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             metroTile3.Show();
@@ -135,68 +123,44 @@ namespace WindowsFormsApplication13
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
-            #region
-            label3.Hide();
-            listBox1.Show();
-            listBox2.Show();
-            listBox3.Show();
-            listBox4.Show();
-            listBox5.Show();
-            listBox6.Show();
-            listBox7.Show();
-            listBox8.Show();
-            listBox9.Show();
-            listBox10.Show();
-            materialLabel1.Show();
-            materialLabel4.Show();
-            materialLabel2.Show();
-            materialLabel3.Show();
-            materialLabel5.Show();
+                //Tokenization
+                #region
+                label3.Hide();
+                listBox1.Show();
+                listBox2.Show();
+                listBox3.Show();
+                listBox4.Show();
+                listBox5.Show();
+                listBox6.Show();
+                listBox7.Show();
+                listBox8.Show();
+                listBox9.Show();
+                listBox10.Show();
+                materialLabel1.Show();
+                materialLabel4.Show();
+                materialLabel2.Show();
+                materialLabel3.Show();
+                materialLabel5.Show();
+
+                #endregion
+                this.timer1.Start();
+                metroProgressBar1.Show();
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+                Char chr = richTextBox1.Text[0];
+                string[] word = richTextBox1.Text.Split('.');
+                string[] word1 = richTextBox2.Text.Split('.');
+                string[,] listkata = new string[0, 0];
+                foreach (string item in word)
+                {
+                    listBox1.Items.Add(item);
+
+                }
+                foreach (string item in word1)
+                {
+                    listBox8.Items.Add(item);
+                }            
             
-            #endregion
-            this.timer1.Start();
-            metroProgressBar1.Show();
-            listBox1.Items.Clear();
-            listBox2.Items.Clear();
-            Char chr = richTextBox1.Text[0];
-            string[] word = richTextBox1.Text.Split('.');
-            string[] word1 = richTextBox2.Text.Split('.');
-            string[,] listkata = new string[0, 0];
-            foreach (string item in word)
-            {
-                listBox1.Items.Add(item);
-                
-            }
-            foreach(string item in word1)
-            {
-                listBox8.Items.Add(item);
-            }
-            //Proses Stemming Disini
-            sql = "SELECT List FROM tb_rootword";
-            conn = new OleDbConnection(link);
-
-            string[] temp1 = new string[listBox1.Items.Count];
-            listKamus();
-            for (int i = 0; i < listBox1.Items.Count - 1; i++)
-            {
-
-                string[] kata = listBox1.Items[i].ToString().Split(' ');
-                foreach (string j in kata)
-                {
-                    listBox2.Items.Add(Stemming(j));
-                }
-
-            }
-            for (int i = 0; i < listBox8.Items.Count; i++)
-            {
-
-                string[] kata = listBox8.Items[i].ToString().Split(' ');
-                foreach (string j in kata)
-                {
-                    listBox7.Items.Add(Stemming(j));
-                }
-
-            }
             //Proses Stopwords Disini
             sql = "SELECT List FROM StopWord_List";
             conn = new OleDbConnection(link);
@@ -210,47 +174,136 @@ namespace WindowsFormsApplication13
             Regex regex = new Regex(regexCode, RegexOptions.Singleline | RegexOptions.IgnoreCase);
 
             Regex removeDoubleSpace = new Regex(@"\s{2,}", RegexOptions.Singleline | RegexOptions.IgnoreCase);
-            for (int i = 0; i < listBox1.Items.Count; i++)
+            for (int i = 0; i < listBox1.Items.Count-1; i++)
             {
                 temp[i] = regex.Replace(listBox1.Items[i].ToString(), " ");
                 temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                 listBox3.Items.Add(temp[i]);
             }
-            for (int i = 0; i < listBox8.Items.Count; i++)
+            for (int i = 0; i < listBox8.Items.Count-1; i++)
             {
                 temp[i] = regex.Replace(listBox8.Items[i].ToString(), " ");
                 temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                 listBox6.Items.Add(temp[i]);
             }
             conn.Close();
-            //proses levenstein
-            //string[] array = new string[listBox3.Items.Count];
-            //listBox3.Items.CopyTo(array, 0);
-            //string[] array1 = new string[listBox6.Items.Count];
-            //listBox6.Items.CopyTo(array, 0);
-            //string result1 = ConverStringArrayToString(array);
-            //string result2 = ConvertStringArrayToStringJoin(array1);
-            //string join1 = ConvertStringArrayToStringJoin(array);
-            //string join2 = ConvertStringArrayToStringJoin(array1);
-            //LevenshteinDistance(result1,result2);
-            //textBox1.Text = result1;
-            //textBox2.Text = result2;
-        }
-        static string ConverStringArrayToString(string[] array)
-        {
-            StringBuilder builder = new StringBuilder();
-            foreach(string value in array)
+            //Proses Stemming Disini
+            sql = "SELECT List FROM tb_rootword";
+            conn = new OleDbConnection(link);
+
+            string[] temp1 = new string[listBox3.Items.Count];
+            listKamus();
+            for (int i = 0; i < listBox3.Items.Count - 1; i++)
             {
-                builder.Append(value);
-                builder.Append('.');
+
+                string[] kata = listBox3.Items[i].ToString().ToLower().Split(' ');
+                foreach (string j in kata)
+                {
+                    listBox2.Items.Add(Stemming(j));
+                }
+
             }
-            return builder.ToString();
+            for (int i = 0; i < listBox6.Items.Count; i++)
+            {
+
+                string[] kata = listBox6.Items[i].ToString().ToLower().Split(' ');
+                foreach (string j in kata)
+                {
+                    listBox7.Items.Add(Stemming(j));
+                }
+
+            }
+            //Proses levenstein disini
+            foreach (string cek in listBox2.Items)
+            {
+                int cost = LevenshteinDistance.Compute(cek, listBox7.Items.ToString());
+
+                listBox4.Items.Add(cost);
+            }
+            foreach (string cek1 in listBox7.Items)
+            {
+                int cost1 = LevenshteinDistance.Compute(cek1, listBox2.Items.ToString());
+
+                listBox5.Items.Add(cost1);
+            }
+            //Proses Synonim disini
+            conn = new OleDbConnection();
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
+            conn.Open();
+            //OleDbCommand cmd = conn.CreateCommand();
+            OleDbDataAdapter da;
+            DataSet ds = new DataSet();
+            da = new OleDbDataAdapter(sql, conn);
+            da.Fill(ds, "Test");
+            string[] tempo = new string[0];
+            int pos = 0;
+            int nilai=0;
+            for (int i = 0; i < listBox2.Items.Count -1; i++)
+            {
+                sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u = '" + listBox2.Items[i] + "'";
+                while (pos < ds.Tables["Test"].Columns.Count)
+                {
+                    Array.Resize(ref tempo, pos + 1);
+                    tempo[pos] = ds.Tables["Test"].Rows[0][pos].ToString();
+                }
+                for(int j=0;j<tempo.Length;j++)
+                {
+                    if (tempo[j] == listBox7.Items[i].ToString())
+                    {
+                        nilai += 1;
+                        listBox9.Items.Add(nilai);
+                    }
+                        
+                } 
+            }
+            //bool temu = false;
+            //while (pos < dataGridView1.Columns.Count & !temu)
+            //{
+            //    if ((string)dataGridView1[pos, 0].Value.ToString().Trim() == "perubahan")
+            //    {
+            //        temu = true;
+            //        label1.Text = "ketemu";
+            //    }
+            //    else
+            //        pos++;
+            //}
+            //cmd.CommandText = sql;
+            //OleDbDataReader reader = cmd.ExecuteReader();
+
+            while (pos < ds.Tables["Test"].Columns.Count)
+            {
+                Array.Resize(ref tempo, pos + 1);
+                temp[pos] = ds.Tables["Test"].Rows[0][pos].ToString();
+                pos++;
+
+            }
+            foreach (string i in temp)
+            {
+                listBox3.Items.Add(i);
+            }
+
+
+            //Array.Resize(ref temp, k + 1);
+            //temp[k] = reader.GetString(0).ToString();
+            //if (temp[k] == "Kemajuan")
+            //    label1.Text = "true";
+            conn.Close();
         }
-        static string ConvertStringArrayToStringJoin (string[]array)
-        {
-            string result = string.Join(".", array);
-            return result;
-        }
+        //static string ConverStringArrayToString(string[] array)
+        //{
+        //    StringBuilder builder = new StringBuilder();
+        //    foreach(string value in array)
+        //    {
+        //        builder.Append(value);
+        //        builder.Append('.');
+        //    }
+        //    return builder.ToString();
+        //}
+        //static string ConvertStringArrayToStringJoin (string[]array)
+        //{
+        //    string result = string.Join(".", array);
+        //    return result;
+        //}
         public int jlhlist(string query)
         {
             conn = new OleDbConnection(link);
@@ -320,9 +373,6 @@ namespace WindowsFormsApplication13
             richTextBox1.Clear();
             richTextBox2.Clear();
             metroProgressBar1.Hide();
-            materialCheckBox1.Checked = false;
-            materialCheckBox2.Checked = false;
-            materialCheckBox3.Checked = false;
         }
         private void metroTile5_Click(object sender, EventArgs e)
         {
@@ -348,48 +398,7 @@ namespace WindowsFormsApplication13
             materialLabel5.Hide();
         }
         //Leveinstein here
-        public static int LevenshteinDistance(string first, string second)
-        {
-            if (first == null)
-            {
-                throw new ArgumentNullException("first");
-            }
-            if (second == null)
-            {
-                throw new ArgumentNullException("second");
-            }
-
-            int n = first.Length;
-            int m = second.Length;
-            var d = new int[n + 1, m + 1]; // matrix
-
-            if (n == 0) return m;
-            if (m == 0) return n;
-
-            for (int i = 0; i <= n; d[i, 0] = i++)
-            {
-            }
-
-            for (int j = 0; j <= m; d[0, j] = j++)
-            {
-            }
-
-            for (int i = 1; i <= n; i++)
-            {
-
-                for (int j = 1; j <= m; j++)
-                {
-                    int cost = (second.Substring(j - 1, 1) == first.Substring(i - 1, 1) ? 0 : 1); // cost
-                    d[i, j] = Math.Min(
-                        Math.Min(
-                            d[i - 1, j] + 1,
-                            d[i, j - 1] + 1),
-                        d[i - 1, j - 1] + cost);
-                }
-            }
-
-            return d[n, m];
-        }
+        
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -1426,6 +1435,66 @@ namespace WindowsFormsApplication13
             kata = hapus_derivation_prefix(kata);
 
             return kata;
+        }
+        static class LevenshteinDistance
+        {
+            /// <summary>
+            /// Compute the distance between two strings.
+            /// </summary>
+            public static int Compute(string s, string t)
+            {
+                int n = s.Length;
+                int m = t.Length;
+                int[,] d = new int[n + 1, m + 1];
+
+                // Step 1
+                if (n == 0)
+                {
+                    return m;
+                }
+
+                if (m == 0)
+                {
+                    return n;
+                }
+
+                // Step 2
+                for (int i = 0; i <= n; d[i, 0] = i++)
+                {
+                }
+
+                for (int j = 0; j <= m; d[0, j] = j++)
+                {
+                }
+
+                // Step 3
+                for (int i = 1; i <= n; i++)
+                {
+                    //Step 4
+                    for (int j = 1; j <= m; j++)
+                    {
+                        // Step 5
+                        int cost = (t[j - 1] == s[i - 1]) ? 0 : 1;
+
+                        // Step 6
+                        d[i, j] = Math.Min(
+                            Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1),
+                            d[i - 1, j - 1] + cost);
+                    }
+                }
+                // Step 7
+                return d[n, m];
+            }
+        }
+
+        private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            metroTile3.Show();
+        }
+
+        private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            metroTile3.Show();
         }
     }
 

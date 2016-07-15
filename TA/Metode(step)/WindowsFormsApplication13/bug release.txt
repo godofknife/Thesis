@@ -1,0 +1,9 @@
+Daftar bug program 
+- groupbox msih ada yang salah
+- tabcontrol tidak bisa pindah jika udah msuk ke tabpage 2 (details process)
+- di tabpage 3, kalo blom load file sama click proses seharusnya listbox dan item2 yang laen tidak muncul, sehrusnya muncul 
+  label "nothing file in check"
+
+cuma itu yang w temuin bugnya 
+
+maaf cuma bisa buat sampai tokenization, tapi stemming/stopword, levensthein, synomyn blom bisa w terapkan
