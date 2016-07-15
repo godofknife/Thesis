@@ -35,6 +35,7 @@ namespace WindowsFormsApplication13
         public string link = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
         public string sql;
         public string[] list;
+        string[] kamus;
 
         #region design
         private void materialCheckBox3_CheckedChanged(object sender, EventArgs e)
@@ -134,6 +135,7 @@ namespace WindowsFormsApplication13
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
+            //Tokenization
             #region
             label3.Hide();
             listBox1.Show();
@@ -160,7 +162,8 @@ namespace WindowsFormsApplication13
             Char chr = richTextBox1.Text[0];
             string[] word = richTextBox1.Text.Split('.');
             string[] word1 = richTextBox2.Text.Split('.');
-            foreach(string item in word)
+            string[,] listkata = new string[0, 0];
+            foreach (string item in word)
             {
                 listBox1.Items.Add(item);
                 
@@ -169,32 +172,88 @@ namespace WindowsFormsApplication13
             {
                 listBox8.Items.Add(item);
             }
+            
+            //Proses Stopwords Disini
             sql = "SELECT List FROM StopWord_List";
             conn = new OleDbConnection(link);
             stoplist(sql);
             conn.Open();
             OleDbCommand com = new OleDbCommand(sql, conn);
             OleDbDataReader reader = com.ExecuteReader();
-            //int z = word.Length;
             string[] temp = new string[listBox1.Items.Count];
             string regexCode = string.Format(@"\s?\b(?:{0})\b\s?", string.Join("|", list));
 
             Regex regex = new Regex(regexCode, RegexOptions.Singleline | RegexOptions.IgnoreCase);
 
             Regex removeDoubleSpace = new Regex(@"\s{2,}", RegexOptions.Singleline | RegexOptions.IgnoreCase);
-            for (int i = 0; i < listBox1.Items.Count; i++)
+            for (int i = 0; i < listBox1.Items.Count-1; i++)
             {
                 temp[i] = regex.Replace(listBox1.Items[i].ToString(), " ");
                 temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                 listBox3.Items.Add(temp[i]);
             }
-            for (int i = 0; i < listBox8.Items.Count; i++)
+            for (int i = 0; i < listBox8.Items.Count-1; i++)
             {
                 temp[i] = regex.Replace(listBox8.Items[i].ToString(), " ");
                 temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                 listBox6.Items.Add(temp[i]);
             }
             conn.Close();
+            //Proses Stemming Disini
+            sql = "SELECT List FROM tb_rootword";
+            conn = new OleDbConnection(link);
+
+            string[] temp1 = new string[listBox3.Items.Count];
+            listKamus();
+            for (int i = 0; i < listBox3.Items.Count - 1; i++)
+            {
+
+                string[] kata = listBox3.Items[i].ToString().ToLower().Split(' ');
+                foreach (string j in kata)
+                {
+                    listBox2.Items.Add(Stemming(j));
+                }
+
+            }
+            for (int i = 0; i < listBox6.Items.Count; i++)
+            {
+
+                string[] kata = listBox6.Items[i].ToString().ToLower().Split(' ');
+                foreach (string j in kata)
+                {
+                    listBox7.Items.Add(Stemming(j));
+                }
+
+            }
+            //Proses levenstein disini
+            foreach (string cek in listBox2.Items)
+            {
+                int cost = LevenshteinDistance.Compute(cek, listBox7.Items.ToString());
+
+                listBox4.Items.Add(cost);
+            }
+            foreach (string cek1 in listBox7.Items)
+            {
+                int cost1 = LevenshteinDistance.Compute(cek1, listBox2.Items.ToString());
+
+                listBox5.Items.Add(cost1);
+            }
+
+        }
+        static string ConverStringArrayToString(string[] array)
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach(string value in array)
+            {
+                builder.Append(value);
+                builder.Append('.');
+            }
+            return builder.ToString();
+        }
+        static string ConvertStringArrayToStringJoin (string[]array)
+        {
+            string result = string.Join(".", array);
+            return result;
         }
         public int jlhlist(string query)
         {
@@ -291,8 +350,1096 @@ namespace WindowsFormsApplication13
             materialLabel3.Hide();
             materialLabel4.Hide();
             materialLabel5.Hide();
-        } 
+        }
+        //Leveinstein here
         
-        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+//Stemming Procedure Starts Here
+        private void listKamus()
+        {
+            OleDbConnection db = new OleDbConnection(link);
+            db.Open();
+            OleDbCommand cmd = db.CreateCommand();
+            string sql = "SELECT rootword FROM tb_rootword";
+            cmd.CommandText = sql;
+            OleDbDataReader reader = cmd.ExecuteReader();
+            int banyak = jlhlist("SELECT count(*) FROM tb_rootword");
+            kamus = new String[banyak];
+            int i = 0;
+            while (reader.Read())
+            {
+                kamus[i] = reader.GetString(0).ToString();
+                i++;
+            }
+            db.Close();
+
+        }
+        private bool cekKataDasar(string kata)
+        {
+            int banyak = jlhlist("SELECT count(*) FROM tb_rootword");
+            //MessageBox.Show(banyak.ToString());
+            for (int i = 0; i < banyak - 1; i++)
+            {
+                if (kata == kamus[i])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private string HapusAkhiran(string kata)
+        {
+
+            Match matchkahlah = Regex.Match(kata, @"([A-Za-z]+)([klt]ah|pun|ku|mu|nya)$", RegexOptions.IgnoreCase);
+            if (matchkahlah.Success)
+            {
+                string key = matchkahlah.Groups[1].Value;
+
+                return HapusAkhiranKepunyaan(key);
+            }
+
+            return HapusAkhiranKepunyaan(kata);
+        }
+
+        private string HapusAkhiranKepunyaan(string kata)
+        {
+            Match matchkahlah = Regex.Match(kata, @"([A-Za-z]+)(nya|[km]u)$", RegexOptions.IgnoreCase);
+            if (matchkahlah.Success)
+            {
+                string key = matchkahlah.Groups[1].Value;
+
+                return key;
+            }
+            return kata;
+        }
+
+        private string HapusAkhiranIAnKan(string kata)
+        {
+            string kataasal = kata;
+
+            if (Regex.IsMatch(kata, "(kan)$"))
+            {
+                string kata1 = Regex.Replace(kata, "(kan)$", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+
+            }
+
+            if (Regex.IsMatch(kata, "(i|an)$"))
+            {
+                string kata2 = Regex.Replace(kata, "(i|an)$", "");
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+
+            }
+            return kataasal;
+        }
+
+
+        private string hapus_derivation_prefix(string kata)
+        {
+            string kataasal = kata;
+            if (Regex.IsMatch(kata, "^(di|[ks]e)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(di|[ks]e)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+            }
+
+
+            #region cek te- me- be- pe-
+            if (Regex.IsMatch(kata, "^([tmbp]e)")) //cek te- me- be- pe-
+            {
+                #region awalan be-
+
+                if (Regex.IsMatch(kataasal, "^(be)"))
+                {
+                    if (Regex.IsMatch(kataasal, "^(ber)[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(ber)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(ber)", "r");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+
+                    if (Regex.IsMatch(kata, "^(ber)[^aiueor][A-Za-z](?!er)"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(ber)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+
+                    if (Regex.IsMatch(kata, "^(ber)[^aiueor][A-Za-z]er[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(ber)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+
+                    if (Regex.IsMatch(kata, "^(belajar)"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(bel)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(ber)[^aiueor]er[^aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(be)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+
+
+                }
+
+                #endregion
+
+                #region awalan te-
+                if (Regex.IsMatch(kata, "^(te)"))
+                {
+                    if (Regex.IsMatch(kata, "^(terr)"))
+                    {
+                        return kata;
+                    }
+                    if (Regex.IsMatch(kata, "^(ter)[aioue]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(ter)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(ter)", "r");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    //teko kene
+                }
+                if (Regex.IsMatch(kata, "^(ter)[^aiueor]er[aiueo]"))
+                {
+                    string kata1 = Regex.Replace(kata, "^(ter)", "");
+                    if (cekKataDasar(kata1))
+                    {
+                        return kata1;
+                    }
+                    string kata2 = HapusAkhiranIAnKan(kata1);
+                    if (cekKataDasar(kata2))
+                    {
+                        return kata2;
+                    }
+                }
+                if (Regex.IsMatch(kata, "^(ter)[^aiueor](?!er)"))
+                {
+                    string kata1 = Regex.Replace(kata, "^(ter)", "");
+                    if (cekKataDasar(kata1))
+                    {
+                        return kata1;
+                    }
+                    string kata2 = HapusAkhiranIAnKan(kata1);
+                    if (cekKataDasar(kata2))
+                    {
+                        return kata2;
+                    }
+                }
+                if (Regex.IsMatch(kata, "^(te)[^aiueor]er[aiueo]"))
+                {
+                    string kata1 = Regex.Replace(kata, "^(te)", "");
+                    if (cekKataDasar(kata1))
+                    {
+                        return kata1;
+                    }
+                    string kata2 = HapusAkhiranIAnKan(kata1);
+                    if (cekKataDasar(kata2))
+                    {
+                        return kata2;
+                    }
+                }
+                if (Regex.IsMatch(kata, "^(ter)[^aiueor]er[^aiueo]"))
+                {
+                    string kata1 = Regex.Replace(kata, "^(ter)", "");
+                    if (cekKataDasar(kata1))
+                    {
+                        return kata1;
+                    }
+                    string kata2 = HapusAkhiranIAnKan(kata1);
+                    if (cekKataDasar(kata2))
+                    {
+                        return kata2;
+                    }
+                }
+
+                #endregion
+
+                #region awalan me-
+                if (Regex.IsMatch(kata, "^(me)"))
+                {
+                    if (Regex.IsMatch(kata, "^(me)[lrwyv][aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(me)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(mem)[bfvp]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(mem)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(mem)((r[aiueo])|[aiueo])"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(mem)", "m");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(mem)", "p");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+
+                    }
+                    if (Regex.IsMatch(kata, "^(men)[cdjszt]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(men)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(men)[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(men)", "n");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(men)", "t");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(meng)[ghqk]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(meng)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(meng)[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(meng)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(meng)", "k");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(menge)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(meny)[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(meny)", "s");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(me)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                }
+                #endregion
+
+                #region awalan pe-
+                if (Regex.IsMatch(kata, "^(pe)"))
+                {
+                    if (Regex.IsMatch(kata, "^(pe)[wy]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pe)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(per)[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(per)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(per)", "r");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(per)[^aiueor][A-Za-z](?!er)"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(per)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(per)[^aiueor][A-Za-z](er)[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(per)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(pembelajaran)"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pembelajaran)", "ajar");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(pem)[bfv]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pem)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(pem)(r[aiueo]|[aiueo])"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pem)", "m");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(pem)", "p");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(pen)[cdjzt]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pen)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(pen)[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pen)", "n");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(pen)", "t");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(peng)[^aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(peng)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(peng)[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(peng)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(peng)", "k");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(penge)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(peny)[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(peny)", "s");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                        kata1 = Regex.Replace(kata, "^(pe)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(pel)[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pel)", "l");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(pelajar)"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pel)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(pe)[^rwylmn]er[aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pe)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(pe)[^rwylmn](?!er)"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pe)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                    if (Regex.IsMatch(kata, "^(pe)[^aiueo]er[^aiueo]"))
+                    {
+                        string kata1 = Regex.Replace(kata, "^(pe)", "");
+                        if (cekKataDasar(kata1))
+                        {
+                            return kata1;
+                        }
+                        string kata2 = HapusAkhiranIAnKan(kata1);
+                        if (cekKataDasar(kata2))
+                        {
+                            return kata2;
+                        }
+                    }
+                }
+            }
+
+            #endregion
+            #endregion
+
+            #region memper- dkk
+
+            if (Regex.IsMatch(kata, "^(memper)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(memper)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+                kata1 = Regex.Replace(kata, "^(memper)", "r");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+            }
+
+            if (Regex.IsMatch(kata, "^(mempel)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(mempel)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+                kata1 = Regex.Replace(kata, "^(mempel)", "l");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+
+            }
+            if (Regex.IsMatch(kata, "^(menter)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(menter)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+                kata1 = Regex.Replace(kata, "^(menter)", "r");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+
+            }
+            if (Regex.IsMatch(kata, "^(member)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(member)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+                kata1 = Regex.Replace(kata, "^(member)", "r");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+
+            }
+
+            #endregion
+
+            #region diper-
+            if (Regex.IsMatch(kata, "^(diper)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(diper)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+                kata1 = Regex.Replace(kata, "^(diper)", "r");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+            }
+            #endregion
+
+            #region diter-
+            if (Regex.IsMatch(kata, "^(diter)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(diter)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+                kata1 = Regex.Replace(kata, "^(diter)", "r");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+            }
+            #endregion
+
+            #region dipel-
+            if (Regex.IsMatch(kata, "^(dipel)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(dipel)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+                kata1 = Regex.Replace(kata, "^(dipel)", "l");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+            }
+            #endregion
+
+            #region diber-
+            if (Regex.IsMatch(kata, "^(diber)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(diber)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+                kata1 = Regex.Replace(kata, "^(diber)", "r");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+            }
+            #endregion
+
+            #region keber-
+            if (Regex.IsMatch(kata, "^(keber)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(keber)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+                kata1 = Regex.Replace(kata, "^(keber)", "r");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+            }
+            #endregion
+
+            #region keter-
+            if (Regex.IsMatch(kata, "^(keter)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(keter)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+                kata1 = Regex.Replace(kata, "^(keter)", "r");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+            }
+            #endregion
+
+            #region berke-
+            if (Regex.IsMatch(kata, "^(keter)"))
+            {
+                string kata1 = Regex.Replace(kata, "^(berke)", "");
+                if (cekKataDasar(kata1))
+                {
+                    return kata1;
+                }
+                string kata2 = HapusAkhiranIAnKan(kata1);
+                if (cekKataDasar(kata2))
+                {
+                    return kata2;
+                }
+
+            }
+            #endregion
+
+            //cek awalan di ke se te be me
+            if (Regex.IsMatch(kata, "^(di|[kstbmp]e)") == false)
+            {
+                return kataasal;
+            }
+            return kataasal;
+
+
+        }
+
+        private string Stemming(string kata)
+        {
+            if (cekKataDasar(kata))
+            {
+                return kata;
+            }
+
+            kata = HapusAkhiran(kata);
+
+            kata = HapusAkhiranIAnKan(kata);
+
+            kata = hapus_derivation_prefix(kata);
+
+            return kata;
+        }
+        static class LevenshteinDistance
+        {
+            /// <summary>
+            /// Compute the distance between two strings.
+            /// </summary>
+            public static int Compute(string s, string t)
+            {
+                int n = s.Length;
+                int m = t.Length;
+                int[,] d = new int[n + 1, m + 1];
+
+                // Step 1
+                if (n == 0)
+                {
+                    return m;
+                }
+
+                if (m == 0)
+                {
+                    return n;
+                }
+
+                // Step 2
+                for (int i = 0; i <= n; d[i, 0] = i++)
+                {
+                }
+
+                for (int j = 0; j <= m; d[0, j] = j++)
+                {
+                }
+
+                // Step 3
+                for (int i = 1; i <= n; i++)
+                {
+                    //Step 4
+                    for (int j = 1; j <= m; j++)
+                    {
+                        // Step 5
+                        int cost = (t[j - 1] == s[i - 1]) ? 0 : 1;
+
+                        // Step 6
+                        d[i, j] = Math.Min(
+                            Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1),
+                            d[i - 1, j - 1] + cost);
+                    }
+                }
+                // Step 7
+                return d[n, m];
+            }
+        }
     }
+
 }

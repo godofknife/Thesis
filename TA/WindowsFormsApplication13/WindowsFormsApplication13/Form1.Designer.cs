@@ -314,7 +314,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(481, 165);
+            this.label3.Location = new System.Drawing.Point(481, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(371, 36);
             this.label3.TabIndex = 18;
@@ -327,7 +327,7 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(633, 265);
+            this.materialLabel5.Location = new System.Drawing.Point(626, 152);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(75, 19);
@@ -422,7 +422,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(633, 165);
+            this.materialLabel2.Location = new System.Drawing.Point(626, 263);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(77, 19);
@@ -457,7 +457,7 @@
             this.listBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox6.FormattingEnabled = true;
             this.listBox6.ItemHeight = 15;
-            this.listBox6.Location = new System.Drawing.Point(771, 235);
+            this.listBox6.Location = new System.Drawing.Point(771, 125);
             this.listBox6.Name = "listBox6";
             this.listBox6.Size = new System.Drawing.Size(536, 94);
             this.listBox6.TabIndex = 6;
@@ -467,7 +467,7 @@
             this.listBox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox7.FormattingEnabled = true;
             this.listBox7.ItemHeight = 15;
-            this.listBox7.Location = new System.Drawing.Point(771, 129);
+            this.listBox7.Location = new System.Drawing.Point(771, 229);
             this.listBox7.Name = "listBox7";
             this.listBox7.Size = new System.Drawing.Size(536, 94);
             this.listBox7.TabIndex = 5;
@@ -497,7 +497,7 @@
             this.listBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 15;
-            this.listBox3.Location = new System.Drawing.Point(22, 235);
+            this.listBox3.Location = new System.Drawing.Point(22, 125);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(536, 94);
             this.listBox3.TabIndex = 2;
@@ -507,7 +507,7 @@
             this.listBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(22, 129);
+            this.listBox2.Location = new System.Drawing.Point(22, 229);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(536, 94);
             this.listBox2.TabIndex = 1;
@@ -644,6 +644,7 @@
             this.Name = "Form1";
             this.Text = "        Plagiarism Checker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

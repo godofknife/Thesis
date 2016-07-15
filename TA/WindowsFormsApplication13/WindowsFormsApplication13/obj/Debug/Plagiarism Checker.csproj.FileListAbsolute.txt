@@ -13,3 +13,17 @@ C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\WindowsFormsApplicati
 C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\WindowsFormsApplication13\WindowsFormsApplication13\obj\Debug\WindowsFormsApplication13.pdb
 C:\Users\ASUS_A455LD\Documents\Visual Studio 2013\Projects\WindowsFormsApplication13\WindowsFormsApplication13\obj\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
 D:\GitHub\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\WindowsFormsApplication13.exe.config
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\WindowsFormsApplication13.exe.config
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\WindowsFormsApplication13.exe
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\WindowsFormsApplication13.pdb
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\itextsharp.dll
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\MaterialSkin.dll
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\MetroFramework.Design.dll
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\MetroFramework.dll
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\obj\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\obj\Debug\WindowsFormsApplication13.Form1.resources
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\obj\Debug\WindowsFormsApplication13.Properties.Resources.resources
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\obj\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\obj\Debug\WindowsFormsApplication13.exe
+C:\Users\Wisely\Downloads\Thesis\TA\WindowsFormsApplication13\WindowsFormsApplication13\obj\Debug\WindowsFormsApplication13.pdb

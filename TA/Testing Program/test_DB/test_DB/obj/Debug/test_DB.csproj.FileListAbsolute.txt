@@ -9,3 +9,13 @@ c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\obj\Debug\te
 c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\obj\Debug\test_DB.pdb
 c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\bin\Debug\itextsharp.dll
 c:\users\acer\documents\visual studio 2015\Projects\test_DB\test_DB\bin\Debug\itextsharp.xml
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\test_DB\test_DB\bin\Debug\test_DB.exe.config
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\test_DB\test_DB\obj\Debug\test_DB.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\test_DB\test_DB\obj\Debug\test_DB.Form1.resources
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\test_DB\test_DB\obj\Debug\test_DB.Properties.Resources.resources
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\test_DB\test_DB\obj\Debug\test_DB.csproj.GenerateResource.Cache
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\test_DB\test_DB\bin\Debug\test_DB.exe
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\test_DB\test_DB\bin\Debug\test_DB.pdb
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\test_DB\test_DB\bin\Debug\itextsharp.dll
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\test_DB\test_DB\obj\Debug\test_DB.exe
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\test_DB\test_DB\obj\Debug\test_DB.pdb
