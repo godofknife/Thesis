@@ -230,32 +230,36 @@ namespace WindowsFormsApplication13
             conn = new OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
             conn.Open();
-            //OleDbCommand cmd = conn.CreateCommand();
+            
             OleDbDataAdapter da;
-            DataSet ds = new DataSet();
-            da = new OleDbDataAdapter(sql, conn);
-            da.Fill(ds, "Test");
-            string[] tempo = new string[0];
+            DataTable dt = new DataTable();
+            string[] tempo = new string[147];
             int pos = 0;
             int nilai=0;
             for (int i = 0; i < listBox2.Items.Count -1; i++)
             {
-                sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u = '" + listBox2.Items[i] + "'";
-                while (pos < ds.Tables["Test"].Columns.Count)
+                sql = string.Empty; Array.Clear(tempo, 0, tempo.Length);pos = 0;
+                sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u = '" + listBox2.Items[i].ToString() + "'";
+                da = new OleDbDataAdapter(sql, conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "persamaan");
+                //da.Fill(dt, "persamaan");
+                while (pos < ds.Tables["persamaan"].Columns.Count)
                 {
-                    Array.Resize(ref tempo, pos + 1);
-                    tempo[pos] = ds.Tables["Test"].Rows[0][pos].ToString();
+                    tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+                    pos++;
                 }
-                for(int j=0;j<tempo.Length;j++)
+                for(int j = 0; j < listBox16.Items.Count - 1; j++)
                 {
-                    if (tempo[j] == listBox7.Items[i].ToString())
+                    for(int k = 0; k < tempo.Length; k++)
                     {
-                        nilai += 1;
-                        listBox9.Items.Add(nilai);
+                        if (tempo[k] == listBox7.Items[j].ToString())
+                            nilai += 1;
                     }
-                        
-                } 
+                }
+                ds.Clear();
             }
+            listBox9.Items.Add(nilai);
             //bool temu = false;
             //while (pos < dataGridView1.Columns.Count & !temu)
             //{
@@ -270,17 +274,17 @@ namespace WindowsFormsApplication13
             //cmd.CommandText = sql;
             //OleDbDataReader reader = cmd.ExecuteReader();
 
-            while (pos < ds.Tables["Test"].Columns.Count)
-            {
-                Array.Resize(ref tempo, pos + 1);
-                temp[pos] = ds.Tables["Test"].Rows[0][pos].ToString();
-                pos++;
+            //while (pos < ds.Tables["Test"].Columns.Count)
+            //{
+            //    Array.Resize(ref tempo, pos + 1);
+            //    temp[pos] = ds.Tables["Test"].Rows[0][pos].ToString();
+            //    pos++;
 
-            }
-            foreach (string i in temp)
-            {
-                listBox3.Items.Add(i);
-            }
+            //}
+            //foreach (string i in temp)
+            //{
+            //    listBox3.Items.Add(i);
+            //}
 
 
             //Array.Resize(ref temp, k + 1);
