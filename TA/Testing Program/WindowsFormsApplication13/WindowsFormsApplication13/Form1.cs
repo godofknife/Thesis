@@ -308,6 +308,18 @@ namespace WindowsFormsApplication13
         //    string result = string.Join(".", array);
         //    return result;
         //}
+        public string RemoveChars(string str)
+        {
+            string[] chars = new string[] { ",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", };
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (str.Contains(chars[i]))
+                {
+                    str = str.Replace(chars[i], "");
+                }
+            }
+            return str;
+        }
         public int jlhlist(string query)
         {
             conn = new OleDbConnection(link);
