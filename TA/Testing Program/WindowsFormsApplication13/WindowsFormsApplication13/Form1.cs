@@ -19,7 +19,8 @@ namespace WindowsFormsApplication13
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
-        
+        bool cekstemming = false;
+        bool ceknonstemming = false;
         public Form1()
         {
            
@@ -123,7 +124,11 @@ namespace WindowsFormsApplication13
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
-                //Tokenization
+            //Tokenization
+            if (materialRadioButton2.Checked == true && materialRadioButton1.Checked == false)
+            {
+
+
                 #region
                 label3.Hide();
                 listBox1.Show();
@@ -153,6 +158,7 @@ namespace WindowsFormsApplication13
                 string[] word = richTextBox1.Text.Split('.');
                 string[] word1 = richTextBox2.Text.Split('.');
                 string[,] listkata = new string[0, 0];
+
                 foreach (string item in word)
                 {
                     listBox1.Items.Add(item);
@@ -161,110 +167,228 @@ namespace WindowsFormsApplication13
                 foreach (string item in word1)
                 {
                     listBox8.Items.Add(item);
-                }            
-            
-            //Proses Stopwords Disini
-            sql = "SELECT List FROM StopWord_List";
-            conn = new OleDbConnection(link);
-            stoplist(sql);
-            conn.Open();
-            OleDbCommand com = new OleDbCommand(sql, conn);
-            OleDbDataReader reader = com.ExecuteReader();
-            string[] temp = new string[listBox1.Items.Count];
-            string regexCode = string.Format(@"\s?\b(?:{0})\b\s?", string.Join("|", list));
-
-            Regex regex = new Regex(regexCode, RegexOptions.Singleline | RegexOptions.IgnoreCase);
-
-            Regex removeDoubleSpace = new Regex(@"\s{2,}", RegexOptions.Singleline | RegexOptions.IgnoreCase);
-            for (int i = 0; i < listBox1.Items.Count-1; i++)
-            {
-                temp[i] = regex.Replace(listBox1.Items[i].ToString(), " ");
-                temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
-                listBox3.Items.Add(RemoveChars(temp[i]));
-            }
-            for (int i = 0; i < listBox8.Items.Count-1; i++)
-            {
-                temp[i] = regex.Replace(listBox8.Items[i].ToString(), " ");
-                temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
-                listBox6.Items.Add(RemoveChars(temp[i]));
-            }
-            conn.Close();
-            //Proses Stemming Disini
-            sql = "SELECT List FROM tb_rootword";
-            conn = new OleDbConnection(link);
-
-            string[] temp1 = new string[listBox3.Items.Count];
-            listKamus();
-            for (int i = 0; i < listBox3.Items.Count; i++)
-            {
-                
-                string[] kata = listBox3.Items[i].ToString().ToLower().Split(' ');
-                foreach (string j in kata)
-                {
-                    if(!string.IsNullOrWhiteSpace(j))
-                        listBox2.Items.Add(Stemming(j));
                 }
 
-            }
-            for (int i = 0; i < listBox6.Items.Count; i++)
-            {
+                //Proses Stopwords Disini
+                sql = "SELECT List FROM StopWord_List";
+                conn = new OleDbConnection(link);
+                stoplist(sql);
+                conn.Open();
+                OleDbCommand com = new OleDbCommand(sql, conn);
+                OleDbDataReader reader = com.ExecuteReader();
+                string[] temp = new string[listBox1.Items.Count];
+                string regexCode = string.Format(@"\s?\b(?:{0})\b\s?", string.Join("|", list));
 
-                string[] kata = listBox6.Items[i].ToString().ToLower().Split(' ');
-                foreach (string j in kata)
+                Regex regex = new Regex(regexCode, RegexOptions.Singleline | RegexOptions.IgnoreCase);
+
+                Regex removeDoubleSpace = new Regex(@"\s{2,}", RegexOptions.Singleline | RegexOptions.IgnoreCase);
+                for (int i = 0; i < listBox1.Items.Count - 1; i++)
                 {
-                    if(!string.IsNullOrWhiteSpace(j))
-                        listBox7.Items.Add(Stemming(j));
+                    temp[i] = regex.Replace(listBox1.Items[i].ToString(), " ");
+                    temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
+                    listBox3.Items.Add(RemoveChars(temp[i]));
                 }
-
-            }
-            //Proses levenstein disini
-            foreach (string cek in listBox2.Items)
-            {
-                int cost = LevenshteinDistance.Compute(cek, listBox7.Items.ToString());
-
-                listBox4.Items.Add(cost);
-            }
-            foreach (string cek1 in listBox7.Items)
-            {
-                int cost1 = LevenshteinDistance.Compute(cek1, listBox2.Items.ToString());
-
-                listBox5.Items.Add(cost1);
-            }
-            //Proses Synonim disini
-            conn = new OleDbConnection();
-            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
-            conn.Open();
-
-            OleDbDataAdapter da;
-            //DataTable dt = new DataTable();
-            string[] tempo = new string[147];
-            int pos = 0;
-            int nilai = 0;
-            for (int i = 0; i < listBox2.Items.Count - 1; i++)
-            {
-                sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u = '" + listBox2.Items[i].ToString() + "'";
-                da = new OleDbDataAdapter(sql, conn);
-                DataSet ds = new DataSet();
-                da.Fill(ds, "persamaan");
-                //da.Fill(dt, "persamaan");
-                while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+                for (int i = 0; i < listBox8.Items.Count - 1; i++)
                 {
-                    tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                    pos++;
+                    temp[i] = regex.Replace(listBox8.Items[i].ToString(), " ");
+                    temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
+                    listBox6.Items.Add(RemoveChars(temp[i]));
                 }
-                for (int j = 0; j < listBox16.Items.Count - 1; j++)
+                conn.Close();
+                //Proses Stemming Disini
+                sql = "SELECT List FROM tb_rootword";
+                conn = new OleDbConnection(link);
+
+                string[] temp1 = new string[listBox3.Items.Count];
+                listKamus();
+                for (int i = 0; i < listBox3.Items.Count; i++)
                 {
-                    for (int k = 0; k < tempo.Length; k++)
+
+                    string[] kata = listBox3.Items[i].ToString().ToLower().Split(' ');
+                    foreach (string j in kata)
                     {
-                        if (tempo[k] == listBox7.Items[j].ToString())
-                            nilai += 1;
+                        if (!string.IsNullOrWhiteSpace(j))
+                            listBox2.Items.Add(Stemming(j));
                     }
+
                 }
-                ds.Clear();
+                for (int i = 0; i < listBox6.Items.Count; i++)
+                {
+
+                    string[] kata = listBox6.Items[i].ToString().ToLower().Split(' ');
+                    foreach (string j in kata)
+                    {
+                        if (!string.IsNullOrWhiteSpace(j))
+                            listBox7.Items.Add(Stemming(j));
+                    }
+
+                }
+                //Proses levenstein disini
+                foreach (string cek in listBox2.Items)
+                {
+                    int cost = LevenshteinDistance.Compute(cek, listBox7.Items.ToString());
+
+                    listBox4.Items.Add(cost);
+                }
+                foreach (string cek1 in listBox7.Items)
+                {
+                    int cost1 = LevenshteinDistance.Compute(cek1, listBox2.Items.ToString());
+
+                    listBox5.Items.Add(cost1);
+                }
+     
+                //Proses Synonim disini
+                try
+                {
+                    conn = new OleDbConnection();
+                    conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
+                    conn.Open();
+
+                    OleDbDataAdapter da;
+                    //DataTable dt = new DataTable();
+                    string[] tempo = new string[147];
+                    int pos = 0;
+                    int nilai = 0;
+                    for (int i = 0; i < listBox2.Items.Count - 1; i++)
+                    {
+                        sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+                        sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u = '" + listBox2.Items[i].ToString() + "'";
+                        da = new OleDbDataAdapter(sql, conn);
+                        DataSet ds = new DataSet();
+                        da.Fill(ds, "persamaan");
+                        //da.Fill(dt, "persamaan");
+                        while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+                        {
+                            tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+                            pos++;
+                        }
+                        //Listbox 10???
+                        for (int j = 0; j < listBox10.Items.Count - 1; j++)
+                        {
+                            for (int k = 0; k < tempo.Length; k++)
+                            {
+                                if (tempo[k] == listBox7.Items[j].ToString())
+                                    nilai += 1;
+                            }
+                        }
+                        ds.Clear();
+                    }
+                    listBox9.Items.Add(nilai);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                conn.Close();
             }
-            listBox9.Items.Add(nilai);
-            conn.Close();
+            else if (materialRadioButton1.Checked==true && materialRadioButton2.Checked==false)
+            {
+                #region
+                label3.Hide();
+                listBox1.Show();
+                listBox2.Show();
+                listBox3.Show();
+                
+                listBox6.Show();
+                listBox7.Show();
+                listBox8.Show();
+               
+                listBox4.Hide();
+                listBox5.Hide();
+                listBox9.Hide();
+                listBox10.Hide();
+                materialLabel1.Show();
+                materialLabel2.Show();
+                materialLabel5.Show();
+                materialLabel5.Text = "Levensthein Distance";
+
+                this.materialLabel5.Location = new Point(588, 154);
+                materialLabel2.Text = "Synonym";
+                materialLabel3.Hide();
+                materialLabel4.Hide();
+
+                #endregion
+                this.timer1.Start();
+                metroProgressBar1.Show();
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+                listBox8.Items.Clear();
+                listBox1.Text.ToLower();
+                listBox2.Text.ToLower();
+                listBox8.Text.ToLower();
+                Char chr = richTextBox1.Text[0];
+                string[] word = richTextBox1.Text.Split('.');
+                string[] word1 = richTextBox2.Text.Split('.');
+                string[,] listkata = new string[0, 0];
+
+                foreach (string item in word)
+                {
+                    listBox1.Items.Add(item);
+
+                }
+                foreach (string item in word1)
+                {
+                    listBox8.Items.Add(item);
+                }
+                
+                //Proses levenstein disini
+                foreach (string cek in listBox1.Items)
+                {
+                    int cost = LevenshteinDistance.Compute(cek, listBox8.Items.ToString());
+
+                    listBox3.Items.Add(cost);
+                }
+                foreach (string cek1 in listBox8.Items)
+                {
+                    int cost1 = LevenshteinDistance.Compute(cek1, listBox1.Items.ToString());
+
+                    listBox6.Items.Add(cost1);
+                }
+
+                //Proses Synonim disini
+                try
+                {
+                    conn = new OleDbConnection();
+                    conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
+                    conn.Open();
+
+                    OleDbDataAdapter da;
+                    //DataTable dt = new DataTable();
+                    string[] tempo = new string[147];
+                    int pos = 0;
+                    int nilai = 0;
+                    for (int i = 0; i < listBox1.Items.Count - 1; i++)
+                    {
+                        sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+                        sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u = '" + listBox1.Items[i].ToString() + "'";
+                        da = new OleDbDataAdapter(sql, conn);
+                        DataSet ds = new DataSet();
+                        da.Fill(ds, "persamaan");
+                        //da.Fill(dt, "persamaan");
+                        while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+                        {
+                            tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+                            pos++;
+                        }
+                        //??? Listbox 10???
+                        for (int j = 0; j < listBox7.Items.Count - 1; j++)
+                        {
+                            for (int k = 0; k < tempo.Length; k++)
+                            {
+                                if (tempo[k] == listBox8.Items[j].ToString())
+                                    nilai += 1;
+                            }
+                        }
+                        ds.Clear();
+                    }
+                    listBox2.Items.Add(nilai);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                conn.Close();
+            }
             //bool temu = false;
             //while (pos < dataGridView1.Columns.Count & !temu)
             //{
@@ -296,8 +420,9 @@ namespace WindowsFormsApplication13
             //temp[k] = reader.GetString(0).ToString();
             //if (temp[k] == "Kemajuan")
             //    label1.Text = "true";
-
+            
         }
+        
         //static string ConverStringArrayToString(string[] array)
         //{
         //    StringBuilder builder = new StringBuilder();
@@ -374,6 +499,7 @@ namespace WindowsFormsApplication13
                 TabPage t = tabControl1.TabPages[1];
                 tabControl1.SelectedTab = t;
                 label1.Hide();
+                timer1.Stop();
             }
                
         }
@@ -418,7 +544,6 @@ namespace WindowsFormsApplication13
             materialLabel4.Hide();
             materialLabel5.Hide();
         }
-        //Leveinstein here
         
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -1516,6 +1641,11 @@ namespace WindowsFormsApplication13
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             metroTile3.Show();
+        }
+
+        private void materialLabel8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
