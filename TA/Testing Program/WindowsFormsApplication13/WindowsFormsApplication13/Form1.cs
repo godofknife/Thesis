@@ -195,13 +195,14 @@ namespace WindowsFormsApplication13
 
             string[] temp1 = new string[listBox3.Items.Count];
             listKamus();
-            for (int i = 0; i < listBox3.Items.Count - 1; i++)
+            for (int i = 0; i < listBox3.Items.Count; i++)
             {
-
+                
                 string[] kata = listBox3.Items[i].ToString().ToLower().Split(' ');
                 foreach (string j in kata)
                 {
-                    listBox2.Items.Add(Stemming(j));
+                    if(!string.IsNullOrWhiteSpace(j))
+                        listBox2.Items.Add(Stemming(j));
                 }
 
             }
@@ -211,7 +212,8 @@ namespace WindowsFormsApplication13
                 string[] kata = listBox6.Items[i].ToString().ToLower().Split(' ');
                 foreach (string j in kata)
                 {
-                    listBox7.Items.Add(Stemming(j));
+                    if(!string.IsNullOrWhiteSpace(j))
+                        listBox7.Items.Add(Stemming(j));
                 }
 
             }
@@ -234,7 +236,7 @@ namespace WindowsFormsApplication13
             conn.Open();
 
             OleDbDataAdapter da;
-            DataTable dt = new DataTable();
+            //DataTable dt = new DataTable();
             string[] tempo = new string[147];
             int pos = 0;
             int nilai = 0;
@@ -246,7 +248,7 @@ namespace WindowsFormsApplication13
                 DataSet ds = new DataSet();
                 da.Fill(ds, "persamaan");
                 //da.Fill(dt, "persamaan");
-                while (pos < ds.Tables["persamaan"].Columns.Count)
+                while (pos < ds.Tables["persamaan"].Columns.Count - 1)
                 {
                     tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
                     pos++;
@@ -262,6 +264,7 @@ namespace WindowsFormsApplication13
                 ds.Clear();
             }
             listBox9.Items.Add(nilai);
+            conn.Close();
             //bool temu = false;
             //while (pos < dataGridView1.Columns.Count & !temu)
             //{
@@ -293,7 +296,7 @@ namespace WindowsFormsApplication13
             //temp[k] = reader.GetString(0).ToString();
             //if (temp[k] == "Kemajuan")
             //    label1.Text = "true";
-            conn.Close();
+
         }
         //static string ConverStringArrayToString(string[] array)
         //{
