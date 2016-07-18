@@ -147,6 +147,8 @@ namespace WindowsFormsApplication13
                 metroProgressBar1.Show();
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
+                listBox1.Text.ToLower();
+                listBox2.Text.ToLower();
                 Char chr = richTextBox1.Text[0];
                 string[] word = richTextBox1.Text.Split('.');
                 string[] word1 = richTextBox2.Text.Split('.');
@@ -178,13 +180,13 @@ namespace WindowsFormsApplication13
             {
                 temp[i] = regex.Replace(listBox1.Items[i].ToString(), " ");
                 temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
-                listBox3.Items.Add(temp[i]);
+                listBox3.Items.Add(RemoveChars(temp[i]));
             }
             for (int i = 0; i < listBox8.Items.Count-1; i++)
             {
                 temp[i] = regex.Replace(listBox8.Items[i].ToString(), " ");
                 temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
-                listBox6.Items.Add(temp[i]);
+                listBox6.Items.Add(RemoveChars(temp[i]));
             }
             conn.Close();
             //Proses Stemming Disini
@@ -230,15 +232,15 @@ namespace WindowsFormsApplication13
             conn = new OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
             conn.Open();
-            
+
             OleDbDataAdapter da;
             DataTable dt = new DataTable();
             string[] tempo = new string[147];
             int pos = 0;
-            int nilai=0;
-            for (int i = 0; i < listBox2.Items.Count -1; i++)
+            int nilai = 0;
+            for (int i = 0; i < listBox2.Items.Count - 1; i++)
             {
-                sql = string.Empty; Array.Clear(tempo, 0, tempo.Length);pos = 0;
+                sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
                 sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u = '" + listBox2.Items[i].ToString() + "'";
                 da = new OleDbDataAdapter(sql, conn);
                 DataSet ds = new DataSet();
@@ -249,9 +251,9 @@ namespace WindowsFormsApplication13
                     tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
                     pos++;
                 }
-                for(int j = 0; j < listBox16.Items.Count - 1; j++)
+                for (int j = 0; j < listBox16.Items.Count - 1; j++)
                 {
-                    for(int k = 0; k < tempo.Length; k++)
+                    for (int k = 0; k < tempo.Length; k++)
                     {
                         if (tempo[k] == listBox7.Items[j].ToString())
                             nilai += 1;
@@ -310,7 +312,7 @@ namespace WindowsFormsApplication13
         //}
         public string RemoveChars(string str)
         {
-            string[] chars = new string[] { ",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", };
+            string[] chars = new string[] { ",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", "-", "_", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",";",":","(",")","[","]","{","}","=","+","?","`"};
             for (int i = 0; i < chars.Length; i++)
             {
                 if (str.Contains(chars[i]))
