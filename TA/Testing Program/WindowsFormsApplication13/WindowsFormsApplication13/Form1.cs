@@ -19,8 +19,7 @@ namespace WindowsFormsApplication13
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
-        bool cekstemming = false;
-        bool ceknonstemming = false;
+
         public Form1()
         {
            
@@ -263,15 +262,18 @@ namespace WindowsFormsApplication13
                             pos++;
                         }
                         //Listbox 10???
-                        for (int j = 0; j < listBox10.Items.Count - 1; j++)
-                        {
-                            for (int k = 0; k < tempo.Length; k++)
+                        
+                            for (int j = 0; j < listBox7.Items.Count - 1; j++)
                             {
-                                if (tempo[k] == listBox7.Items[j].ToString())
-                                    nilai += 1;
+                                for (int k = 0; k < tempo.Length-1; k++)
+                                {
+                                    if (tempo[k] == listBox7.Items[j].ToString())
+                                        nilai += 1;
+                                }
                             }
-                        }
-                        ds.Clear();
+                            ds.Clear();
+                        
+                        
                     }
                     listBox9.Items.Add(nilai);
                 }
@@ -326,11 +328,12 @@ namespace WindowsFormsApplication13
                     listBox1.Items.Add(item);
 
                 }
+              
                 foreach (string item in word1)
                 {
                     listBox8.Items.Add(item);
                 }
-                
+              
                 //Proses levenstein disini
                 foreach (string cek in listBox1.Items)
                 {
@@ -371,7 +374,7 @@ namespace WindowsFormsApplication13
                             pos++;
                         }
                         //??? Listbox 10???
-                        for (int j = 0; j < listBox7.Items.Count - 1; j++)
+                        for (int j = 0; j < listBox1.Items.Count - 1; j++)
                         {
                             for (int k = 0; k < tempo.Length; k++)
                             {
