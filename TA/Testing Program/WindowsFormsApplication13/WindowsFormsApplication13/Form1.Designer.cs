@@ -308,12 +308,11 @@
             this.materialLabel8.TabIndex = 27;
             this.materialLabel8.Text = "Tokenization";
             this.materialLabel8.Visible = false;
-            this.materialLabel8.Click += new System.EventHandler(this.materialLabel8_Click);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(478, 190);
+            this.label3.Location = new System.Drawing.Point(474, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(371, 36);
             this.label3.TabIndex = 18;
@@ -326,7 +325,7 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(626, 154);
+            this.materialLabel5.Location = new System.Drawing.Point(626, 152);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(75, 19);
@@ -356,7 +355,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(488, 206);
+            this.label1.Location = new System.Drawing.Point(474, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(371, 36);
             this.label1.TabIndex = 14;

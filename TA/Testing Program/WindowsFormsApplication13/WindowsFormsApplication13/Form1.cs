@@ -19,7 +19,7 @@ namespace WindowsFormsApplication13
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
-
+        
         public Form1()
         {
            
@@ -123,11 +123,9 @@ namespace WindowsFormsApplication13
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
-            //Tokenization
             if (materialRadioButton2.Checked == true && materialRadioButton1.Checked == false)
             {
-
-
+                //Tokenization
                 #region
                 label3.Hide();
                 listBox1.Show();
@@ -157,7 +155,6 @@ namespace WindowsFormsApplication13
                 string[] word = richTextBox1.Text.Split('.');
                 string[] word1 = richTextBox2.Text.Split('.');
                 string[,] listkata = new string[0, 0];
-
                 foreach (string item in word)
                 {
                     listBox1.Items.Add(item);
@@ -181,13 +178,13 @@ namespace WindowsFormsApplication13
                 Regex regex = new Regex(regexCode, RegexOptions.Singleline | RegexOptions.IgnoreCase);
 
                 Regex removeDoubleSpace = new Regex(@"\s{2,}", RegexOptions.Singleline | RegexOptions.IgnoreCase);
-                for (int i = 0; i < listBox1.Items.Count - 1; i++)
+                for (int i = 0; i < listBox1.Items.Count; i++)
                 {
                     temp[i] = regex.Replace(listBox1.Items[i].ToString(), " ");
                     temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                     listBox3.Items.Add(RemoveChars(temp[i]));
                 }
-                for (int i = 0; i < listBox8.Items.Count - 1; i++)
+                for (int i = 0; i < listBox8.Items.Count; i++)
                 {
                     temp[i] = regex.Replace(listBox8.Items[i].ToString(), " ");
                     temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
@@ -235,105 +232,112 @@ namespace WindowsFormsApplication13
 
                     listBox5.Items.Add(cost1);
                 }
-     
                 //Proses Synonim disini
-                try
-                {
-                    conn = new OleDbConnection();
-                    conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
-                    conn.Open();
+                conn = new OleDbConnection();
+                conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
+                conn.Open();
 
-                    OleDbDataAdapter da;
-                    //DataTable dt = new DataTable();
-                    string[] tempo = new string[147];
-                    int pos = 0;
-                    int nilai = 0;
-                    for (int i = 0; i < listBox2.Items.Count - 1; i++)
-                    {
-                        sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                        sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u = '" + listBox2.Items[i].ToString() + "'";
-                        da = new OleDbDataAdapter(sql, conn);
-                        DataSet ds = new DataSet();
-                        da.Fill(ds, "persamaan");
-                        //da.Fill(dt, "persamaan");
-                        while (pos < ds.Tables["persamaan"].Columns.Count - 1)
-                        {
-                            tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                            pos++;
-                        }
-                        //Listbox 10???
-                        
-                            for (int j = 0; j < listBox7.Items.Count - 1; j++)
-                            {
-                                for (int k = 0; k < tempo.Length-1; k++)
-                                {
-                                    if (tempo[k] == listBox7.Items[j].ToString())
-                                        nilai += 1;
-                                }
-                            }
-                            ds.Clear();
-                        
-                        
-                    }
-                    listBox9.Items.Add(nilai);
-                }
-                catch (Exception ex)
+                OleDbDataAdapter da;
+                //DataTable dt = new DataTable();
+                string[] tempo = new string[147];
+                int pos = 0;
+                int nilai = 0;
+                for (int i = 0; i < listBox2.Items.Count - 1; i++)
                 {
-                    MessageBox.Show(ex.ToString());
+                    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+                    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox2.Items[i].ToString() + "%'";
+                    da = new OleDbDataAdapter(sql, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "persamaan");
+                    //da.Fill(dt, "persamaan");
+                    while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+                    {
+                        tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+                        pos++;
+                    }
+                    for (int j = 0; j < listBox7.Items.Count - 1; j++)
+                    {
+                        for (int k = 0; k < tempo.Length; k++)
+                        {
+                            if (tempo[k] == listBox7.Items[j].ToString())
+                                nilai += 1;
+                        }
+                    }
+                    ds.Clear();
                 }
+                listBox9.Items.Add(nilai);
+                nilai = 0;
+                for (int i = 0; i < listBox7.Items.Count - 1; i++)
+                {
+                    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+                    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox7.Items[i].ToString() + "%'";
+                    da = new OleDbDataAdapter(sql, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "persamaan");
+                    //da.Fill(dt, "persamaan");
+                    while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+                    {
+                        tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+                        pos++;
+                    }
+                    for (int j = 0; j < listBox2.Items.Count - 1; j++)
+                    {
+                        for (int k = 0; k < tempo.Length; k++)
+                        {
+                            if (tempo[k] == listBox2.Items[j].ToString())
+                                nilai += 1;
+                        }
+                    }
+                    ds.Clear();
+                }
+                listBox10.Items.Add(nilai);
                 conn.Close();
             }
-            else if (materialRadioButton1.Checked==true && materialRadioButton2.Checked==false)
+            else if (materialRadioButton1.Checked == true && materialRadioButton2.Checked == false)
             {
+                //Tokenization
                 #region
                 label3.Hide();
                 listBox1.Show();
                 listBox2.Show();
                 listBox3.Show();
-                
+                listBox4.Hide();
+                listBox5.Hide();
                 listBox6.Show();
                 listBox7.Show();
                 listBox8.Show();
-               
-                listBox4.Hide();
-                listBox5.Hide();
                 listBox9.Hide();
                 listBox10.Hide();
                 materialLabel1.Show();
+                materialLabel4.Hide();
                 materialLabel2.Show();
+                materialLabel3.Hide();
                 materialLabel5.Show();
                 materialLabel5.Text = "Levensthein Distance";
-
                 this.materialLabel5.Location = new Point(588, 154);
                 materialLabel2.Text = "Synonym";
-                materialLabel3.Hide();
-                materialLabel4.Hide();
-
                 #endregion
                 this.timer1.Start();
                 metroProgressBar1.Show();
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
-                listBox8.Items.Clear();
                 listBox1.Text.ToLower();
                 listBox2.Text.ToLower();
-                listBox8.Text.ToLower();
                 Char chr = richTextBox1.Text[0];
-                string[] word = richTextBox1.Text.Split('.');
-                string[] word1 = richTextBox2.Text.Split('.');
+                string[] word = richTextBox1.Text.Split(' ');
+                string[] word1 = richTextBox2.Text.Split(' ');
                 string[,] listkata = new string[0, 0];
-
                 foreach (string item in word)
                 {
-                    listBox1.Items.Add(item);
-
+                    RemoveChars(item);
+                     listBox1.Items.Add(item);
+                    
                 }
-              
                 foreach (string item in word1)
                 {
+                    RemoveChars(item);
                     listBox8.Items.Add(item);
                 }
-              
                 //Proses levenstein disini
                 foreach (string cek in listBox1.Items)
                 {
@@ -347,49 +351,65 @@ namespace WindowsFormsApplication13
 
                     listBox6.Items.Add(cost1);
                 }
-
                 //Proses Synonim disini
-                try
-                {
-                    conn = new OleDbConnection();
-                    conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
-                    conn.Open();
+                conn = new OleDbConnection();
+                conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
+                conn.Open();
 
-                    OleDbDataAdapter da;
-                    //DataTable dt = new DataTable();
-                    string[] tempo = new string[147];
-                    int pos = 0;
-                    int nilai = 0;
-                    for (int i = 0; i < listBox1.Items.Count - 1; i++)
-                    {
-                        sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                        sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u = '" + listBox1.Items[i].ToString() + "'";
-                        da = new OleDbDataAdapter(sql, conn);
-                        DataSet ds = new DataSet();
-                        da.Fill(ds, "persamaan");
-                        //da.Fill(dt, "persamaan");
-                        while (pos < ds.Tables["persamaan"].Columns.Count - 1)
-                        {
-                            tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                            pos++;
-                        }
-                        //??? Listbox 10???
-                        for (int j = 0; j < listBox1.Items.Count - 1; j++)
-                        {
-                            for (int k = 0; k < tempo.Length; k++)
-                            {
-                                if (tempo[k] == listBox8.Items[j].ToString())
-                                    nilai += 1;
-                            }
-                        }
-                        ds.Clear();
-                    }
-                    listBox2.Items.Add(nilai);
-                }
-                catch (Exception ex)
+                OleDbDataAdapter da;
+                //DataTable dt = new DataTable();
+                string[] tempo = new string[147];
+                int pos = 0;
+                int nilai = 0;
+                for (int i = 0; i < listBox1.Items.Count - 1; i++)
                 {
-                    MessageBox.Show(ex.ToString());
+                    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+                    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox1.Items[i].ToString() + "%'";
+                    da = new OleDbDataAdapter(sql, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "persamaan");
+                    //da.Fill(dt, "persamaan");
+                    while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+                    {
+                        tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+                        pos++;
+                    }
+                    for (int j = 0; j < listBox8.Items.Count - 1; j++)
+                    {
+                        for (int k = 0; k < tempo.Length; k++)
+                        {
+                            if (tempo[k] == listBox8.Items[j].ToString())
+                                nilai += 1;
+                        }
+                    }
+                    ds.Clear();
                 }
+                listBox2.Items.Add(nilai);
+                nilai = 0;
+                for (int i = 0; i < listBox8.Items.Count - 1; i++)
+                {
+                    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+                    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox8.Items[i].ToString() + "%'";
+                    da = new OleDbDataAdapter(sql, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "persamaan");
+                    //da.Fill(dt, "persamaan");
+                    while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+                    {
+                        tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+                        pos++;
+                    }
+                    for (int j = 0; j < listBox1.Items.Count - 1; j++)
+                    {
+                        for (int k = 0; k < tempo.Length; k++)
+                        {
+                            if (tempo[k] == listBox1.Items[j].ToString())
+                                nilai += 1;
+                        }
+                    }
+                    ds.Clear();
+                }
+                listBox7.Items.Add(nilai);
                 conn.Close();
             }
             //bool temu = false;
@@ -423,9 +443,8 @@ namespace WindowsFormsApplication13
             //temp[k] = reader.GetString(0).ToString();
             //if (temp[k] == "Kemajuan")
             //    label1.Text = "true";
-            
+
         }
-        
         //static string ConverStringArrayToString(string[] array)
         //{
         //    StringBuilder builder = new StringBuilder();
@@ -547,6 +566,7 @@ namespace WindowsFormsApplication13
             materialLabel4.Hide();
             materialLabel5.Hide();
         }
+        //Leveinstein here
         
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -1644,11 +1664,6 @@ namespace WindowsFormsApplication13
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             metroTile3.Show();
-        }
-
-        private void materialLabel8_Click(object sender, EventArgs e)
-        {
-
         }
     }
 
