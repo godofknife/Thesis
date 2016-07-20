@@ -53,19 +53,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itextsharp">
-      <HintPath>..\..\metroframework dll\metroframework dll\itextsharp.dll</HintPath>
+      <HintPath>..\..\..\..\metroframework dll\metroframework dll\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin">
-      <HintPath>..\..\metroframework dll\metroframework dll\MaterialSkin.dll</HintPath>
+      <HintPath>..\..\..\..\metroframework dll\metroframework dll\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework">
-      <HintPath>..\..\metroframework dll\metroframework dll\MetroFramework.dll</HintPath>
+      <HintPath>..\..\..\..\metroframework dll\metroframework dll\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Design">
-      <HintPath>..\..\metroframework dll\metroframework dll\MetroFramework.Design.dll</HintPath>
+      <HintPath>..\..\..\..\metroframework dll\metroframework dll\MetroFramework.Design.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Fonts">
-      <HintPath>..\..\metroframework dll\metroframework dll\MetroFramework.Fonts.dll</HintPath>
+      <HintPath>..\..\..\..\metroframework dll\metroframework dll\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

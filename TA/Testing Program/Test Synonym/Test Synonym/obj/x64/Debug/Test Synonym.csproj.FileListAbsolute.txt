@@ -7,3 +7,6 @@ c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\
 c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\bin\x64\Debug\Test Synonym.pdb
 c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\obj\x64\Debug\Test Synonym.exe
 c:\users\wisely\documents\visual studio 2015\Projects\Test Synonym\Test Synonym\obj\x64\Debug\Test Synonym.pdb
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Test Synonym\Test Synonym\bin\x64\Debug\Test Synonym.exe.config
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Test Synonym\Test Synonym\obj\x64\Debug\Test Synonym.exe
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Test Synonym\Test Synonym\obj\x64\Debug\Test Synonym.pdb

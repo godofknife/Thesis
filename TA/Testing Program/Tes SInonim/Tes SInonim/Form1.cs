@@ -123,7 +123,7 @@ namespace Tes_SInonim
 
                 foreach (string j in listBox2.Items)
                 {
-                    comm = new OleDbCommand("Select * from Kamus_Tesaurus where * = ' " + j + "'", connection);
+                    comm = new OleDbCommand("Select * from Kamus_Tesaurus where Kata_u = '" + j + "'", connection);
                     string kata = (string)comm.ExecuteScalar();
                     label1.Text = kata;
                     break;

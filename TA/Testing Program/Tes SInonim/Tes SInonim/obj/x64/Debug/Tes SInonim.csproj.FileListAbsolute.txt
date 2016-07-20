@@ -1,0 +1,10 @@
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Tes SInonim\Tes SInonim\bin\x64\Debug\Tes SInonim.exe.config
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Tes SInonim\Tes SInonim\obj\x64\Debug\Tes_SInonim.Form1.resources
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Tes SInonim\Tes SInonim\obj\x64\Debug\Tes_SInonim.Properties.Resources.resources
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Tes SInonim\Tes SInonim\obj\x64\Debug\Tes SInonim.csproj.GenerateResource.Cache
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Tes SInonim\Tes SInonim\obj\x64\Debug\Tes SInonim.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Tes SInonim\Tes SInonim\bin\x64\Debug\Tes SInonim.exe
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Tes SInonim\Tes SInonim\bin\x64\Debug\Tes SInonim.pdb
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Tes SInonim\Tes SInonim\bin\x64\Debug\itextsharp.dll
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Tes SInonim\Tes SInonim\obj\x64\Debug\Tes SInonim.exe
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Testing Program\Tes SInonim\Tes SInonim\obj\x64\Debug\Tes SInonim.pdb

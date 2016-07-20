@@ -1,4 +1,3 @@
-
 1. project sinonim rivaldi ada di folder testing program, database di project sinonim blom di update soalnya takut bermasalah
 begitu juga di folder windowsformapp13 di mana tempat project TA nya database blom di update
 2.database bru di msukkan k folder database, isi database 80-85 persen fix dari noise seperti angka dan huruf jika masih ada
