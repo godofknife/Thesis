@@ -37,8 +37,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
@@ -75,6 +73,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -103,10 +103,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.metroProgressBar1);
             this.tabPage1.Controls.Add(this.metroTile3);
-            this.tabPage1.Controls.Add(this.richTextBox2);
-            this.tabPage1.Controls.Add(this.richTextBox1);
             this.tabPage1.Controls.Add(this.metroTile2);
             this.tabPage1.Controls.Add(this.metroTextBox2);
             this.tabPage1.Controls.Add(this.metroTile1);
@@ -139,30 +139,6 @@
             this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile3.UseSelectable = true;
             this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Enabled = false;
-            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(706, 51);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(624, 302);
-            this.richTextBox2.TabIndex = 28;
-            this.richTextBox2.Text = "";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(15, 51);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(623, 302);
-            this.richTextBox1.TabIndex = 27;
-            this.richTextBox1.Text = "";
             // 
             // metroTile2
             // 
@@ -630,6 +606,26 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.textBox1.Location = new System.Drawing.Point(15, 51);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(623, 303);
+            this.textBox1.TabIndex = 31;
+            // 
+            // textBox2
+            // 
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.textBox2.Location = new System.Drawing.Point(688, 51);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(623, 303);
+            this.textBox2.TabIndex = 32;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -645,6 +641,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -665,8 +662,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
         private MetroFramework.Controls.MetroTile metroTile3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private MetroFramework.Controls.MetroTile metroTile2;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private MetroFramework.Controls.MetroTile metroTile1;
@@ -702,6 +697,8 @@
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

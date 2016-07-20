@@ -25,7 +25,7 @@ namespace WindowsFormsApplication13
            
             InitializeComponent();
             metroTextBox2.Hide();
-            richTextBox2.Hide();
+            textBox2.Hide();
             metroTile2.Hide();
             metroProgressBar1.Hide();
             groupBox1.Hide();
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication13
             if (openDlg.ShowDialog() == DialogResult.OK)
             {
                 metroTextBox2.Show();
-                richTextBox2.Show();
+                textBox2.Show();
                 metroTile2.Show();
                 string filePath = openDlg.FileName.ToString();
                 filePath = openDlg.FileName.ToString();
@@ -75,7 +75,7 @@ namespace WindowsFormsApplication13
 
                         s = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(s)));
                         strText = strText + s;
-                        richTextBox1.Text = strText;
+                        textBox1.Text = strText;
                     }
                     read.Close();
                 }
@@ -110,7 +110,7 @@ namespace WindowsFormsApplication13
 
                         s = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(s)));
                         strText = strText + s;
-                        richTextBox2.Text = strText;
+                        textBox2.Text = strText;
                     }
                     read.Close();
                 }
@@ -151,9 +151,9 @@ namespace WindowsFormsApplication13
                 listBox2.Items.Clear();
                 listBox1.Text.ToLower();
                 listBox2.Text.ToLower();
-                Char chr = richTextBox1.Text[0];
-                string[] word = richTextBox1.Text.Split('.');
-                string[] word1 = richTextBox2.Text.Split('.');
+                Char chr = textBox1.Text[0];
+                string[] word = textBox1.Text.Split('.');
+                string[] word1 = textBox2.Text.Split('.');
                 string[,] listkata = new string[0, 0];
                 foreach (string item in word)
                 {
@@ -323,15 +323,15 @@ namespace WindowsFormsApplication13
                 listBox2.Items.Clear();
                 listBox1.Text.ToLower();
                 listBox2.Text.ToLower();
-                Char chr = richTextBox1.Text[0];
-                string[] word = richTextBox1.Text.Split(' ');
-                string[] word1 = richTextBox2.Text.Split(' ');
+                Char chr = textBox1.Text[0];
+                string[] word = textBox1.Text.Split(' ');
+                string[] word1 = textBox2.Text.Split(' ');
                 string[,] listkata = new string[0, 0];
                 foreach (string item in word)
                 {
                     RemoveChars(item);
-                     listBox1.Items.Add(item);
-                    
+                    listBox1.Items.Add(item);
+
                 }
                 foreach (string item in word1)
                 {
@@ -352,66 +352,67 @@ namespace WindowsFormsApplication13
                     listBox6.Items.Add(cost1);
                 }
                 //Proses Synonim disini
-                conn = new OleDbConnection();
-                conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
-                conn.Open();
+        //        conn = new OleDbConnection();
+        //        conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
+        //        conn.Open();
 
-                OleDbDataAdapter da;
-                //DataTable dt = new DataTable();
-                string[] tempo = new string[147];
-                int pos = 0;
-                int nilai = 0;
-                for (int i = 0; i < listBox1.Items.Count - 1; i++)
-                {
-                    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox1.Items[i].ToString() + "%'";
-                    da = new OleDbDataAdapter(sql, conn);
-                    DataSet ds = new DataSet();
-                    da.Fill(ds, "persamaan");
-                    //da.Fill(dt, "persamaan");
-                    while (pos < ds.Tables["persamaan"].Columns.Count - 1)
-                    {
-                        tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                        pos++;
-                    }
-                    for (int j = 0; j < listBox8.Items.Count - 1; j++)
-                    {
-                        for (int k = 0; k < tempo.Length; k++)
-                        {
-                            if (tempo[k] == listBox8.Items[j].ToString())
-                                nilai += 1;
-                        }
-                    }
-                    ds.Clear();
-                }
-                listBox2.Items.Add(nilai);
-                nilai = 0;
-                for (int i = 0; i < listBox8.Items.Count - 1; i++)
-                {
-                    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox8.Items[i].ToString() + "%'";
-                    da = new OleDbDataAdapter(sql, conn);
-                    DataSet ds = new DataSet();
-                    da.Fill(ds, "persamaan");
-                    //da.Fill(dt, "persamaan");
-                    while (pos < ds.Tables["persamaan"].Columns.Count - 1)
-                    {
-                        tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                        pos++;
-                    }
-                    for (int j = 0; j < listBox1.Items.Count - 1; j++)
-                    {
-                        for (int k = 0; k < tempo.Length; k++)
-                        {
-                            if (tempo[k] == listBox1.Items[j].ToString())
-                                nilai += 1;
-                        }
-                    }
-                    ds.Clear();
-                }
-                listBox7.Items.Add(nilai);
-                conn.Close();
+        //        OleDbDataAdapter da;
+        //        //DataTable dt = new DataTable();
+        //        string[] tempo = new string[147];
+        //        int pos = 0;
+        //        int nilai = 0;
+        //        for (int i = 0; i < listBox1.Items.Count - 1; i++)
+        //        {
+        //            sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+        //            sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox1.Items[i].ToString() + "%'";
+        //            da = new OleDbDataAdapter(sql, conn);
+        //            DataSet ds = new DataSet();
+        //            da.Fill(ds, "persamaan");
+        //            //da.Fill(dt, "persamaan");
+        //            while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+        //            {
+        //                tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+        //                pos++;
+        //            }
+        //            for (int j = 0; j < listBox8.Items.Count - 1; j++)
+        //            {
+        //                for (int k = 0; k < tempo.Length; k++)
+        //                {
+        //                    if (tempo[k] == listBox8.Items[j].ToString())
+        //                        nilai += 1;
+        //                }
+        //            }
+        //            ds.Clear();
+        //        }
+        //        listBox2.Items.Add(nilai);
+        //        nilai = 0;
+        //        for (int i = 0; i < listBox8.Items.Count - 1; i++)
+        //        {
+        //            sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+        //            sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox8.Items[i].ToString() + "%'";
+        //            da = new OleDbDataAdapter(sql, conn);
+        //            DataSet ds = new DataSet();
+        //            da.Fill(ds, "persamaan");
+        //            //da.Fill(dt, "persamaan");
+        //            while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+        //            {
+        //                tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+        //                pos++;
+        //            }
+        //            for (int j = 0; j < listBox1.Items.Count - 1; j++)
+        //            {
+        //                for (int k = 0; k < tempo.Length; k++)
+        //                {
+        //                    if (tempo[k] == listBox1.Items[j].ToString())
+        //                        nilai += 1;
+        //                }
+        //            }
+        //            ds.Clear();
+        //        }
+        //        listBox7.Items.Add(nilai);
+        //        conn.Close();
             }
+        }
             //bool temu = false;
             //while (pos < dataGridView1.Columns.Count & !temu)
             //{
@@ -444,22 +445,22 @@ namespace WindowsFormsApplication13
             //if (temp[k] == "Kemajuan")
             //    label1.Text = "true";
 
-        }
-        //static string ConverStringArrayToString(string[] array)
-        //{
-        //    StringBuilder builder = new StringBuilder();
-        //    foreach(string value in array)
-        //    {
-        //        builder.Append(value);
-        //        builder.Append('.');
-        //    }
-        //    return builder.ToString();
-        //}
-        //static string ConvertStringArrayToStringJoin (string[]array)
-        //{
-        //    string result = string.Join(".", array);
-        //    return result;
-        //}
+            //}
+            //static string ConverStringArrayToString(string[] array)
+            //{
+            //    StringBuilder builder = new StringBuilder();
+            //    foreach(string value in array)
+            //    {
+            //        builder.Append(value);
+            //        builder.Append('.');
+            //    }
+            //    return builder.ToString();
+            //}
+            //static string ConvertStringArrayToStringJoin (string[]array)
+            //{
+            //    string result = string.Join(".", array);
+            //    return result;
+            //}
         public string RemoveChars(string str)
         {
             string[] chars = new string[] { ",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", "-", "_", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",";",":","(",")","[","]","{","}","=","+","?","`"};
@@ -539,8 +540,8 @@ namespace WindowsFormsApplication13
             tabControl1.SelectedTab = t;
             metroTextBox1.Clear();
             metroTextBox2.Clear();
-            richTextBox1.Clear();
-            richTextBox2.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
             metroProgressBar1.Hide();
         }
         private void metroTile5_Click(object sender, EventArgs e)
