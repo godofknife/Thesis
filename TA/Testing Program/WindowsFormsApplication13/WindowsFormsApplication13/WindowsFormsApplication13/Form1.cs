@@ -329,14 +329,19 @@ namespace WindowsFormsApplication13
                 string[,] listkata = new string[0, 0];
                 foreach (string item in word)
                 {
-                    RemoveChars(item);
-                    listBox1.Items.Add(item);
+                    if (!string.IsNullOrWhiteSpace(item))
+                    {
+                        listBox1.Items.Add(RemoveChars(item));
+                    }
 
                 }
                 foreach (string item in word1)
                 {
-                    RemoveChars(item);
-                    listBox8.Items.Add(item);
+                    if (!string.IsNullOrWhiteSpace(item))
+                    {
+                        listBox8.Items.Add(RemoveChars(item));
+                    }
+                    
                 }
                 //Proses levenstein disini
                 foreach (string cek in listBox1.Items)

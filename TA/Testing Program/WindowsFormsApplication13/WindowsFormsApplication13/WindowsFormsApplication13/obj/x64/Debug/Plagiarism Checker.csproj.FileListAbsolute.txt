@@ -39,3 +39,26 @@ C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Testing Program\WindowsFormsApplicat
 C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Testing Program\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Properties.Resources.resources
 C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Testing Program\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
 C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Testing Program\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.pdb
+G:\New folder\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.exe.config
+G:\New folder\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.pdb
+C:\Users\ACER\Downloads\Compressed\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.exe.config
+C:\Users\ACER\Downloads\Compressed\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.pdb
+C:\Users\ACER\Downloads\Compressed\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.exe
+C:\Users\ACER\Downloads\Compressed\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.pdb
+C:\Users\ACER\Downloads\Compressed\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Downloads\Compressed\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Form1.resources
+C:\Users\ACER\Downloads\Compressed\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Properties.Resources.resources
+C:\Users\ACER\Downloads\Compressed\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\ACER\Downloads\Compressed\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.exe
+G:\New folder (2)\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.exe.config
+G:\New folder (2)\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.exe
+G:\New folder (2)\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.pdb
+G:\New folder (2)\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.exe
+G:\New folder (2)\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.pdb
+G:\New folder (2)\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+G:\New folder (2)\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Form1.resources
+G:\New folder (2)\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Properties.Resources.resources
+G:\New folder (2)\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Testing Program\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.exe.config
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Testing Program\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.exe
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Testing Program\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.pdb
