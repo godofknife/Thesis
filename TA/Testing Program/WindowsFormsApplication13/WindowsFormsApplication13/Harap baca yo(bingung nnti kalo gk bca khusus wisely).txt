@@ -1,0 +1,50 @@
+Penjelasan tentang tampilan result dari File 1:
+
+	    Persentase
+textbox 5 hasil persentase levensthein
+textbox 6 hasil persentase sinonim
+textbox 7 hasil akhir (persentase levensthein + persentase sinonim) 
+    textbox 7 berubah warna sesuai tingkat plagiat;
+    kuning jika  <30%
+    hijau jika   30-70%
+    merah jika   70-100% 
+
+	    details
+textbox 8 jumlah kata berdasarkan levensthein
+textbox 9 jumlah kata berdasarkan sinonim
+textbox 10 total kata dari file bukan total dari levensthein + sinonim (ingat jumlah dari file)
+
+	   Bagian status
+label 36 bisa berubah warna sesuai textbox 7
+  kuning jika  <30%
+  hijau  jika   30-70%
+  merah  jika   70-100%
+
+------------------------------------------------------------------------------------------------------------------------
+
+Penjelasan tentang tampilan result dari File 2:
+
+	    Persentase
+textbox 21 hasil persentase levensthein
+textbox 20 hasil persentase sinonim
+textbox 16 hasil akhir (persentase levensthein + persentase sinonim) 
+    textbox 16 berubah warna sesuai tingkat plagiat;
+    jika kuning  <30%
+    jika hijau   30-70%
+    jika merah   70-100% 
+
+	    details
+textbox 15 jumlah kata berdasarkan levensthein
+textbox 14 jumlah kata berdasarkan sinonim
+textbox 13 total kata dari file bukan total dari levensthein + sinonim (ingat jumlah dari file)
+
+	   Bagian status
+label 22 bisa berubah warna sesuai textbox 16
+jika kuning  <30%
+jika hijau   30-70%
+jika merah   70-100%
+
+
+
+kalo gak bisa di implementasi buat dengan versi yang lebih mudah aja
+

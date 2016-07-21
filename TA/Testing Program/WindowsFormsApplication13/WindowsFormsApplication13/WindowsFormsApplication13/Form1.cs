@@ -30,7 +30,9 @@ namespace WindowsFormsApplication13
             metroProgressBar1.Hide();
             groupBox1.Hide();
             metroTile3.Hide();
+            
         }
+        private short hours, minute, second;
         public OleDbConnection conn;
         public string link = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
         public string sql;
@@ -63,6 +65,9 @@ namespace WindowsFormsApplication13
                 filePath = openDlg.FileName.ToString();
                 metroTextBox1.Text = filePath;
                 metroTextBox1.Enabled = false;
+                textBox3.Text = filePath;
+                textBox3.Text = filePath;
+                textBox3.Enabled = false;
                 string strText = string.Empty;
                 try
                 {
@@ -98,6 +103,9 @@ namespace WindowsFormsApplication13
                 filePath = openDlg.FileName.ToString();
                 metroTextBox2.Text = filePath;
                 metroTextBox2.Enabled = false;
+                textBox22.Text = filePath;
+                textBox22.Text = filePath;
+                textBox22.Enabled = false;
                 string strText = string.Empty;
                 try
                 {
@@ -145,7 +153,7 @@ namespace WindowsFormsApplication13
                 materialLabel5.Show();
 
                 #endregion
-                this.timer1.Start();
+                timer1.Start();
                 metroProgressBar1.Show();
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
@@ -644,6 +652,39 @@ namespace WindowsFormsApplication13
         }
         private void metroTile4_Click(object sender, EventArgs e)
         {
+            #region
+            DialogResult dialogResult = MessageBox.Show("If you go back, all process will be resetted and previous file be load back. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+                listBox3.Items.Clear();
+                listBox4.Items.Clear();
+                listBox5.Items.Clear();
+                listBox6.Items.Clear();
+                listBox7.Items.Clear();
+                listBox8.Items.Clear();
+                listBox9.Items.Clear();
+                listBox10.Items.Clear();
+                listBox1.Hide();
+                listBox2.Hide();
+                listBox3.Hide();
+                listBox4.Hide();
+                listBox5.Hide();
+                listBox6.Hide();
+                listBox7.Hide();
+                listBox8.Hide();
+                listBox9.Hide();
+                listBox10.Hide();
+                materialLabel1.Hide();
+                materialLabel2.Hide();
+                materialLabel3.Hide();
+                materialLabel4.Hide();
+                materialLabel5.Hide();
+                materialLabel8.Hide();
+                label3.Show();
+                label1.Show();
+            }
             TabPage t = tabControl1.TabPages[0];
             tabControl1.SelectedTab = t;
             metroTextBox1.Clear();
@@ -651,9 +692,20 @@ namespace WindowsFormsApplication13
             textBox1.Clear();
             textBox2.Clear();
             metroProgressBar1.Hide();
+            #endregion 
         }
         private void metroTile5_Click(object sender, EventArgs e)
         {
+            TabPage t = tabControl1.TabPages[2];
+            tabControl1.SelectedTab = t;
+            label2.Hide();
+            label4.Hide();
+            label6.Show();
+            textBox3.Show();
+            groupBox2.Show();
+            label44.Show();
+            textBox22.Show();
+            groupBox3.Show();
             
         }
 
@@ -1770,9 +1822,94 @@ namespace WindowsFormsApplication13
             metroTile3.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label14.Show();
+            label15.Show();
+            label16.Show();
+            label17.Show();
+            label18.Show();
+            label19.Show();
+            textBox8.Show();
+            textBox9.Show();
+            textBox10.Show();
+            label35.Show();
+            label36.Show();
+            label37.Show();
+            label38.Show();
+            label39.Show();
+            textBox18.Show();
+            textBox19.Show();
+            textBox17.Show();
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label31.Show();
+            label30.Show();
+            label29.Show();
+            textBox15.Show();
+            textBox14.Show();
+            textBox13.Show();
+            label26.Show();
+            label27.Show();
+            label28.Show();
+            label23.Show();
+            label22.Show();
+            textBox4.Show();
+            textBox12.Show();
+            textBox11.Show();
+            label21.Show();
+            label7.Show();
+            label5.Show();
+
+        }
+
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             metroTile3.Show();
+        }
+
+        private void metroTile6_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            listBox3.Items.Clear();
+            listBox4.Items.Clear();
+            listBox5.Items.Clear();
+            listBox6.Items.Clear();
+            listBox7.Items.Clear();
+            listBox8.Items.Clear();
+            listBox9.Items.Clear();
+            listBox10.Items.Clear();
+            listBox1.Hide();
+            listBox2.Hide();
+            listBox3.Hide();
+            listBox4.Hide();
+            listBox5.Hide();
+            listBox6.Hide();
+            listBox7.Hide();
+            listBox8.Hide();
+            listBox9.Hide();
+            listBox10.Hide();
+            materialLabel1.Hide();
+            materialLabel2.Hide();
+            materialLabel3.Hide();
+            materialLabel4.Hide();
+            materialLabel5.Hide();
+            materialLabel8.Hide();
+            label3.Show();
+            label1.Show();
+            TabPage t = tabControl1.TabPages[0];
+            tabControl1.SelectedTab = t;
+            metroTextBox1.Clear();
+            metroTextBox2.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
+            metroProgressBar1.Hide();
+
         }
     }
 
