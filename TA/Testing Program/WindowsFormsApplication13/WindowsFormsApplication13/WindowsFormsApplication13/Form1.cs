@@ -133,10 +133,10 @@ namespace WindowsFormsApplication13
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
-            storevariable variable = new storevariable();
+
             if (materialRadioButton2.Checked == true && materialRadioButton1.Checked == false)
             {
-                variable.cekresultstemming = true;
+                storevariable.cekstemmingresult = true;
                 //Tokenization
                 #region
                 label3.Hide();
@@ -335,7 +335,7 @@ namespace WindowsFormsApplication13
             }
             else if (materialRadioButton1.Checked == true && materialRadioButton2.Checked == false)
             {
-                variable.cekresultstemming = false;
+                storevariable.cekstemmingresult = false;
 
                 //Tokenization
                 #region
@@ -714,7 +714,7 @@ namespace WindowsFormsApplication13
             textBox22.Show();
             groupBox3.Show();
             listBox11.Hide();
-            if (variable.cekresultstemming)
+            if (storevariable.cekstemmingresult == true)
             {
                 //Counting Total words in Textbox
                 String countingwords = textBox1.Text.Trim();
@@ -843,7 +843,7 @@ namespace WindowsFormsApplication13
                 textBox8.Text = variable.finallevelscore.ToString();
                 textBox15.Text = variable.finallevenscore2.ToString();
             }
-            else if(!variable.cekresultstemming )
+            else if (storevariable.cekstemmingresult == false )
             {
                 //Counting Total words in Textbox
                 String countingwords = textBox1.Text.Trim();

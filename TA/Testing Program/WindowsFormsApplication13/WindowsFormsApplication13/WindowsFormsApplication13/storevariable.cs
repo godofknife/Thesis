@@ -13,6 +13,6 @@ namespace WindowsFormsApplication13
         public int finallevelscore;
         public int scoreleven2;
         public int finallevenscore2;
-        public bool cekresultstemming = true;
+        public static Boolean cekstemmingresult;
     }
 }
