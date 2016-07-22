@@ -32,6 +32,8 @@ namespace WindowsFormsApplication13
             metroTile3.Hide();
             
         }
+
+        
         private short hours, minute, second;
         public OleDbConnection conn;
         public string link = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
@@ -131,8 +133,10 @@ namespace WindowsFormsApplication13
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
+            storevariable variable = new storevariable();
             if (materialRadioButton2.Checked == true && materialRadioButton1.Checked == false)
             {
+                variable.cekresultstemming = true;
                 //Tokenization
                 #region
                 label3.Hide();
@@ -331,6 +335,8 @@ namespace WindowsFormsApplication13
             }
             else if (materialRadioButton1.Checked == true && materialRadioButton2.Checked == false)
             {
+                variable.cekresultstemming = false;
+
                 //Tokenization
                 #region
                 label3.Hide();
@@ -696,6 +702,7 @@ namespace WindowsFormsApplication13
         }
         private void metroTile5_Click(object sender, EventArgs e)
         {
+            storevariable variable = new storevariable();
             TabPage t = tabControl1.TabPages[2];
             tabControl1.SelectedTab = t;
             label2.Hide();
@@ -706,7 +713,266 @@ namespace WindowsFormsApplication13
             label44.Show();
             textBox22.Show();
             groupBox3.Show();
-            
+            listBox11.Hide();
+            if (variable.cekresultstemming)
+            {
+                //Counting Total words in Textbox
+                String countingwords = textBox1.Text.Trim();
+                string countingwords2 = textBox2.Text.Trim();
+                int wordCount = 0, index = 0;
+                int wordCount2 = 0, index2 = 0;
+                while (index < countingwords.Length)
+                {
+                    // check if current char is part of a word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == false)
+                        index++;
+
+                    wordCount++;
+
+                    // skip whitespace until next word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == true)
+                        index++;
+                }
+                textBox10.Text = wordCount.ToString();
+                while (index2 < countingwords2.Length)
+                {
+                    // check if current char is part of a word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == false)
+                        index2++;
+
+                    wordCount2++;
+
+                    // skip whitespace until next word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == true)
+                        index2++;
+                }
+                textBox13.Text = wordCount2.ToString();
+                //Ambil nilai dari listbox sinonim untuk Stemming
+                int angka = int.Parse(listBox9.Items[0].ToString());
+
+                int angka2 = int.Parse(listBox10.Items[0].ToString());
+                textBox9.Text = angka.ToString();
+                textBox14.Text = angka2.ToString();
+                //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming
+                int ambilselisih;
+                int totalkatasinonim;
+                int ambilinverse;
+                double persensinonim;
+                totalkatasinonim = angka + angka2;
+                ambilselisih = Math.Abs(angka - angka2);
+                ambilinverse = totalkatasinonim + (ambilselisih * -1);
+                persensinonim = (double)ambilinverse / (double)totalkatasinonim * 100;
+                textBox6.Text = persensinonim.ToString();
+                textBox20.Text = persensinonim.ToString();
+                //Ambil Levenstein distance angka
+                int levangka, levangka2, selisihleven, totalleven, inverseleven;
+                for (int i = 0; i < listBox4.Items.Count; i++)
+                {
+                    levangka = int.Parse(listBox4.Items[i].ToString());
+                    for (int x = 0; x < listBox5.Items.Count; x++)
+                    {
+                        levangka2 = int.Parse(listBox5.Items[x].ToString());
+                        totalleven = levangka + levangka2;
+                        selisihleven = Math.Abs(levangka - levangka2);
+                        inverseleven = totalleven + (selisihleven * -1);
+                        double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
+
+                        listBox11.Items.Add(persenleven);
+                    }
+
+                }
+                double sum = 0;
+
+                for (int i = 0; i < listBox11.Items.Count; i++)
+                {
+                    sum += Math.Round(Convert.ToDouble(listBox11.Items[i].ToString()), 3);
+                    variable.finalresult = Math.Round(sum / i, 3);
+                    textBox5.Text = variable.finalresult.ToString();
+                    textBox21.Text = variable.finalresult.ToString();
+                }
+                double hasilakhirlevensinonim;
+                hasilakhirlevensinonim = Math.Round((persensinonim + variable.finalresult) / 2, 3);
+                textBox7.Text = hasilakhirlevensinonim.ToString();
+                textBox16.Text = hasilakhirlevensinonim.ToString();
+                //foreach (var item in listBox11.Items)
+                //{
+                //    sum += Math.Round(Convert.ToDouble(item.ToString()),3);
+                //    double finalresult = sum / listBox11.Items.Count;
+                //    label36.Text = finalresult.ToString();
+                //}
+                if (hasilakhirlevensinonim < 30)
+                {
+                    label36.Text = "Low Plagiarism";
+                    label36.ForeColor = Color.Green;
+                    label22.Text = "Low Plagiarism";
+                    label22.ForeColor = Color.Green;
+                    //textBox7.BackColor = Color.Green;
+                    //textBox16.BackColor = Color.Green;
+                }
+                else if (hasilakhirlevensinonim >= 30 && hasilakhirlevensinonim <= 70)
+                {
+                    label36.Text = "Medium Plagiarism";
+                    label36.ForeColor = Color.Yellow;
+                    label22.Text = "Medium Plagiarism";
+                    label22.ForeColor = Color.Yellow;
+                    //textBox7.BackColor = Color.Yellow;
+                    //textBox16.BackColor = Color.Yellow;
+                }
+                else if (hasilakhirlevensinonim >= 71 && hasilakhirlevensinonim <= 100)
+                {
+                    label36.Text = "High Plagiarism";
+                    label36.ForeColor = Color.Red;
+                    label22.Text = "High Plagiarism";
+                    label22.ForeColor = Color.Red;
+                    //textBox7.BackColor = Color.Red;
+                    //textBox16.BackColor = Color.Red;
+
+                }
+                //Ambil Levenstein Score
+                for (int i = 0; i < listBox4.Items.Count; i++)
+                {
+                    variable.scoreleven += Convert.ToInt32(listBox4.Items[i].ToString());
+                    variable.finallevelscore = variable.scoreleven / listBox4.Items.Count;
+                }
+                textBox8.Text = variable.finallevelscore.ToString();
+                for (int i = 0; i < listBox5.Items.Count; i++)
+                {
+                    variable.scoreleven2 += Convert.ToInt32(listBox5.Items[i].ToString());
+                    variable.finallevenscore2 = variable.scoreleven2 / listBox5.Items.Count;
+                }
+                textBox8.Text = variable.finallevelscore.ToString();
+                textBox15.Text = variable.finallevenscore2.ToString();
+            }
+            else if(!variable.cekresultstemming )
+            {
+                //Counting Total words in Textbox
+                String countingwords = textBox1.Text.Trim();
+                string countingwords2 = textBox2.Text.Trim();
+                int wordCount = 0, index = 0;
+                int wordCount2 = 0, index2 = 0;
+                while (index < countingwords.Length)
+                {
+                    // check if current char is part of a word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == false)
+                        index++;
+
+                    wordCount++;
+
+                    // skip whitespace until next word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == true)
+                        index++;
+                }
+                textBox10.Text = wordCount.ToString();
+                while (index2 < countingwords2.Length)
+                {
+                    // check if current char is part of a word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == false)
+                        index2++;
+
+                    wordCount2++;
+
+                    // skip whitespace until next word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == true)
+                        index2++;
+                }
+                textBox13.Text = wordCount2.ToString();
+                //Ambil nilai dari listbox sinonim untuk Stemming
+                int angka = int.Parse(listBox2.Items[0].ToString());
+
+                int angka2 = int.Parse(listBox7.Items[0].ToString());
+                textBox9.Text = angka.ToString();
+                textBox14.Text = angka2.ToString();
+                //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming
+                int ambilselisih;
+                int totalkatasinonim;
+                int ambilinverse;
+                double persensinonim;
+                totalkatasinonim = angka + angka2;
+                ambilselisih = Math.Abs(angka - angka2);
+                ambilinverse = totalkatasinonim + (ambilselisih * -1);
+                persensinonim = (double)ambilinverse / (double)totalkatasinonim * 100;
+                textBox6.Text = persensinonim.ToString();
+                textBox20.Text = persensinonim.ToString();
+                //Ambil Levenstein distance angka
+                int levangka, levangka2, selisihleven, totalleven, inverseleven;
+                for (int i = 0; i < listBox3.Items.Count; i++)
+                {
+                    levangka = int.Parse(listBox3.Items[i].ToString());
+                    for (int x = 0; x < listBox6.Items.Count; x++)
+                    {
+                        levangka2 = int.Parse(listBox6.Items[x].ToString());
+                        totalleven = levangka + levangka2;
+                        selisihleven = Math.Abs(levangka - levangka2);
+                        inverseleven = totalleven + (selisihleven * -1);
+                        double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
+
+                        listBox11.Items.Add(persenleven);
+                    }
+
+                }
+                double sum = 0;
+
+                for (int i = 0; i < listBox11.Items.Count; i++)
+                {
+                    sum += Math.Round(Convert.ToDouble(listBox11.Items[i].ToString()), 3);
+                    variable.finalresult = Math.Round(sum / i, 3);
+                    textBox5.Text = variable.finalresult.ToString();
+                    textBox21.Text = variable.finalresult.ToString();
+                }
+                double hasilakhirlevensinonim;
+                hasilakhirlevensinonim = Math.Round((persensinonim + variable.finalresult) / 2, 3);
+                textBox7.Text = hasilakhirlevensinonim.ToString();
+                textBox16.Text = hasilakhirlevensinonim.ToString();
+                //foreach (var item in listBox11.Items)
+                //{
+                //    sum += Math.Round(Convert.ToDouble(item.ToString()),3);
+                //    double finalresult = sum / listBox11.Items.Count;
+                //    label36.Text = finalresult.ToString();
+                //}
+                if (hasilakhirlevensinonim < 30)
+                {
+                    label36.Text = "Low Plagiarism";
+                    label36.ForeColor = Color.Green;
+                    label22.Text = "Low Plagiarism";
+                    label22.ForeColor = Color.Green;
+                    //textBox7.BackColor = Color.Green;
+                    //textBox16.BackColor = Color.Green;
+                }
+                else if (hasilakhirlevensinonim >= 30 && hasilakhirlevensinonim <= 70)
+                {
+                    label36.Text = "Medium Plagiarism";
+                    label36.ForeColor = Color.Yellow;
+                    label22.Text = "Medium Plagiarism";
+                    label22.ForeColor = Color.Yellow;
+                    //textBox7.BackColor = Color.Yellow;
+                    //textBox16.BackColor = Color.Yellow;
+                }
+                else if (hasilakhirlevensinonim >= 71 && hasilakhirlevensinonim <= 100)
+                {
+                    label36.Text = "High Plagiarism";
+                    label36.ForeColor = Color.Red;
+                    label22.Text = "High Plagiarism";
+                    label22.ForeColor = Color.Red;
+                    //textBox7.BackColor = Color.Red;
+                    //textBox16.BackColor = Color.Red;
+
+                }
+                //Ambil Levenstein Score
+                for (int i = 0; i < listBox3.Items.Count; i++)
+                {
+                    variable.scoreleven += Convert.ToInt32(listBox3.Items[i].ToString());
+                    variable.finallevelscore = variable.scoreleven / listBox3.Items.Count;
+                }
+                textBox8.Text = variable.finallevelscore.ToString();
+                for (int i = 0; i < listBox6.Items.Count; i++)
+                {
+                    variable.scoreleven2 += Convert.ToInt32(listBox6.Items[i].ToString());
+                    variable.finallevenscore2 = variable.scoreleven2 / listBox6.Items.Count;
+                }
+                textBox8.Text = variable.finallevelscore.ToString();
+                textBox15.Text = variable.finallevenscore2.ToString();
+            }
+          
         }
 
         private void tabControl1_ParentChanged(object sender, EventArgs e)

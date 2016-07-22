@@ -68,6 +68,7 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listBox11 = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -588,6 +589,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.listBox11);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.textBox22);
             this.tabPage2.Controls.Add(this.label44);
@@ -604,6 +606,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Result";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // listBox11
+            // 
+            this.listBox11.FormattingEnabled = true;
+            this.listBox11.ItemHeight = 21;
+            this.listBox11.Location = new System.Drawing.Point(564, 397);
+            this.listBox11.Name = "listBox11";
+            this.listBox11.Size = new System.Drawing.Size(120, 88);
+            this.listBox11.TabIndex = 30;
             // 
             // groupBox3
             // 
@@ -651,7 +662,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 21);
             this.label5.TabIndex = 62;
-            this.label5.Text = "70%-100%";
+            this.label5.Text = "71%-100%";
             this.label5.Visible = false;
             // 
             // label7
@@ -676,7 +687,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Yellow;
+            this.textBox4.BackColor = System.Drawing.Color.Green;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox4.Enabled = false;
@@ -704,7 +715,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.BackColor = System.Drawing.Color.Green;
+            this.textBox12.BackColor = System.Drawing.Color.Yellow;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox12.Enabled = false;
@@ -771,19 +782,19 @@
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(351, 204);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(53, 21);
+            this.label28.Size = new System.Drawing.Size(67, 21);
             this.label28.TabIndex = 40;
-            this.label28.Text = "words";
+            this.label28.Text = "Average";
             this.label28.Visible = false;
             // 
             // textBox13
             // 
             this.textBox13.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox13.Enabled = false;
-            this.textBox13.Location = new System.Drawing.Point(168, 271);
+            this.textBox13.Location = new System.Drawing.Point(246, 271);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(177, 29);
+            this.textBox13.Size = new System.Drawing.Size(99, 29);
             this.textBox13.TabIndex = 39;
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox13.Visible = false;
@@ -792,10 +803,10 @@
             // 
             this.textBox14.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox14.Enabled = false;
-            this.textBox14.Location = new System.Drawing.Point(168, 236);
+            this.textBox14.Location = new System.Drawing.Point(246, 236);
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(177, 29);
+            this.textBox14.Size = new System.Drawing.Size(99, 29);
             this.textBox14.TabIndex = 38;
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox14.Visible = false;
@@ -804,10 +815,10 @@
             // 
             this.textBox15.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(168, 201);
+            this.textBox15.Location = new System.Drawing.Point(246, 201);
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(177, 29);
+            this.textBox15.Size = new System.Drawing.Size(99, 29);
             this.textBox15.TabIndex = 37;
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox15.Visible = false;
@@ -837,9 +848,9 @@
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(19, 208);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(139, 21);
+            this.label31.Size = new System.Drawing.Size(221, 21);
             this.label31.TabIndex = 34;
-            this.label31.Text = "Levensthein(word)";
+            this.label31.Text = "Levensthein(Letter/Each word)";
             this.label31.Visible = false;
             // 
             // button2
@@ -865,10 +876,10 @@
             // 
             this.textBox16.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox16.Enabled = false;
-            this.textBox16.Location = new System.Drawing.Point(315, 117);
+            this.textBox16.Location = new System.Drawing.Point(280, 117);
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(30, 29);
+            this.textBox16.Size = new System.Drawing.Size(65, 29);
             this.textBox16.TabIndex = 31;
             this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -912,10 +923,10 @@
             // 
             this.textBox20.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox20.Enabled = false;
-            this.textBox20.Location = new System.Drawing.Point(315, 82);
+            this.textBox20.Location = new System.Drawing.Point(280, 82);
             this.textBox20.Name = "textBox20";
             this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(30, 29);
+            this.textBox20.Size = new System.Drawing.Size(65, 29);
             this.textBox20.TabIndex = 26;
             this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -923,10 +934,10 @@
             // 
             this.textBox21.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox21.Enabled = false;
-            this.textBox21.Location = new System.Drawing.Point(315, 47);
+            this.textBox21.Location = new System.Drawing.Point(280, 47);
             this.textBox21.Name = "textBox21";
             this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(30, 29);
+            this.textBox21.Size = new System.Drawing.Size(65, 29);
             this.textBox21.TabIndex = 25;
             this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1007,7 +1018,7 @@
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(87, 21);
             this.label39.TabIndex = 62;
-            this.label39.Text = "70%-100%";
+            this.label39.Text = "71%-100%";
             this.label39.Visible = false;
             // 
             // label38
@@ -1032,7 +1043,7 @@
             // 
             // textBox18
             // 
-            this.textBox18.BackColor = System.Drawing.Color.Yellow;
+            this.textBox18.BackColor = System.Drawing.Color.Green;
             this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox18.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox18.Enabled = false;
@@ -1060,7 +1071,7 @@
             // 
             // textBox19
             // 
-            this.textBox19.BackColor = System.Drawing.Color.Green;
+            this.textBox19.BackColor = System.Drawing.Color.Yellow;
             this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox19.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox19.Enabled = false;
@@ -1136,19 +1147,19 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(351, 204);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 21);
+            this.label17.Size = new System.Drawing.Size(71, 21);
             this.label17.TabIndex = 40;
-            this.label17.Text = "words";
+            this.label17.Text = "Average ";
             this.label17.Visible = false;
             // 
             // textBox10
             // 
             this.textBox10.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(168, 271);
+            this.textBox10.Location = new System.Drawing.Point(246, 271);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(177, 29);
+            this.textBox10.Size = new System.Drawing.Size(99, 29);
             this.textBox10.TabIndex = 39;
             this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox10.Visible = false;
@@ -1157,10 +1168,10 @@
             // 
             this.textBox9.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(168, 236);
+            this.textBox9.Location = new System.Drawing.Point(246, 236);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(177, 29);
+            this.textBox9.Size = new System.Drawing.Size(99, 29);
             this.textBox9.TabIndex = 38;
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox9.Visible = false;
@@ -1169,10 +1180,10 @@
             // 
             this.textBox8.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(168, 201);
+            this.textBox8.Location = new System.Drawing.Point(246, 201);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(177, 29);
+            this.textBox8.Size = new System.Drawing.Size(99, 29);
             this.textBox8.TabIndex = 37;
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox8.Visible = false;
@@ -1202,9 +1213,9 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(19, 208);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(139, 21);
+            this.label14.Size = new System.Drawing.Size(221, 21);
             this.label14.TabIndex = 34;
-            this.label14.Text = "Levensthein(word)";
+            this.label14.Text = "Levensthein(Letter/Each word)";
             this.label14.Visible = false;
             // 
             // button1
@@ -1230,10 +1241,10 @@
             // 
             this.textBox7.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(315, 117);
+            this.textBox7.Location = new System.Drawing.Point(283, 117);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(30, 29);
+            this.textBox7.Size = new System.Drawing.Size(62, 29);
             this.textBox7.TabIndex = 31;
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1277,10 +1288,10 @@
             // 
             this.textBox6.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(315, 82);
+            this.textBox6.Location = new System.Drawing.Point(283, 82);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(30, 29);
+            this.textBox6.Size = new System.Drawing.Size(62, 29);
             this.textBox6.TabIndex = 26;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1288,10 +1299,10 @@
             // 
             this.textBox5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(315, 47);
+            this.textBox5.Location = new System.Drawing.Point(283, 47);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(30, 29);
+            this.textBox5.Size = new System.Drawing.Size(62, 29);
             this.textBox5.TabIndex = 25;
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1578,6 +1589,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListBox listBox11;
     }
 }
 
