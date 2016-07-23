@@ -184,7 +184,7 @@ namespace WindowsFormsApplication13
                 conn.Open();
                 OleDbCommand com = new OleDbCommand(sql, conn);
                 OleDbDataReader reader = com.ExecuteReader();
-                string[] temp = new string[listBox1.Items.Count];
+                string[] temp = new string[0];
                 string regexCode = string.Format(@"\s?\b(?:{0})\b\s?", string.Join("|", list));
 
                 Regex regex = new Regex(regexCode, RegexOptions.Singleline | RegexOptions.IgnoreCase);
@@ -192,12 +192,15 @@ namespace WindowsFormsApplication13
                 Regex removeDoubleSpace = new Regex(@"\s{2,}", RegexOptions.Singleline | RegexOptions.IgnoreCase);
                 for (int i = 0; i < listBox1.Items.Count; i++)
                 {
+                    Array.Resize(ref temp, i + 1);
                     temp[i] = regex.Replace(listBox1.Items[i].ToString(), " ");
                     temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                     listBox3.Items.Add(RemoveChars(temp[i]));
                 }
+                temp = new string[0];
                 for (int i = 0; i < listBox8.Items.Count; i++)
                 {
+                    Array.Resize(ref temp, i + 1);
                     temp[i] = regex.Replace(listBox8.Items[i].ToString(), " ");
                     temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                     listBox6.Items.Add(RemoveChars(temp[i]));
@@ -714,6 +717,7 @@ namespace WindowsFormsApplication13
             textBox22.Show();
             groupBox3.Show();
             listBox11.Hide();
+            listBox11.Items.Clear();
             if (storevariable.cekstemmingresult == true)
             {
                 //Counting Total words in Textbox
@@ -754,10 +758,10 @@ namespace WindowsFormsApplication13
                 textBox9.Text = angka.ToString();
                 textBox14.Text = angka2.ToString();
                 //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming
-                int ambilselisih;
-                int totalkatasinonim;
-                int ambilinverse;
-                double persensinonim;
+                int ambilselisih=0;
+                int totalkatasinonim=0;
+                int ambilinverse=0;
+                double persensinonim=0;
                 totalkatasinonim = angka + angka2;
                 ambilselisih = Math.Abs(angka - angka2);
                 ambilinverse = totalkatasinonim + (ambilselisih * -1);
@@ -765,7 +769,7 @@ namespace WindowsFormsApplication13
                 textBox6.Text = persensinonim.ToString();
                 textBox20.Text = persensinonim.ToString();
                 //Ambil Levenstein distance angka
-                int levangka, levangka2, selisihleven, totalleven, inverseleven;
+                int levangka=0, levangka2=0, selisihleven=0, totalleven=0, inverseleven=0;
                 for (int i = 0; i < listBox4.Items.Count; i++)
                 {
                     levangka = int.Parse(listBox4.Items[i].ToString());
@@ -782,7 +786,6 @@ namespace WindowsFormsApplication13
 
                 }
                 double sum = 0;
-
                 for (int i = 0; i < listBox11.Items.Count; i++)
                 {
                     sum += Math.Round(Convert.ToDouble(listBox11.Items[i].ToString()), 3);
@@ -911,7 +914,6 @@ namespace WindowsFormsApplication13
 
                 }
                 double sum = 0;
-
                 for (int i = 0; i < listBox11.Items.Count; i++)
                 {
                     sum += Math.Round(Convert.ToDouble(listBox11.Items[i].ToString()), 3);
