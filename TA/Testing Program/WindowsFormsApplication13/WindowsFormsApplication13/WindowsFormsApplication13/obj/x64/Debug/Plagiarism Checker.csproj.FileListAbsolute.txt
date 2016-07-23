@@ -108,3 +108,12 @@ D:\GitHub\Thesis\TA\Testing Program\WindowsFormsApplication13\WindowsFormsApplic
 D:\GitHub\Thesis\TA\Testing Program\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Form1.resources
 D:\GitHub\Thesis\TA\Testing Program\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Properties.Resources.resources
 D:\GitHub\Thesis\TA\Testing Program\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.exe.config
+C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.exe
+C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.pdb
+C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.exe
+C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.pdb
+C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Form1.resources
+C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Properties.Resources.resources
+C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache

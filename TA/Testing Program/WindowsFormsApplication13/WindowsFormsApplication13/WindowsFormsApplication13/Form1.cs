@@ -758,16 +758,27 @@ namespace WindowsFormsApplication13
                 textBox9.Text = angka.ToString();
                 textBox14.Text = angka2.ToString();
                 //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming
-                int ambilselisih=0;
-                int totalkatasinonim=0;
-                int ambilinverse=0;
-                double persensinonim=0;
-                totalkatasinonim = angka + angka2;
-                ambilselisih = Math.Abs(angka - angka2);
-                ambilinverse = totalkatasinonim + (ambilselisih * -1);
-                persensinonim = (double)ambilinverse / (double)totalkatasinonim * 100;
+                int totalkatasinonim = 0;
+                double persensinonim = 0;
+                totalkatasinonim = int.Parse(textBox9.Text);
+                persensinonim = ((double)totalkatasinonim / (double)wordCount) * 100;
                 textBox6.Text = persensinonim.ToString();
-                textBox20.Text = persensinonim.ToString();
+     
+                int totalkatasinonim2 = 0;
+                double persensinonim2 = 0;
+                totalkatasinonim2 = int.Parse(textBox14.Text);
+                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount2) * 100;  
+                textBox20.Text = persensinonim2.ToString();
+                //int ambilselisih=0;
+                //int totalkatasinonim=0;
+                //int ambilinverse=0;
+                //double persensinonim=0;
+                //totalkatasinonim = angka + angka2;
+                //ambilselisih = Math.Abs(angka - angka2);
+                //ambilinverse = totalkatasinonim + (ambilselisih * -1);
+                //persensinonim = (double)ambilinverse / (double)totalkatasinonim * 100;
+                //textBox6.Text = persensinonim.ToString();
+                //textBox20.Text = persensinonim.ToString();
                 //Ambil Levenstein distance angka
                 int levangka=0, levangka2=0, selisihleven=0, totalleven=0, inverseleven=0;
                 for (int i = 0; i < listBox4.Items.Count; i++)
@@ -796,7 +807,11 @@ namespace WindowsFormsApplication13
                 double hasilakhirlevensinonim;
                 hasilakhirlevensinonim = Math.Round((persensinonim + variable.finalresult) / 2, 3);
                 textBox7.Text = hasilakhirlevensinonim.ToString();
-                textBox16.Text = hasilakhirlevensinonim.ToString();
+
+                double hasilakhirlevensinonim2;
+                hasilakhirlevensinonim2 = Math.Round((persensinonim2 + variable.finalresult) / 2, 3);
+                textBox16.Text = hasilakhirlevensinonim2.ToString();
+           
                 //foreach (var item in listBox11.Items)
                 //{
                 //    sum += Math.Round(Convert.ToDouble(item.ToString()),3);
@@ -886,16 +901,28 @@ namespace WindowsFormsApplication13
                 textBox9.Text = angka.ToString();
                 textBox14.Text = angka2.ToString();
                 //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming
-                int ambilselisih;
-                int totalkatasinonim;
-                int ambilinverse;
-                double persensinonim;
-                totalkatasinonim = angka + angka2;
-                ambilselisih = Math.Abs(angka - angka2);
-                ambilinverse = totalkatasinonim + (ambilselisih * -1);
-                persensinonim = (double)ambilinverse / (double)totalkatasinonim * 100;
+              
+                int totalkatasinonim = 0;
+                double persensinonim = 0;
+                totalkatasinonim = int.Parse(textBox9.Text);
+                persensinonim = ((double)totalkatasinonim / (double)wordCount) * 100;
                 textBox6.Text = persensinonim.ToString();
-                textBox20.Text = persensinonim.ToString();
+
+                int totalkatasinonim2 = 0;
+                double persensinonim2 = 0;
+                totalkatasinonim2 = int.Parse(textBox14.Text);
+                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount2) * 100;
+                textBox20.Text = persensinonim2.ToString();
+                //int ambilselisih;
+                //int totalkatasinonim;
+                //int ambilinverse;
+                //double persensinonim;
+                //totalkatasinonim = angka + angka2;
+                //ambilselisih = Math.Abs(angka - angka2);
+                //ambilinverse = totalkatasinonim + (ambilselisih * -1);
+                //persensinonim = (double)ambilinverse / (double)totalkatasinonim * 100;
+                //textBox6.Text = persensinonim.ToString();
+                //textBox20.Text = persensinonim.ToString();
                 //Ambil Levenstein distance angka
                 int levangka, levangka2, selisihleven, totalleven, inverseleven;
                 for (int i = 0; i < listBox3.Items.Count; i++)
@@ -924,7 +951,10 @@ namespace WindowsFormsApplication13
                 double hasilakhirlevensinonim;
                 hasilakhirlevensinonim = Math.Round((persensinonim + variable.finalresult) / 2, 3);
                 textBox7.Text = hasilakhirlevensinonim.ToString();
-                textBox16.Text = hasilakhirlevensinonim.ToString();
+
+                double hasilakhirlevensinonim2;
+                hasilakhirlevensinonim2 = Math.Round((persensinonim2 + variable.finalresult) / 2, 3);
+                textBox16.Text = hasilakhirlevensinonim2.ToString();
                 //foreach (var item in listBox11.Items)
                 //{
                 //    sum += Math.Round(Convert.ToDouble(item.ToString()),3);
