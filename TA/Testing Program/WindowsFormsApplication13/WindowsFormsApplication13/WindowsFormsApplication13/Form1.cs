@@ -719,25 +719,6 @@ namespace WindowsFormsApplication13
         {
             storevariable variable = new storevariable();
             TabPage t = tabControl1.TabPages[2];
-            DataTable dt = new DataTable();
-            DataRow dr;
-            dt.Columns.Add("File 1");
-            dt.Columns.Add("Persentase File 1");
-            dt.Columns.Add("File 2");
-            dt.Columns.Add("Persentase File 2");
-            dt.Columns.Add("Status");
-            dt.Columns.Add("Date");
-            dt.Columns.Add("Time");
-            dr = dt.NewRow();
-            dr["File 1"] = textBox3.Text;
-            dr["Persentase File 1"] = textBox7.Text;
-            dr["File 2"] = textBox22.Text;
-            dr["Persentase File 2"] = textBox16.Text;
-            dr["Status"] = label22.Text;
-            dr["Date"] = materialLabel6.Text;
-            dr["Time"] = materialLabel7.Text;
-            dt.Rows.Add(dr);
-            metroGrid1.DataSource = dt;
             tabControl1.SelectedTab = t;
             label2.Hide();
             label4.Hide();
@@ -992,7 +973,7 @@ namespace WindowsFormsApplication13
                 //    double finalresult = sum / listBox11.Items.Count;
                 //    label36.Text = finalresult.ToString();
                 //}
-                if (hasilakhirlevensinonim < 30)
+                if (hasilakhirlevensinonim < 30.00)
                 {
                     label36.Text = "Low Plagiarism";
                     label36.ForeColor = Color.Green;
@@ -1001,7 +982,7 @@ namespace WindowsFormsApplication13
                     //textBox7.BackColor = Color.Green;
                     //textBox16.BackColor = Color.Green;
                 }
-                else if (hasilakhirlevensinonim >= 30 && hasilakhirlevensinonim <= 70)
+                else if (hasilakhirlevensinonim >= 30.00 && hasilakhirlevensinonim <= 70.00)
                 {
                     label36.Text = "Medium Plagiarism";
                     label36.ForeColor = Color.Yellow;
@@ -1010,7 +991,7 @@ namespace WindowsFormsApplication13
                     //textBox7.BackColor = Color.Yellow;
                     //textBox16.BackColor = Color.Yellow;
                 }
-                else if (hasilakhirlevensinonim >= 71 && hasilakhirlevensinonim <= 100)
+                else if (hasilakhirlevensinonim >= 71.00 && hasilakhirlevensinonim <= 100)
                 {
                     label36.Text = "High Plagiarism";
                     label36.ForeColor = Color.Red;
@@ -2201,8 +2182,27 @@ namespace WindowsFormsApplication13
         {
             TabPage t = tabControl1.TabPages[3];
             tabControl1.SelectedTab = t;
-            
-            
+            DataTable dt = new DataTable();
+            DataRow dr;
+            dt.Columns.Add("File 1");
+            dt.Columns.Add("Persentase File 1");
+            dt.Columns.Add("File 2");
+            dt.Columns.Add("Persentase File 2");
+            dt.Columns.Add("Status");
+            dt.Columns.Add("Date");
+            dt.Columns.Add("Time");
+            dr = dt.NewRow();
+            dr["File 1"] = textBox3.Text;
+            dr["Persentase File 1"] = textBox7.Text;
+            dr["File 2"] = textBox22.Text;
+            dr["Persentase File 2"] = textBox16.Text;
+            dr["Status"] = label22.Text;
+            dr["Date"] = materialLabel6.Text;
+            dr["Time"] = materialLabel7.Text;
+            dt.Rows.Add(dr);
+            metroGrid1.DataSource = dt;
+
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -2215,6 +2215,7 @@ namespace WindowsFormsApplication13
         {
             TabPage t = tabControl1.TabPages[1];
             tabControl1.SelectedTab = t;
+
         }
 
         private void metroTile9_Click(object sender, EventArgs e)
