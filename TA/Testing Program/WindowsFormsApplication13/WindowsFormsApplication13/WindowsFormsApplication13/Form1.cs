@@ -32,9 +32,6 @@ namespace WindowsFormsApplication13
             metroTile3.Hide();
             
         }
-
-        
-        private short hours, minute, second;
         public OleDbConnection conn;
         public string link = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
         public string sql;
@@ -139,6 +136,8 @@ namespace WindowsFormsApplication13
                 storevariable.cekstemmingresult = true;
                 //Tokenization
                 #region
+                listBox9.Items.Clear();
+                listBox10.Items.Clear();
                 label3.Hide();
                 listBox1.Show();
                 listBox2.Show();
@@ -409,8 +408,8 @@ namespace WindowsFormsApplication13
           
                 OleDbDataAdapter da;
                 string []tempo = new string[147];
-                int pos = 0;
-                int nilai = 0;
+                int pos=0;
+                int nilai=0;
                 for (int i = 0; i < listBox1.Items.Count - 1; i++)
                 {
                     sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
@@ -665,6 +664,11 @@ namespace WindowsFormsApplication13
             DialogResult dialogResult = MessageBox.Show("If you go back, all process will be resetted and previous file be load back. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
+                metroTile2.Hide();
+                metroTextBox2.Hide();
+                textBox2.Hide();
+                groupBox1.Hide();
+                metroTile3.Hide();
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
                 listBox3.Items.Clear();
@@ -685,6 +689,10 @@ namespace WindowsFormsApplication13
                 listBox8.Hide();
                 listBox9.Hide();
                 listBox10.Hide();
+                label44.Hide();
+                label6.Hide();
+                textBox3.Hide();
+                textBox22.Hide();
                 materialLabel1.Hide();
                 materialLabel2.Hide();
                 materialLabel3.Hide();
@@ -693,6 +701,10 @@ namespace WindowsFormsApplication13
                 materialLabel8.Hide();
                 label3.Show();
                 label1.Show();
+                label4.Show();
+                label2.Show();
+                groupBox2.Hide();
+                groupBox3.Hide();
             }
             TabPage t = tabControl1.TabPages[0];
             tabControl1.SelectedTab = t;
@@ -707,6 +719,25 @@ namespace WindowsFormsApplication13
         {
             storevariable variable = new storevariable();
             TabPage t = tabControl1.TabPages[2];
+            DataTable dt = new DataTable();
+            DataRow dr;
+            dt.Columns.Add("File 1");
+            dt.Columns.Add("Persentase File 1");
+            dt.Columns.Add("File 2");
+            dt.Columns.Add("Persentase File 2");
+            dt.Columns.Add("Status");
+            dt.Columns.Add("Date");
+            dt.Columns.Add("Time");
+            dr = dt.NewRow();
+            dr["File 1"] = textBox3.Text;
+            dr["Persentase File 1"] = textBox7.Text;
+            dr["File 2"] = textBox22.Text;
+            dr["Persentase File 2"] = textBox16.Text;
+            dr["Status"] = label22.Text;
+            dr["Date"] = materialLabel6.Text;
+            dr["Time"] = materialLabel7.Text;
+            dt.Rows.Add(dr);
+            metroGrid1.DataSource = dt;
             tabControl1.SelectedTab = t;
             label2.Hide();
             label4.Hide();
@@ -1029,7 +1060,8 @@ namespace WindowsFormsApplication13
         
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            materialLabel6.Text = DateTime.Now.ToLongDateString();
+            materialLabel7.Text = DateTime.Now.ToLongDateString();
         }
 //Stemming Procedure Starts Here
         private void listKamus()
@@ -2164,6 +2196,83 @@ namespace WindowsFormsApplication13
             label5.Show();
 
         }
+
+        private void metroTile7_Click(object sender, EventArgs e)
+        {
+            TabPage t = tabControl1.TabPages[3];
+            tabControl1.SelectedTab = t;
+            
+            
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            materialLabel7.Text = DateTime.Now.ToLongTimeString();
+            timer2.Start();     
+        }
+
+        private void metroTile8_Click(object sender, EventArgs e)
+        {
+            TabPage t = tabControl1.TabPages[1];
+            tabControl1.SelectedTab = t;
+        }
+
+        private void metroTile9_Click(object sender, EventArgs e)
+        {
+            TabPage t = tabControl1.TabPages[2];
+            tabControl1.SelectedTab = t;
+        }
+
+        private void metroTile6_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("You will be Check some file. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+                listBox3.Items.Clear();
+                listBox4.Items.Clear();
+                listBox5.Items.Clear();
+                listBox6.Items.Clear();
+                listBox7.Items.Clear();
+                listBox8.Items.Clear();
+                listBox9.Items.Clear();
+                listBox10.Items.Clear();
+                listBox1.Hide();
+                listBox2.Hide();
+                listBox3.Hide();
+                listBox4.Hide();
+                listBox5.Hide();
+                listBox6.Hide();
+                listBox7.Hide();
+                listBox8.Hide();
+                listBox9.Hide();
+                listBox10.Hide();
+                label44.Hide();
+                label6.Hide();
+                textBox3.Hide();
+                textBox22.Hide();
+                materialLabel1.Hide();
+                materialLabel2.Hide();
+                materialLabel3.Hide();
+                materialLabel4.Hide();
+                materialLabel5.Hide();
+                materialLabel8.Hide();
+                label3.Show();
+                label1.Show();
+                label4.Show();
+                label2.Show();
+                groupBox2.Hide();
+                groupBox3.Hide();
+            }
+            TabPage t = tabControl1.TabPages[0];
+            tabControl1.SelectedTab = t;
+            metroTextBox1.Clear();
+            metroTextBox2.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
+            metroProgressBar1.Hide();
+            }
 
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
