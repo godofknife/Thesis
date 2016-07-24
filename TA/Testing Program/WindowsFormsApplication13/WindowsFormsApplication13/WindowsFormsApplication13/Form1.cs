@@ -720,6 +720,7 @@ namespace WindowsFormsApplication13
             storevariable variable = new storevariable();
             TabPage t = tabControl1.TabPages[2];
             tabControl1.SelectedTab = t;
+
             label2.Hide();
             label4.Hide();
             label6.Show();
@@ -973,7 +974,7 @@ namespace WindowsFormsApplication13
                 //    double finalresult = sum / listBox11.Items.Count;
                 //    label36.Text = finalresult.ToString();
                 //}
-                if (hasilakhirlevensinonim < 30.00)
+                if (hasilakhirlevensinonim < 30)
                 {
                     label36.Text = "Low Plagiarism";
                     label36.ForeColor = Color.Green;
@@ -982,7 +983,7 @@ namespace WindowsFormsApplication13
                     //textBox7.BackColor = Color.Green;
                     //textBox16.BackColor = Color.Green;
                 }
-                else if (hasilakhirlevensinonim >= 30.00 && hasilakhirlevensinonim <= 70.00)
+                else if (hasilakhirlevensinonim >= 30 && hasilakhirlevensinonim <= 70)
                 {
                     label36.Text = "Medium Plagiarism";
                     label36.ForeColor = Color.Yellow;
@@ -991,7 +992,7 @@ namespace WindowsFormsApplication13
                     //textBox7.BackColor = Color.Yellow;
                     //textBox16.BackColor = Color.Yellow;
                 }
-                else if (hasilakhirlevensinonim >= 71.00 && hasilakhirlevensinonim <= 100)
+                else if (hasilakhirlevensinonim >= 71 && hasilakhirlevensinonim <= 100)
                 {
                     label36.Text = "High Plagiarism";
                     label36.ForeColor = Color.Red;
