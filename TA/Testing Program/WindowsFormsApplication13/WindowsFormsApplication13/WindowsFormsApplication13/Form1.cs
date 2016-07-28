@@ -57,16 +57,20 @@ namespace WindowsFormsApplication13
 
             if (openDlg.ShowDialog() == DialogResult.OK)
             {
+                
                 metroTextBox2.Show();
                 textBox2.Show();
                 metroTile2.Show();
                 string filePath = openDlg.FileName.ToString();
                 filePath = openDlg.FileName.ToString();
+                FileInfo inf = new FileInfo(filePath);
+                long lengthinf = inf.Length / 1024;
+                string fordislay = lengthinf.ToString("N0") + "KB";
                 metroTextBox1.Text = filePath;
                 metroTextBox1.Enabled = false;
-                textBox3.Text = filePath;
-                textBox3.Text = filePath;
-                textBox3.Enabled = false;
+                textBox33.Text = System.IO.Path.GetFileName(filePath);
+                textBox35.Text = fordislay;
+                textBox34.Text = filePath;
                 string strText = string.Empty;
                 try
                 {
@@ -102,9 +106,12 @@ namespace WindowsFormsApplication13
                 filePath = openDlg.FileName.ToString();
                 metroTextBox2.Text = filePath;
                 metroTextBox2.Enabled = false;
-                textBox22.Text = filePath;
-                textBox22.Text = filePath;
-                textBox22.Enabled = false;
+                FileInfo inf = new FileInfo(filePath);
+                long lengthinf = inf.Length / 1024;
+                string fordislay = lengthinf.ToString("N0") + "KB";
+                textBox36.Text = fordislay;
+                textBox37.Text = filePath;
+                textBox38.Text = System.IO.Path.GetFileName(filePath);
                 string strText = string.Empty;
                 try
                 {
@@ -689,10 +696,6 @@ namespace WindowsFormsApplication13
                 listBox8.Hide();
                 listBox9.Hide();
                 listBox10.Hide();
-                label44.Hide();
-                label6.Hide();
-                textBox3.Hide();
-                textBox22.Hide();
                 materialLabel1.Hide();
                 materialLabel2.Hide();
                 materialLabel3.Hide();
@@ -701,10 +704,8 @@ namespace WindowsFormsApplication13
                 materialLabel8.Hide();
                 label3.Show();
                 label1.Show();
-                label4.Show();
-                label2.Show();
                 groupBox2.Hide();
-                groupBox3.Hide();
+                
             }
             TabPage t = tabControl1.TabPages[0];
             tabControl1.SelectedTab = t;
@@ -720,17 +721,7 @@ namespace WindowsFormsApplication13
             storevariable variable = new storevariable();
             TabPage t = tabControl1.TabPages[2];
             tabControl1.SelectedTab = t;
-
-            label2.Hide();
-            label4.Hide();
-            label6.Show();
-            textBox3.Show();
             groupBox2.Show();
-            label44.Show();
-            textBox22.Show();
-            groupBox3.Show();
-            listBox11.Hide();
-            listBox11.Items.Clear();
             if (storevariable.cekstemmingresult == true)
             {
                 //Counting Total words in Textbox
@@ -2149,9 +2140,6 @@ namespace WindowsFormsApplication13
             label36.Show();
             label37.Show();
             label38.Show();
-            label39.Show();
-            textBox18.Show();
-            textBox19.Show();
             textBox17.Show();
 
 
@@ -2159,51 +2147,12 @@ namespace WindowsFormsApplication13
 
         private void button2_Click(object sender, EventArgs e)
         {
-            label31.Show();
-            label30.Show();
-            label29.Show();
-            textBox15.Show();
-            textBox14.Show();
-            textBox13.Show();
-            label26.Show();
-            label27.Show();
-            label28.Show();
-            label23.Show();
-            label22.Show();
-            textBox4.Show();
-            textBox12.Show();
-            textBox11.Show();
-            label21.Show();
-            label7.Show();
-            label5.Show();
 
         }
 
         private void metroTile7_Click(object sender, EventArgs e)
         {
-            TabPage t = tabControl1.TabPages[3];
-            tabControl1.SelectedTab = t;
-            DataTable dt = new DataTable();
-            DataRow dr;
-            dt.Columns.Add("File 1");
-            dt.Columns.Add("Persentase File 1");
-            dt.Columns.Add("File 2");
-            dt.Columns.Add("Persentase File 2");
-            dt.Columns.Add("Status");
-            dt.Columns.Add("Date");
-            dt.Columns.Add("Time");
-            dr = dt.NewRow();
-            dr["File 1"] = textBox3.Text;
-            dr["Persentase File 1"] = textBox7.Text;
-            dr["File 2"] = textBox22.Text;
-            dr["Persentase File 2"] = textBox16.Text;
-            dr["Status"] = label22.Text;
-            dr["Date"] = materialLabel6.Text;
-            dr["Time"] = materialLabel7.Text;
-            dt.Rows.Add(dr);
-            metroGrid1.DataSource = dt;
-
-
+            
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -2250,10 +2199,6 @@ namespace WindowsFormsApplication13
                 listBox8.Hide();
                 listBox9.Hide();
                 listBox10.Hide();
-                label44.Hide();
-                label6.Hide();
-                textBox3.Hide();
-                textBox22.Hide();
                 materialLabel1.Hide();
                 materialLabel2.Hide();
                 materialLabel3.Hide();
@@ -2262,10 +2207,7 @@ namespace WindowsFormsApplication13
                 materialLabel8.Hide();
                 label3.Show();
                 label1.Show();
-                label4.Show();
-                label2.Show();
                 groupBox2.Hide();
-                groupBox3.Hide();
             }
             TabPage t = tabControl1.TabPages[0];
             tabControl1.SelectedTab = t;
@@ -2318,6 +2260,36 @@ namespace WindowsFormsApplication13
             textBox1.Clear();
             textBox2.Clear();
             metroProgressBar1.Hide();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            label14.Visible = true;
+            label15.Visible = true;
+            label16.Visible = true;
+            label17.Visible = true;
+            label18.Visible = true;
+            label19.Visible = true;
+            label38.Visible = true;
+            label37.Visible = true;
+            textBox8.Visible = true;
+            textBox9.Visible = true;
+            textBox10.Visible = true;
+            textBox17.Visible = true;
+            label36.Visible = true;
+            label35.Visible = true;
+
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
 
         }
     }
