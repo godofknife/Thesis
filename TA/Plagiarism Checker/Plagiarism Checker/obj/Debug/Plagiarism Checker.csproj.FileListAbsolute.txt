@@ -1,0 +1,15 @@
+G:\Plagiarism Checker\Plagiarism Checker\bin\Debug\Plagiarism Checker.exe.config
+G:\Plagiarism Checker\Plagiarism Checker\bin\Debug\Plagiarism Checker.exe
+G:\Plagiarism Checker\Plagiarism Checker\bin\Debug\Plagiarism Checker.pdb
+G:\Plagiarism Checker\Plagiarism Checker\bin\Debug\itextsharp.dll
+G:\Plagiarism Checker\Plagiarism Checker\bin\Debug\MaterialSkin.dll
+G:\Plagiarism Checker\Plagiarism Checker\bin\Debug\MetroFramework.Design.dll
+G:\Plagiarism Checker\Plagiarism Checker\bin\Debug\MetroFramework.dll
+G:\Plagiarism Checker\Plagiarism Checker\bin\Debug\MetroFramework.Fonts.dll
+G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism_Checker.Form1.resources
+G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism_Checker.Properties.Resources.resources
+G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism Checker.exe
+G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism Checker.pdb
+G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism_Checker.About.resources
