@@ -23,3 +23,13 @@ D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiari
 D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
 D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
 D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+D:\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+D:\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+D:\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache

@@ -49,16 +49,6 @@ namespace Plagiarism_Checker
         {
             metroTile3.Show();
         }
-        private void metroTile1_Click(object sender, EventArgs e)
-        {
-
-          
-        }
-
-        private void metroTile2_Click(object sender, EventArgs e)
-        {
-          
-        }
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
@@ -214,63 +204,7 @@ namespace Plagiarism_Checker
         private void timer1_Tick(object sender, EventArgs e)
         {
            
-        }
-        private void metroTile4_Click(object sender, EventArgs e)
-        {
-            #region
-            DialogResult dialogResult = MessageBox.Show("If you go back, all process will be resetted and previous file be load back. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dialogResult == DialogResult.Yes)
-            {
-                metroTile2.Hide();
-                metroTextBox2.Hide();
-                textBox2.Hide();
-                groupBox1.Hide();
-                metroTile3.Hide();
-                listBox1.Items.Clear();
-                listBox2.Items.Clear();
-                listBox3.Items.Clear();
-
-                listBox5.Items.Clear();
-                listBox6.Items.Clear();
-                listBox7.Items.Clear();
-                listBox8.Items.Clear();
-
-                listBox10.Items.Clear();
-                listBox1.Hide();
-                listBox2.Hide();
-                listBox3.Hide();
-      
-                listBox5.Hide();
-                listBox6.Hide();
-                listBox7.Hide();
-                listBox8.Hide();
-
-                listBox10.Hide();
-                materialLabel1.Hide();
-                materialLabel2.Hide();
-                materialLabel3.Hide();
-                materialLabel4.Hide();
-                materialLabel5.Hide();
-                materialLabel8.Hide();
-                label3.Show();
-                label1.Show();
-                groupBox2.Hide();
-
-            }
-            TabPage t = tabControl1.TabPages[0];
-            tabControl1.SelectedTab = t;
-            metroTextBox1.Clear();
-            metroTextBox2.Clear();
-            textBox1.Clear();
-            textBox2.Clear();
-            metroProgressBar1.Hide();
-            #endregion 
-        }
-        private void metroTile5_Click(object sender, EventArgs e)
-        {
-          
-
-        }
+        }            
 
         private void tabControl1_ParentChanged(object sender, EventArgs e)
         {
@@ -1394,116 +1328,14 @@ namespace Plagiarism_Checker
 
         }
 
-        private void metroTile7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
           
         }
 
-        private void metroTile8_Click(object sender, EventArgs e)
-        {
-            TabPage t = tabControl1.TabPages[1];
-            tabControl1.SelectedTab = t;
-
-        }
-
-        private void metroTile9_Click(object sender, EventArgs e)
-        {
-            TabPage t = tabControl1.TabPages[2];
-            tabControl1.SelectedTab = t;
-        }
-
-        private void metroTile6_Click_1(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("You will be Check some file. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dialogResult == DialogResult.Yes)
-            {
-                listBox1.Items.Clear();
-                listBox2.Items.Clear();
-                listBox3.Items.Clear();
-
-                listBox5.Items.Clear();
-                listBox6.Items.Clear();
-                listBox7.Items.Clear();
-                listBox8.Items.Clear();
-
-                listBox10.Items.Clear();
-                listBox1.Hide();
-                listBox2.Hide();
-                listBox3.Hide();
-
-                listBox5.Hide();
-                listBox6.Hide();
-                listBox7.Hide();
-                listBox8.Hide();
-    
-                listBox10.Hide();
-                materialLabel1.Hide();
-                materialLabel2.Hide();
-                materialLabel3.Hide();
-                materialLabel4.Hide();
-                materialLabel5.Hide();
-                materialLabel8.Hide();
-                label3.Show();
-                label1.Show();
-                groupBox2.Hide();
-            }
-            TabPage t = tabControl1.TabPages[0];
-            tabControl1.SelectedTab = t;
-            metroTextBox1.Clear();
-            metroTextBox2.Clear();
-            textBox1.Clear();
-            textBox2.Clear();
-            metroProgressBar1.Hide();
-        }
-
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             metroTile3.Show();
-        }
-
-        private void metroTile6_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-            listBox2.Items.Clear();
-            listBox3.Items.Clear();
-
-            listBox5.Items.Clear();
-            listBox6.Items.Clear();
-            listBox7.Items.Clear();
-            listBox8.Items.Clear();
-
-            listBox10.Items.Clear();
-            listBox1.Hide();
-            listBox2.Hide();
-            listBox3.Hide();
-
-            listBox5.Hide();
-            listBox6.Hide();
-            listBox7.Hide();
-            listBox8.Hide();
-
-            listBox10.Hide();
-            materialLabel1.Hide();
-            materialLabel2.Hide();
-            materialLabel3.Hide();
-            materialLabel4.Hide();
-            materialLabel5.Hide();
-            materialLabel8.Hide();
-            label3.Show();
-            label1.Show();
-            TabPage t = tabControl1.TabPages[0];
-            tabControl1.SelectedTab = t;
-            metroTextBox1.Clear();
-            metroTextBox2.Clear();
-            textBox1.Clear();
-            textBox2.Clear();
-            metroProgressBar1.Hide();
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -1547,7 +1379,6 @@ namespace Plagiarism_Checker
                 materialLabel2.Show();
                 materialLabel3.Show();
                 materialLabel5.Show();
-                metroTile4.Show();
                 metroTile5.Show();
                 #endregion
                 timer1.Start();
@@ -1628,6 +1459,7 @@ namespace Plagiarism_Checker
 
                 }
                 //Proses levenstein disini
+
                 //foreach (string cek in listBox2.Items)
                 //{
                 //    int cost = LevenshteinDistance.Compute(cek, listBox7.Items.ToString());
@@ -1640,7 +1472,7 @@ namespace Plagiarism_Checker
 
                 //    listBox5.Items.Add(cost1);
                 //}
-                for(int i=0; i < listBox7.Items.Count; i++)
+                for (int i=0; i < listBox7.Items.Count; i++)
                 {
                     for(int j = 0; i < listBox2.Items.Count; i++)
                     {
@@ -1747,7 +1579,6 @@ namespace Plagiarism_Checker
                 listBox2.Hide();
                 listBox6.Hide();
                 listBox7.Hide();
-                metroTile4.Show();
                 metroTile5.Show();
                 label3.Hide();
                 listBox1.Show();
@@ -1803,11 +1634,13 @@ namespace Plagiarism_Checker
 
                 //    listBox3.Items.Add(cost);
                 //}
-                foreach (string cek1 in listBox8.Items)
+                for (int i=0; i < listBox8.Items.Count; i++)
                 {
-                    int cost1 = LevenshteinDistance.Compute(cek1, listBox1.Items.ToString());
-
-                    listBox5.Items.Add(cost1);
+                    for(int j = 0; i < listBox1.Items.Count; i++)
+                    {
+                        int cost1 = LevenshteinDistance.Compute(listBox8.Items[i].ToString(), listBox1.Items[j].ToString());
+                        listBox5.Items.Add(cost1);
+                    }
                 }
                 //Proses Synonim disini
 
@@ -1902,289 +1735,6 @@ namespace Plagiarism_Checker
             }
         }
 
-        private void metroTile5_Click_1(object sender, EventArgs e)
-        {
-            storevariable variable = new storevariable();
-            TabPage t = tabControl1.TabPages[2];
-            tabControl1.SelectedTab = t;
-            groupBox2.Show();
-            metroTile6.Show();
-            metroTile9.Show();
-            groupBox7.Show();
-            textBox24.Show();
-            textBox25.Show();
-            if (storevariable.cekstemmingresult == true)
-            {
-                groupBox5.Show();
-                groupBox6.Show();
-                label2.Hide();
-                label4.Hide();
-                //Counting Total words in Textbox
-                String countingwords = textBox1.Text.Trim();
-                string countingwords2 = textBox2.Text.Trim();
-                int wordCount = 0, index = 0;
-                int wordCount2 = 0, index2 = 0;
-                while (index < countingwords.Length)
-                {
-                    // check if current char is part of a word
-                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == false)
-                        index++;
-
-                    wordCount++;
-
-                    // skip whitespace until next word
-                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == true)
-                        index++;
-                }
-                textBox10.Text = wordCount.ToString();
-                while (index2 < countingwords2.Length)
-                {
-                    // check if current char is part of a word
-                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == false)
-                        index2++;
-
-                    wordCount2++;
-
-                    // skip whitespace until next word
-                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == true)
-                        index2++;
-                }
-                textBox17.Text = wordCount2.ToString();
-                //Ambil nilai dari listbox sinonim untuk Stemming
-
-                int angka2 = int.Parse(listBox10.Items[0].ToString());
-                textBox9.Text = angka2.ToString();
-                //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming
-                int totalkatasinonim2 = 0;
-                double persensinonim2 = 0;
-                totalkatasinonim2 = int.Parse(textBox9.Text);
-                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount2) * 100;
-                textBox6.Text = persensinonim2.ToString();
-                //Ambil Levenstein distance angka
-                int levangka = 0, totalleven = 0, inverseleven = 0;
-                for (int i = 0; i < listBox5.Items.Count; i++)
-                {
-                    levangka = int.Parse(listBox5.Items[i].ToString());
-
-                    totalleven = levangka;
-                 
-                        inverseleven = totalleven* -1;
-                        double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
-
-                        listBox4.Items.Add(persenleven);
-                    
-
-                }
-                double sum = 0;
-                for (int i = 0; i < listBox4.Items.Count; i++)
-                {
-                    sum += Math.Round(Convert.ToDouble(listBox4.Items[i].ToString()), 3);
-                    variable.finalresult = Math.Round(sum / i, 3);
-                    textBox5.Text = variable.finalresult.ToString();
-
-                }
-                //double hasilakhirlevensinonim;
-                //hasilakhirlevensinonim = Math.Round((persensinonim + variable.finalresult) / 2, 3);
-                //textBox7.Text = hasilakhirlevensinonim.ToString();
-
-                double hasilakhirlevensinonim2;
-                hasilakhirlevensinonim2 = Math.Round((persensinonim2 + variable.finalresult) / 2, 3);
-                textBox7.Text = hasilakhirlevensinonim2.ToString();
-
-                //foreach (var item in listBox11.Items)
-                //{
-                //    sum += Math.Round(Convert.ToDouble(item.ToString()),3);
-                //    double finalresult = sum / listBox11.Items.Count;
-                //    label36.Text = finalresult.ToString();
-                //}
-                if (hasilakhirlevensinonim2 < 30)
-                {
-                    label36.Text = "Low Plagiarism";
-                    label36.ForeColor = Color.Green;
-         
-                    //textBox7.BackColor = Color.Green;
-                    //textBox16.BackColor = Color.Green;
-                }
-                else if (hasilakhirlevensinonim2 >= 30 && hasilakhirlevensinonim2 <= 70)
-                {
-                    label36.Text = "Medium Plagiarism";
-                    label36.ForeColor = Color.Yellow;
-
-                    //textBox7.BackColor = Color.Yellow;
-                    //textBox16.BackColor = Color.Yellow;
-                }
-                else if (hasilakhirlevensinonim2 >= 71 && hasilakhirlevensinonim2 <= 100)
-                {
-                    label36.Text = "High Plagiarism";
-                    label36.ForeColor = Color.Red;
-   
-                    //textBox7.BackColor = Color.Red;
-                    //textBox16.BackColor = Color.Red;
-
-                }
-                //Ambil Levenstein Score
-           
-                for (int i = 0; i < listBox5.Items.Count; i++)
-                {
-                    variable.scoreleven2 += Convert.ToInt32(listBox5.Items[i].ToString());
-                    variable.finallevenscore2 = variable.scoreleven2 / listBox5.Items.Count;
-                }
-                textBox8.Text = variable.finallevelscore.ToString();
-
-            }
-            else if (storevariable.cekstemmingresult == false)
-            {
-                metroTile6.Show();
-                metroTile9.Show();
-                groupBox5.Show();
-                groupBox6.Show();
-                label2.Hide();
-                label4.Hide();
-                //Counting Total words in Textbox
-                String countingwords = textBox1.Text.Trim();
-                string countingwords2 = textBox2.Text.Trim();
-                int wordCount = 0, index = 0;
-                int wordCount2 = 0, index2 = 0;
-                while (index < countingwords.Length)
-                {
-                    // check if current char is part of a word
-                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == false)
-                        index++;
-
-                    wordCount++;
-
-                    // skip whitespace until next word
-                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == true)
-                        index++;
-                }
-                textBox10.Text = wordCount.ToString();
-                while (index2 < countingwords2.Length)
-                {
-                    // check if current char is part of a word
-                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == false)
-                        index2++;
-
-                    wordCount2++;
-
-                    // skip whitespace until next word
-                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == true)
-                        index2++;
-                }
-                textBox17.Text = wordCount2.ToString();
-                //Ambil nilai dari listbox sinonim untuk Stemming
-                int angka2 = int.Parse(listBox10.Items[0].ToString());
-                textBox9.Text = angka2.ToString();
-                //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming           
-                int totalkatasinonim2 = 0;
-                double persensinonim2 = 0;
-                totalkatasinonim2 = int.Parse(textBox9.Text);
-                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount2) * 100;
-                textBox6.Text = persensinonim2.ToString();
-                //Ambil Levenstein distance angka
-                int levangka, totalleven, inverseleven;
-                for (int i = 0; i < listBox5.Items.Count; i++)
-                {
-                    levangka = int.Parse(listBox5.Items[i].ToString());
-                    
-                    totalleven = levangka;
-                  
-                        inverseleven = totalleven *-1;
-                        double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
-
-                        listBox4.Items.Add(persenleven);
-                    
-
-                }
-                double sum = 0;
-                for (int i = 0; i < listBox4.Items.Count; i++)
-                {
-                    sum += Math.Round(Convert.ToDouble(listBox4.Items[i].ToString()), 3);
-                    variable.finalresult = Math.Round(sum / i, 3);
-                    textBox5.Text = variable.finalresult.ToString();
-                }
-                double hasilakhirlevensinonim2;
-                hasilakhirlevensinonim2 = Math.Round((persensinonim2 + variable.finalresult) / 2, 3);
-                textBox7.Text = hasilakhirlevensinonim2.ToString();
-         
-                if (hasilakhirlevensinonim2 < 30)
-                {
-                    label36.Text = "Low Plagiarism";
-                    label36.ForeColor = Color.Green;
-             
-                    //textBox7.BackColor = Color.Green;
-                    //textBox16.BackColor = Color.Green;
-                }
-                else if (hasilakhirlevensinonim2 >= 30 && hasilakhirlevensinonim2 <= 70)
-                {
-                    label36.Text = "Medium Plagiarism";
-                    label36.ForeColor = Color.Yellow;
-              
-        
-                }
-                else if (hasilakhirlevensinonim2 >= 71 && hasilakhirlevensinonim2 <= 100)
-                {
-                    label36.Text = "High Plagiarism";
-                    label36.ForeColor = Color.Red;
-                   
-
-                }
-                //Ambil Levenstein Score
-                for (int i = 0; i < listBox5.Items.Count; i++)
-                {
-                    variable.scoreleven += Convert.ToInt32(listBox5.Items[i].ToString());
-                    variable.finallevelscore = variable.scoreleven / listBox5.Items.Count;
-                }
-                textBox8.Text = variable.finallevelscore.ToString();
-           
-                textBox8.Text = variable.finallevelscore.ToString();
-
-            }
-        }
-
-        private void metroTile1_Click_1(object sender, EventArgs e)
-        {
-            OpenFileDialog openDlg = new OpenFileDialog();
-            openDlg.Filter = "PDF Files(*.PDF)|*.PDF|ALL Files(*.*)|*.*";
-
-            if (openDlg.ShowDialog() == DialogResult.OK)
-            {
-
-                metroTextBox2.Show();
-                textBox2.Show();
-                metroTile2.Show();
-                string filePath = openDlg.FileName.ToString();
-                filePath = openDlg.FileName.ToString();
-                FileInfo inf = new FileInfo(filePath);
-                long lengthinf = inf.Length / 1024;
-                string fordislay = lengthinf.ToString("N0") + "KB";
-                metroTextBox1.Text = filePath;
-                metroTextBox1.Enabled = false;
-                textBox33.Text = System.IO.Path.GetFileName(filePath);
-                textBox35.Text = fordislay;
-                textBox34.Text = filePath;
-                string strText = string.Empty;
-                try
-                {
-                    //textBoxInput.Text = File.ReadAllText(openDlg.FileName);
-                    PdfReader read = new PdfReader(filePath);
-                    for (int page = 1; page <= read.NumberOfPages; page++)
-                    {
-                        ITextExtractionStrategy its = new iTextSharp.text.pdf.parser.LocationTextExtractionStrategy();
-                        String s = PdfTextExtractor.GetTextFromPage(read, page, its);
-
-                        s = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(s)));
-                        strText = strText + s;
-                        textBox1.Text = strText;
-                    }
-                    read.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
         private void metroTile2_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog openDlg = new OpenFileDialog();
@@ -2249,13 +1799,6 @@ namespace Plagiarism_Checker
             }
 
         }
-
-        private void timer2_Tick_1(object sender, EventArgs e)
-        {
-            materialLabel7.Text = DateTime.Now.ToLongTimeString();
-            timer2.Start();
-        }
-
         private void button1_Click_2(object sender, EventArgs e)
         {
             label14.Show();
@@ -2293,8 +1836,6 @@ namespace Plagiarism_Checker
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            materialLabel6.Text = DateTime.Now.ToLongDateString();
-            materialLabel7.Text = DateTime.Now.ToLongDateString();
             listBox1.Hide();
             listBox2.Hide();
             listBox3.Hide();
@@ -2308,12 +1849,413 @@ namespace Plagiarism_Checker
             materialLabel4.Hide();
             materialLabel5.Hide();
             materialLabel8.Hide();
-            metroTile4.Hide();
             metroTile5.Hide();
             metroTile6.Hide();
-            metroTile9.Hide();
             listBox4.Hide();
+            materialLabel8.Hide();
             
+        }
+
+        private void metroTile5_Click(object sender, EventArgs e)
+        {
+            storevariable variable = new storevariable();
+            TabPage t = tabControl1.TabPages[2];
+            tabControl1.SelectedTab = t;
+            groupBox2.Show();
+            metroTile6.Show();
+            groupBox7.Show();
+            textBox24.Show();
+            textBox25.Show();
+            if (storevariable.cekstemmingresult == true)
+            {
+                groupBox5.Show();
+                groupBox6.Show();
+                label2.Hide();
+                label4.Hide();
+                //Counting Total words in Textbox
+                String countingwords = textBox1.Text.Trim();
+                string countingwords2 = textBox2.Text.Trim();
+                int wordCount = 0, index = 0;
+                int wordCount2 = 0, index2 = 0;
+                while (index < countingwords.Length)
+                {
+                    // check if current char is part of a word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == false)
+                        index++;
+
+                    wordCount++;
+
+                    // skip whitespace until next word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == true)
+                        index++;
+                }
+                textBox10.Text = wordCount.ToString();
+                while (index2 < countingwords2.Length)
+                {
+                    // check if current char is part of a word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == false)
+                        index2++;
+
+                    wordCount2++;
+
+                    // skip whitespace until next word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == true)
+                        index2++;
+                }
+                textBox17.Text = wordCount2.ToString();
+                //Ambil nilai dari listbox sinonim untuk Stemming
+
+                int angka2 = int.Parse(listBox10.Items[0].ToString());
+                textBox9.Text = angka2.ToString();
+                //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming
+                int totalkatasinonim2 = 0;
+                double persensinonim2 = 0;
+                totalkatasinonim2 = int.Parse(textBox9.Text);
+                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount2) * 100;
+                textBox6.Text = persensinonim2.ToString();
+                //Ambil Levenstein distance angka
+                int levangka = 0, totalleven = 0, inverseleven = 0;
+                for (int i = 0; i < listBox5.Items.Count; i++)
+                {
+                    levangka = int.Parse(listBox5.Items[i].ToString());
+
+                    totalleven = levangka;
+
+                    inverseleven = totalleven * -1;
+                    double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
+
+                    listBox4.Items.Add(persenleven);
+
+
+                }
+                double sum = 0;
+                for (int i = 0; i < listBox4.Items.Count; i++)
+                {
+                    sum += Math.Round(Convert.ToDouble(listBox4.Items[i].ToString()), 3);
+                    variable.finalresult = Math.Round(sum / i, 3);
+                    textBox5.Text = variable.finalresult.ToString();
+
+                }
+                //double hasilakhirlevensinonim;
+                //hasilakhirlevensinonim = Math.Round((persensinonim + variable.finalresult) / 2, 3);
+                //textBox7.Text = hasilakhirlevensinonim.ToString();
+
+                double hasilakhirlevensinonim2;
+                hasilakhirlevensinonim2 = Math.Round((persensinonim2 + variable.finalresult) / 2, 3);
+                textBox7.Text = hasilakhirlevensinonim2.ToString();
+
+                //foreach (var item in listBox11.Items)
+                //{
+                //    sum += Math.Round(Convert.ToDouble(item.ToString()),3);
+                //    double finalresult = sum / listBox11.Items.Count;
+                //    label36.Text = finalresult.ToString();
+                //}
+                if (hasilakhirlevensinonim2 < 30)
+                {
+                    label36.Text = "Low Plagiarism";
+                    label36.ForeColor = Color.Green;
+
+                    //textBox7.BackColor = Color.Green;
+                    //textBox16.BackColor = Color.Green;
+                }
+                else if (hasilakhirlevensinonim2 >= 30 && hasilakhirlevensinonim2 <= 70)
+                {
+                    label36.Text = "Medium Plagiarism";
+                    label36.ForeColor = Color.Yellow;
+
+                    //textBox7.BackColor = Color.Yellow;
+                    //textBox16.BackColor = Color.Yellow;
+                }
+                else if (hasilakhirlevensinonim2 >= 71 && hasilakhirlevensinonim2 <= 100)
+                {
+                    label36.Text = "High Plagiarism";
+                    label36.ForeColor = Color.Red;
+
+                    //textBox7.BackColor = Color.Red;
+                    //textBox16.BackColor = Color.Red;
+
+                }
+                //Ambil Levenstein Score
+
+                for (int i = 0; i < listBox5.Items.Count; i++)
+                {
+                    variable.scoreleven2 += Convert.ToInt32(listBox5.Items[i].ToString());
+                    variable.finallevenscore2 = variable.scoreleven2 / listBox5.Items.Count;
+                }
+                textBox8.Text = variable.finallevelscore.ToString();
+
+            }
+            else if (storevariable.cekstemmingresult == false)
+            {
+                metroTile6.Show();
+                groupBox5.Show();
+                groupBox6.Show();
+                label2.Hide();
+                label4.Hide();
+                //Counting Total words in Textbox
+                String countingwords = textBox1.Text.Trim();
+                string countingwords2 = textBox2.Text.Trim();
+                int wordCount = 0, index = 0;
+                int wordCount2 = 0, index2 = 0;
+                while (index < countingwords.Length)
+                {
+                    // check if current char is part of a word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == false)
+                        index++;
+
+                    wordCount++;
+
+                    // skip whitespace until next word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == true)
+                        index++;
+                }
+                textBox10.Text = wordCount.ToString();
+                while (index2 < countingwords2.Length)
+                {
+                    // check if current char is part of a word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == false)
+                        index2++;
+
+                    wordCount2++;
+
+                    // skip whitespace until next word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == true)
+                        index2++;
+                }
+                textBox17.Text = wordCount2.ToString();
+                //Ambil nilai dari listbox sinonim untuk Stemming
+                int angka2 = int.Parse(listBox10.Items[0].ToString());
+                textBox9.Text = angka2.ToString();
+                //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming           
+                int totalkatasinonim2 = 0;
+                double persensinonim2 = 0;
+                totalkatasinonim2 = int.Parse(textBox9.Text);
+                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount2) * 100;
+                textBox6.Text = persensinonim2.ToString();
+                //Ambil Levenstein distance angka
+                int levangka, totalleven, inverseleven;
+                for (int i = 0; i < listBox5.Items.Count; i++)
+                {
+                    levangka = int.Parse(listBox5.Items[i].ToString());
+
+                    totalleven = levangka;
+
+                    inverseleven = totalleven * -1;
+                    double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
+
+                    listBox4.Items.Add(persenleven);
+
+
+                }
+                double sum = 0;
+                for (int i = 0; i < listBox4.Items.Count; i++)
+                {
+                    sum += Math.Round(Convert.ToDouble(listBox4.Items[i].ToString()), 3);
+                    variable.finalresult = Math.Round(sum / i, 3);
+                    textBox5.Text = variable.finalresult.ToString();
+                }
+                double hasilakhirlevensinonim2;
+                hasilakhirlevensinonim2 = Math.Round((persensinonim2 + variable.finalresult) / 2, 3);
+                textBox7.Text = hasilakhirlevensinonim2.ToString();
+
+                if (hasilakhirlevensinonim2 < 30)
+                {
+                    label36.Text = "Low Plagiarism";
+                    label36.ForeColor = Color.Green;
+
+                    //textBox7.BackColor = Color.Green;
+                    //textBox16.BackColor = Color.Green;
+                }
+                else if (hasilakhirlevensinonim2 >= 30 && hasilakhirlevensinonim2 <= 70)
+                {
+                    label36.Text = "Medium Plagiarism";
+                    label36.ForeColor = Color.Yellow;
+
+
+                }
+                else if (hasilakhirlevensinonim2 >= 71 && hasilakhirlevensinonim2 <= 100)
+                {
+                    label36.Text = "High Plagiarism";
+                    label36.ForeColor = Color.Red;
+
+
+                }
+                //Ambil Levenstein Score
+                for (int i = 0; i < listBox5.Items.Count; i++)
+                {
+                    variable.scoreleven += Convert.ToInt32(listBox5.Items[i].ToString());
+                    variable.finallevelscore = variable.scoreleven / listBox5.Items.Count;
+                }
+                textBox8.Text = variable.finallevelscore.ToString();
+
+                textBox8.Text = variable.finallevelscore.ToString();
+
+            }
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openDlg = new OpenFileDialog();
+            openDlg.Filter = "PDF Files(*.PDF)|*.PDF|ALL Files(*.*)|*.*";
+
+            if (openDlg.ShowDialog() == DialogResult.OK)
+            {
+                metroTextBox2.Show();
+                textBox2.Show();
+                metroTile2.Show();
+                string filePath = openDlg.FileName.ToString();
+                filePath = openDlg.FileName.ToString();
+                metroTextBox1.Text = filePath;
+                metroTextBox1.Enabled = false;
+                FileInfo inf = new FileInfo(filePath);
+                long lengthinf = inf.Length / 1024;
+                string fordislay = lengthinf.ToString("N0") + "KB";
+                textBox35.Text = fordislay;
+                textBox34.Text = filePath;
+                textBox33.Text = System.IO.Path.GetFileName(filePath);
+                string strText = string.Empty;
+                try
+                {
+                    //textBoxInput.Text = File.ReadAllText(openDlg.FileName);
+                    PdfReader read = new PdfReader(filePath);
+                    for (int page = 1; page <= read.NumberOfPages; page++)
+                    {
+                        ITextExtractionStrategy its = new iTextSharp.text.pdf.parser.LocationTextExtractionStrategy();
+                        String s = PdfTextExtractor.GetTextFromPage(read, page, its);
+
+                        s = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(s)));
+                        strText = strText + s;
+                        textBox1.Text = strText;
+                    }
+                    read.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+
+        private void metroTile6_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("You will be Check some file. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+                listBox3.Items.Clear();
+
+                listBox5.Items.Clear();
+                listBox6.Items.Clear();
+                listBox7.Items.Clear();
+                listBox8.Items.Clear();
+
+                listBox10.Items.Clear();
+                listBox1.Hide();
+                listBox2.Hide();
+                listBox3.Hide();
+
+                listBox5.Hide();
+                listBox6.Hide();
+                listBox7.Hide();
+                listBox8.Hide();
+
+                listBox10.Hide();
+                materialLabel1.Hide();
+                materialLabel2.Hide();
+                materialLabel3.Hide();
+                materialLabel4.Hide();
+                materialLabel5.Hide();
+                materialLabel8.Hide();
+                label3.Show();
+                label1.Show();
+                groupBox2.Hide();
+                TabPage t = tabControl1.TabPages[0];
+                tabControl1.SelectedTab = t;
+                metroTextBox1.Clear();
+                metroTextBox2.Clear();
+                textBox1.Clear();
+                textBox2.Clear();
+                metroProgressBar1.Hide();
+            }
+            else
+            {
+
+            }
+        }
+        private void metroTile7_Click(object sender, EventArgs e)
+        {
+            TabPage t = tabControl1.TabPages[1];
+            tabControl1.SelectedTab = t;
+        }
+
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox2.Image = Plagiarism_Checker.Properties.Resources.info2;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Image = Plagiarism_Checker.Properties.Resources.info;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            About ab = new About();
+            ab.Show();
+        }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            #region
+            DialogResult dialogResult = MessageBox.Show("If you go back, all process will be resetted and previous file be load back. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                metroTile2.Hide();
+                metroTextBox2.Hide();
+                textBox2.Hide();
+                groupBox1.Hide();
+                metroTile3.Hide();
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+                listBox3.Items.Clear();
+
+                listBox5.Items.Clear();
+                listBox6.Items.Clear();
+                listBox7.Items.Clear();
+                listBox8.Items.Clear();
+
+                listBox10.Items.Clear();
+                listBox1.Hide();
+                listBox2.Hide();
+                listBox3.Hide();
+
+                listBox5.Hide();
+                listBox6.Hide();
+                listBox7.Hide();
+                listBox8.Hide();
+
+                listBox10.Hide();
+                materialLabel1.Hide();
+                materialLabel2.Hide();
+                materialLabel3.Hide();
+                materialLabel4.Hide();
+                materialLabel5.Hide();
+                materialLabel8.Hide();
+                label3.Show();
+                label1.Show();
+                groupBox2.Hide();
+
+            }
+            TabPage t = tabControl1.TabPages[0];
+            tabControl1.SelectedTab = t;
+            metroTextBox1.Clear();
+            metroTextBox2.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
+            metroProgressBar1.Hide();
+            #endregion 
         }
     }
 

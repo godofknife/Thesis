@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
@@ -50,7 +50,6 @@
             this.listBox10 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
@@ -63,9 +62,11 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.metroTile7 = new MetroFramework.Controls.MetroTile();
+            this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -116,15 +117,13 @@
             this.label65 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
-            this.metroTile9 = new MetroFramework.Controls.MetroTile();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.label5 = new System.Windows.Forms.Label();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -153,13 +152,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.metroTile1);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.metroProgressBar1);
             this.tabPage1.Controls.Add(this.metroTile3);
             this.tabPage1.Controls.Add(this.metroTile2);
             this.tabPage1.Controls.Add(this.metroTextBox2);
-            this.tabPage1.Controls.Add(this.metroTile1);
             this.tabPage1.Controls.Add(this.metroTextBox1);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
@@ -170,9 +169,22 @@
             this.tabPage1.Text = "Input File";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(136, 22);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(85, 23);
+            this.metroTile1.TabIndex = 33;
+            this.metroTile1.Text = "Load";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
             // textBox2
             // 
             this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(688, 51);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -183,6 +195,7 @@
             // textBox1
             // 
             this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(15, 51);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -224,6 +237,7 @@
             // 
             // metroTextBox2
             // 
+            this.metroTextBox2.Enabled = false;
             this.metroTextBox2.Lines = new string[] {
         "Test File"};
             this.metroTextBox2.Location = new System.Drawing.Point(970, 22);
@@ -238,21 +252,10 @@
             this.metroTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.metroTextBox2.UseSelectable = true;
             // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(136, 22);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(85, 23);
-            this.metroTile1.TabIndex = 24;
-            this.metroTile1.Text = "Load";
-            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click_1);
-            // 
             // metroTextBox1
             // 
             this.metroTextBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.metroTextBox1.Enabled = false;
             this.metroTextBox1.Lines = new string[] {
         "Original File"};
             this.metroTextBox1.Location = new System.Drawing.Point(227, 22);
@@ -291,10 +294,10 @@
             this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton2.Name = "materialRadioButton2";
             this.materialRadioButton2.Ripple = true;
-            this.materialRadioButton2.Size = new System.Drawing.Size(156, 30);
+            this.materialRadioButton2.Size = new System.Drawing.Size(118, 30);
             this.materialRadioButton2.TabIndex = 1;
             this.materialRadioButton2.TabStop = true;
-            this.materialRadioButton2.Text = "Stemming/Stopword";
+            this.materialRadioButton2.Text = "Preprocessing";
             this.materialRadioButton2.UseVisualStyleBackColor = true;
             this.materialRadioButton2.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged_1);
             // 
@@ -309,22 +312,22 @@
             this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton1.Name = "materialRadioButton1";
             this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(185, 30);
+            this.materialRadioButton1.Size = new System.Drawing.Size(147, 30);
             this.materialRadioButton1.TabIndex = 0;
             this.materialRadioButton1.TabStop = true;
-            this.materialRadioButton1.Text = "Non Stemming/Stopword";
+            this.materialRadioButton1.Text = "Non Preprocessing";
             this.materialRadioButton1.UseVisualStyleBackColor = true;
             this.materialRadioButton1.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged_1);
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.metroTile4);
             this.tabPage4.Controls.Add(this.materialLabel8);
             this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.Controls.Add(this.materialLabel5);
             this.tabPage4.Controls.Add(this.listBox10);
             this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Controls.Add(this.metroTile5);
-            this.tabPage4.Controls.Add(this.metroTile4);
             this.tabPage4.Controls.Add(this.materialLabel4);
             this.tabPage4.Controls.Add(this.materialLabel3);
             this.tabPage4.Controls.Add(this.materialLabel2);
@@ -355,7 +358,6 @@
             this.materialLabel8.Size = new System.Drawing.Size(96, 19);
             this.materialLabel8.TabIndex = 27;
             this.materialLabel8.Text = "Tokenization";
-            this.materialLabel8.Visible = false;
             // 
             // label3
             // 
@@ -411,19 +413,7 @@
             this.metroTile5.Text = "Hasil";
             this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile5.UseSelectable = true;
-            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click_1);
-            // 
-            // metroTile4
-            // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(22, 568);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(109, 42);
-            this.metroTile4.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroTile4.TabIndex = 12;
-            this.metroTile4.Text = "Kembali";
-            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile4.UseSelectable = true;
+            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
             // materialLabel4
             // 
@@ -549,14 +539,15 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.metroTile7);
+            this.tabPage3.Controls.Add(this.metroTile6);
             this.tabPage3.Controls.Add(this.listBox4);
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.groupBox5);
-            this.tabPage3.Controls.Add(this.metroTile9);
-            this.tabPage3.Controls.Add(this.metroTile6);
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1332, 693);
@@ -564,19 +555,36 @@
             this.tabPage3.Text = "Hasil Akhir";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // listBox4
+            // metroTile7
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 21;
-            this.listBox4.Location = new System.Drawing.Point(879, 352);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(120, 88);
-            this.listBox4.TabIndex = 73;
+            this.metroTile7.ActiveControl = null;
+            this.metroTile7.Location = new System.Drawing.Point(33, 568);
+            this.metroTile7.Name = "metroTile7";
+            this.metroTile7.Size = new System.Drawing.Size(110, 42);
+            this.metroTile7.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroTile7.TabIndex = 74;
+            this.metroTile7.Text = "Kembali";
+            this.metroTile7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile7.UseSelectable = true;
+            this.metroTile7.Click += new System.EventHandler(this.metroTile7_Click);
+            // 
+            // metroTile6
+            // 
+            this.metroTile6.ActiveControl = null;
+            this.metroTile6.Location = new System.Drawing.Point(1176, 568);
+            this.metroTile6.Name = "metroTile6";
+            this.metroTile6.Size = new System.Drawing.Size(109, 42);
+            this.metroTile6.TabIndex = 0;
+            this.metroTile6.Text = "Cek Ulang";
+            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile6.UseSelectable = true;
+            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
             // 
             // label2
             // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(481, 303);
+            this.label2.Location = new System.Drawing.Point(481, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(371, 36);
             this.label2.TabIndex = 72;
@@ -620,6 +628,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hasil Pengecekan";
             this.groupBox2.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(481, 215);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(371, 36);
+            this.label4.TabIndex = 74;
+            this.label4.Text = "No File in Check";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label37
             // 
@@ -1161,38 +1179,9 @@
             this.label63.TabIndex = 63;
             this.label63.Text = "Nama File";
             // 
-            // metroTile9
-            // 
-            this.metroTile9.ActiveControl = null;
-            this.metroTile9.Location = new System.Drawing.Point(22, 568);
-            this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(109, 42);
-            this.metroTile9.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroTile9.TabIndex = 19;
-            this.metroTile9.Text = "Kembali";
-            this.metroTile9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile9.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile9.UseSelectable = true;
-            // 
-            // metroTile6
-            // 
-            this.metroTile6.ActiveControl = null;
-            this.metroTile6.Location = new System.Drawing.Point(1198, 568);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(109, 42);
-            this.metroTile6.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTile6.TabIndex = 18;
-            this.metroTile6.Text = "Cek ulang File";
-            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile6.UseSelectable = true;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
             // 
             // pictureBox1
             // 
@@ -1204,19 +1193,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // materialLabel6
-            // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(976, 29);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(108, 19);
-            this.materialLabel6.TabIndex = 36;
-            this.materialLabel6.Text = "materialLabel6";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -1225,38 +1201,48 @@
             this.pictureBox2.Size = new System.Drawing.Size(30, 31);
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             // 
-            // materialLabel7
+            // metroTile4
             // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(976, 56);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(108, 19);
-            this.materialLabel7.TabIndex = 39;
-            this.materialLabel7.Text = "materialLabel7";
+            this.metroTile4.ActiveControl = null;
+            this.metroTile4.Location = new System.Drawing.Point(22, 568);
+            this.metroTile4.Name = "metroTile4";
+            this.metroTile4.Size = new System.Drawing.Size(109, 42);
+            this.metroTile4.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroTile4.TabIndex = 0;
+            this.metroTile4.Text = "Kembali";
+            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile4.UseSelectable = true;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
             // 
-            // label4
+            // label5
             // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 210);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(371, 36);
-            this.label4.TabIndex = 74;
-            this.label4.Text = "No File in Check";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(481, 215);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(371, 36);
+            this.label5.TabIndex = 75;
+            this.label5.Text = "No File in Check";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 21;
+            this.listBox4.Location = new System.Drawing.Point(879, 352);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(120, 88);
+            this.listBox4.TabIndex = 73;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.materialLabel7);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.materialLabel6);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -1282,7 +1268,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1297,7 +1282,6 @@
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile2;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
-        private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
@@ -1309,7 +1293,6 @@
         private System.Windows.Forms.ListBox listBox10;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroTile metroTile5;
-        private MetroFramework.Controls.MetroTile metroTile4;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
@@ -1374,15 +1357,16 @@
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label63;
-        private MetroFramework.Controls.MetroTile metroTile9;
-        private MetroFramework.Controls.MetroTile metroTile6;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ListBox listBox4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private System.Windows.Forms.Label label4;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile metroTile6;
+        private MetroFramework.Controls.MetroTile metroTile7;
+        private MetroFramework.Controls.MetroTile metroTile4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox listBox4;
     }
 }
 
