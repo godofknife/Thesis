@@ -1370,8 +1370,7 @@ namespace Plagiarism_Checker
                         int cost = (t[j - 1] == s[i - 1]) ? 0 : 1;
 
                         // Step 6
-                        d[i, j] = Math.Min(
-                            Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1),
+                        d[i, j] = Math.Min(Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1),
                             d[i - 1, j - 1] + cost);
                     }
                 }
@@ -1635,11 +1634,19 @@ namespace Plagiarism_Checker
 
                 //    listBox4.Items.Add(cost);
                 //}
-                foreach (string cek1 in listBox7.Items)
-                {
-                    int cost1 = LevenshteinDistance.Compute(cek1, listBox2.Items.ToString());
+                //foreach (string cek1 in listBox7.Items)
+                //{
+                //    int cost1 = LevenshteinDistance.Compute(cek1, listBox2.Items.ToString());
 
-                    listBox5.Items.Add(cost1);
+                //    listBox5.Items.Add(cost1);
+                //}
+                for(int i=0; i < listBox7.Items.Count; i++)
+                {
+                    for(int j = 0; i < listBox2.Items.Count; i++)
+                    {
+                        int cost1 = LevenshteinDistance.Compute(listBox7.Items[i].ToString(), listBox2.Items[j].ToString());
+                        listBox5.Items.Add(cost1);
+                    }
                 }
                 //Proses Synonim disini
                 conn = new OleDbConnection();
