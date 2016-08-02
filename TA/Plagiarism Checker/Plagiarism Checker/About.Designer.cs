@@ -37,9 +37,9 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
+           // this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -143,19 +143,19 @@
             // 
             // axAcroPDF1
             // 
-            this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(427, 51);
-            this.axAcroPDF1.Name = "axAcroPDF1";
-            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(530, 512);
-            this.axAcroPDF1.TabIndex = 10;
+            //this.axAcroPDF1.Enabled = true;
+            //this.axAcroPDF1.Location = new System.Drawing.Point(427, 51);
+            //this.axAcroPDF1.Name = "axAcroPDF1";
+            //this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            //this.axAcroPDF1.Size = new System.Drawing.Size(530, 512);
+            //this.axAcroPDF1.TabIndex = 10;
             // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 586);
-            this.Controls.Add(this.axAcroPDF1);
+           // this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
@@ -167,7 +167,7 @@
             this.Name = "About";
             this.Text = "About";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
+          //  ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,6 +183,6 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel4;
-        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
+        //private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
 }

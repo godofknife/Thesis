@@ -24,8 +24,8 @@ namespace Plagiarism_Checker
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            axAcroPDF1.src = "";
-            axAcroPDF1.Visible = true;
+            //axAcroPDF1.src = "";
+            //axAcroPDF1.Visible = true;
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

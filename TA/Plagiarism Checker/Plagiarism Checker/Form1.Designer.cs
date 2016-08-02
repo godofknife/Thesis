@@ -63,8 +63,8 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label37 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
@@ -122,8 +122,9 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -207,6 +208,7 @@
             this.metroTile3.Text = "Proses";
             this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile3.UseSelectable = true;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click_1);
             // 
             // metroTile2
             // 
@@ -218,6 +220,7 @@
             this.metroTile2.Text = "Load";
             this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.UseSelectable = true;
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click_1);
             // 
             // metroTextBox2
             // 
@@ -245,6 +248,7 @@
             this.metroTile1.Text = "Load";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click_1);
             // 
             // metroTextBox1
             // 
@@ -280,7 +284,7 @@
             // 
             this.materialRadioButton2.AutoSize = true;
             this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
             this.materialRadioButton2.Location = new System.Drawing.Point(43, 64);
             this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -292,12 +296,13 @@
             this.materialRadioButton2.TabStop = true;
             this.materialRadioButton2.Text = "Stemming/Stopword";
             this.materialRadioButton2.UseVisualStyleBackColor = true;
+            this.materialRadioButton2.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged_1);
             // 
             // materialRadioButton1
             // 
             this.materialRadioButton1.AutoSize = true;
             this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
             this.materialRadioButton1.Location = new System.Drawing.Point(43, 22);
             this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -309,6 +314,7 @@
             this.materialRadioButton1.TabStop = true;
             this.materialRadioButton1.Text = "Non Stemming/Stopword";
             this.materialRadioButton1.UseVisualStyleBackColor = true;
+            this.materialRadioButton1.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged_1);
             // 
             // tabPage4
             // 
@@ -332,7 +338,7 @@
             this.tabPage4.Controls.Add(this.listBox1);
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1327, 693);
+            this.tabPage4.Size = new System.Drawing.Size(1332, 693);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Detil Proses";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -341,12 +347,12 @@
             // 
             this.materialLabel8.AutoSize = true;
             this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel8.Location = new System.Drawing.Point(622, 66);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(93, 18);
+            this.materialLabel8.Size = new System.Drawing.Size(96, 19);
             this.materialLabel8.TabIndex = 27;
             this.materialLabel8.Text = "Tokenization";
             this.materialLabel8.Visible = false;
@@ -354,7 +360,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(481, 165);
+            this.label3.Location = new System.Drawing.Point(481, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(371, 36);
             this.label3.TabIndex = 18;
@@ -365,12 +371,12 @@
             // 
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel5.Location = new System.Drawing.Point(626, 152);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(76, 18);
+            this.materialLabel5.Size = new System.Drawing.Size(75, 19);
             this.materialLabel5.TabIndex = 17;
             this.materialLabel5.Text = "StopWord";
             // 
@@ -391,7 +397,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(371, 36);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Nothing File in Check";
+            this.label1.Text = "No File in Check";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroTile5
@@ -405,6 +411,7 @@
             this.metroTile5.Text = "Hasil";
             this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile5.UseSelectable = true;
+            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click_1);
             // 
             // metroTile4
             // 
@@ -422,12 +429,12 @@
             // 
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel4.Location = new System.Drawing.Point(349, 497);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(62, 18);
+            this.materialLabel4.Size = new System.Drawing.Size(64, 19);
             this.materialLabel4.TabIndex = 11;
             this.materialLabel4.Text = "Sinonim";
             // 
@@ -435,12 +442,12 @@
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel3.Location = new System.Drawing.Point(308, 376);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(148, 18);
+            this.materialLabel3.Size = new System.Drawing.Size(152, 19);
             this.materialLabel3.TabIndex = 10;
             this.materialLabel3.Text = "Levensthein Distance";
             // 
@@ -448,12 +455,12 @@
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(626, 263);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(75, 18);
+            this.materialLabel2.Size = new System.Drawing.Size(77, 19);
             this.materialLabel2.TabIndex = 9;
             this.materialLabel2.Text = "Stemming";
             // 
@@ -461,12 +468,12 @@
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(622, 66);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(93, 18);
+            this.materialLabel1.Size = new System.Drawing.Size(96, 19);
             this.materialLabel1.TabIndex = 8;
             this.materialLabel1.Text = "Tokenization";
             // 
@@ -542,8 +549,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.listBox4);
             this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox6);
@@ -552,10 +559,19 @@
             this.tabPage3.Controls.Add(this.metroTile6);
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1327, 693);
+            this.tabPage3.Size = new System.Drawing.Size(1332, 693);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Hasil Akhir";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 21;
+            this.listBox4.Location = new System.Drawing.Point(879, 352);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(120, 88);
+            this.listBox4.TabIndex = 73;
             // 
             // label2
             // 
@@ -567,19 +583,10 @@
             this.label2.Text = "Sorry";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(481, 353);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(371, 36);
-            this.label4.TabIndex = 71;
-            this.label4.Text = "Nothing File in Check";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label37);
             this.groupBox2.Controls.Add(this.textBox17);
             this.groupBox2.Controls.Add(this.label38);
@@ -789,6 +796,7 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "Detail";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // label13
             // 
@@ -1178,6 +1186,14 @@
             this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile6.UseSelectable = true;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Plagiarism_Checker.Properties.Resources.Untitled_2;
@@ -1194,12 +1210,21 @@
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(1067, 29);
+            this.materialLabel6.Location = new System.Drawing.Point(976, 29);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(108, 19);
             this.materialLabel6.TabIndex = 36;
             this.materialLabel6.Text = "materialLabel6";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1297, 41);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 31);
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
             // 
             // materialLabel7
             // 
@@ -1207,35 +1232,37 @@
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(1187, 29);
+            this.materialLabel7.Location = new System.Drawing.Point(976, 56);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
             this.materialLabel7.Size = new System.Drawing.Size(108, 19);
-            this.materialLabel7.TabIndex = 37;
+            this.materialLabel7.TabIndex = 39;
             this.materialLabel7.Text = "materialLabel7";
             // 
-            // pictureBox2
+            // label4
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1305, 17);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 31);
-            this.pictureBox2.TabIndex = 38;
-            this.pictureBox2.TabStop = false;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 210);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(371, 36);
+            this.label4.TabIndex = 74;
+            this.label4.Text = "No File in Check";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.materialLabel7);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.materialLabel6);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "       Plagiarism Checker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1296,7 +1323,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox textBox17;
@@ -1353,8 +1379,10 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ListBox listBox4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel7;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -13,3 +13,7 @@ G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism Checker.csproj.Gen
 G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism Checker.exe
 G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism Checker.pdb
 G:\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism_Checker.About.resources
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\bin\Debug\Plagiarism Checker.exe.config
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism Checker.csproj.ResolveComReference.cache
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\Debug\Plagiarism Checker.exe.config
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\Debug\Plagiarism Checker.csproj.ResolveComReference.cache

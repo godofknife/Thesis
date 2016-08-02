@@ -1,0 +1,15 @@
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\itextsharp.dll
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\MaterialSkin.dll
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\MetroFramework.Design.dll
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\MetroFramework.dll
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\MetroFramework.Fonts.dll
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb

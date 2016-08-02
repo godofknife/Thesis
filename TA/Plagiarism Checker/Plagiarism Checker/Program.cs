@@ -16,7 +16,7 @@ namespace Plagiarism_Checker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new About());
+            Application.Run(new Form1());
         }
     }
 }
