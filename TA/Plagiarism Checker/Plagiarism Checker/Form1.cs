@@ -1380,6 +1380,10 @@ namespace Plagiarism_Checker
                 materialLabel3.Show();
                 materialLabel5.Show();
                 metroTile5.Show();
+                this.materialLabel3.Location = new Point(308, 376);
+                this.materialLabel4.Location = new Point(349, 497);
+                this.listBox5.Location = new Point(487, 347);
+                this.listBox10.Location = new Point(487, 456);
                 #endregion
                 timer1.Start();
                 metroProgressBar1.Show();
@@ -1390,7 +1394,7 @@ namespace Plagiarism_Checker
                 Char chr = textBox1.Text[0];
                 string[] word = textBox1.Text.Split('.');
                 string[] word1 = textBox2.Text.Split('.');
-                string[,] listkata = new string[0, 0];
+                //string[,] listkata = new string[0, 0];
                 foreach (string item in word)
                 {
                     listBox1.Items.Add(item);
@@ -1474,7 +1478,7 @@ namespace Plagiarism_Checker
                 //}
                 for (int i=0; i < listBox7.Items.Count; i++)
                 {
-                    for(int j = 0; i < listBox2.Items.Count; i++)
+                    for(int j = 0; j < listBox2.Items.Count; j++)
                     {
                         int cost1 = LevenshteinDistance.Compute(listBox7.Items[i].ToString(), listBox2.Items[j].ToString());
                         listBox5.Items.Add(cost1);
@@ -1487,7 +1491,7 @@ namespace Plagiarism_Checker
 
                 OleDbDataAdapter da;
                 //DataTable dt = new DataTable();
-                string[] tempo = new string[147];
+                string[] tempo = new string[294];
                 int pos = 0;
                 //int nilai = 0;
                 //for (int i = 0; i < listBox2.Items.Count - 1; i++)
@@ -1529,7 +1533,7 @@ namespace Plagiarism_Checker
                 //}
                 //listBox9.Items.Add(nilai);
                 int nilai = 0;
-                for (int i = 0; i < listBox7.Items.Count - 1; i++)
+                for (int i = 0; i < listBox7.Items.Count; i++)
                 {
                     sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
                     string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox7.Items[i].ToString() + "%'";
@@ -1542,12 +1546,15 @@ namespace Plagiarism_Checker
                         DataSet ds = new DataSet();
                         da.Fill(ds, "persamaan");
                         //da.Fill(dt, "persamaan");
-                        while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+                        for (int j = 0; j < ds.Tables["persamaan"].Rows.Count; j++)
                         {
-                            tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                            pos++;
+                            while (pos < ds.Tables["persamaan"].Columns.Count)
+                            {
+                                tempo[pos] = ds.Tables["persamaan"].Rows[j][pos].ToString();
+                                pos++;
+                            }
                         }
-                        for (int j = 0; j < listBox2.Items.Count - 1; j++)
+                        for (int j = 0; j < listBox2.Items.Count; j++)
                         {
                             for (int k = 0; k < tempo.Length; k++)
                             {
@@ -1605,6 +1612,7 @@ namespace Plagiarism_Checker
                 metroProgressBar1.Show();
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
+                listBox8.Items.Clear();
                 listBox1.Text.ToLower();
                 listBox2.Text.ToLower();
                 Char chr = textBox1.Text[0];
@@ -1636,7 +1644,7 @@ namespace Plagiarism_Checker
                 //}
                 for (int i=0; i < listBox8.Items.Count; i++)
                 {
-                    for(int j = 0; i < listBox1.Items.Count; i++)
+                    for(int j = 0; j < listBox1.Items.Count; j++)
                     {
                         int cost1 = LevenshteinDistance.Compute(listBox8.Items[i].ToString(), listBox1.Items[j].ToString());
                         listBox5.Items.Add(cost1);
