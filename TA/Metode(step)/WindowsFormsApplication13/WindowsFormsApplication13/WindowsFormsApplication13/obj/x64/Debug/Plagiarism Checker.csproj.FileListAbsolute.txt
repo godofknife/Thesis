@@ -117,3 +117,4 @@ C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication
 C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Form1.resources
 C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\WindowsFormsApplication13.Properties.Resources.resources
 C:\Users\Wisely\Downloads\Temp\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Metode(step)\WindowsFormsApplication13\WindowsFormsApplication13\WindowsFormsApplication13\bin\x64\Debug\WindowsFormsApplication13.exe.config
