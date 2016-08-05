@@ -1613,6 +1613,8 @@ namespace Plagiarism_Checker
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
                 listBox8.Items.Clear();
+                listBox5.Items.Clear();
+                listBox10.Items.Clear();
                 listBox1.Text.ToLower();
                 listBox2.Text.ToLower();
                 Char chr = textBox1.Text[0];
@@ -1844,6 +1846,7 @@ namespace Plagiarism_Checker
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            
             listBox1.Hide();
             listBox2.Hide();
             listBox3.Hide();
@@ -1859,7 +1862,7 @@ namespace Plagiarism_Checker
             materialLabel8.Hide();
             metroTile5.Hide();
             metroTile6.Hide();
-            listBox4.Hide();
+            listBox4.Show();
             materialLabel8.Hide();
             
         }
@@ -1880,6 +1883,7 @@ namespace Plagiarism_Checker
                 groupBox6.Show();
                 label2.Hide();
                 label4.Hide();
+                label5.Hide();
                 //Counting Total words in Textbox
                 String countingwords = textBox1.Text.Trim();
                 string countingwords2 = textBox2.Text.Trim();
@@ -1922,34 +1926,39 @@ namespace Plagiarism_Checker
                 persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount2) * 100;
                 textBox6.Text = persensinonim2.ToString();
                 //Ambil Levenstein distance angka
-                int levangka = 0, totalleven = 0, inverseleven = 0;
+                int levangka = 0;
                 for (int i = 0; i < listBox5.Items.Count; i++)
                 {
+
                     levangka = int.Parse(listBox5.Items[i].ToString());
 
-                    totalleven = levangka;
+                    if (levangka == 0)
+                    {
+                        variable.levenkalkulasi += 1;
 
-                    inverseleven = totalleven * -1;
-                    double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
+                    }
 
-                    listBox4.Items.Add(persenleven);
+                    //inverseleven = totalleven * -1;
+                    //double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
 
-
-                }
-                double sum = 0;
-                for (int i = 0; i < listBox4.Items.Count; i++)
-                {
-                    sum += Math.Round(Convert.ToDouble(listBox4.Items[i].ToString()), 3);
-                    variable.finalresult = Math.Round(sum / i, 3);
-                    textBox5.Text = variable.finalresult.ToString();
 
                 }
+                double tot = ((double)variable.levenkalkulasi / (double)wordCount2) * 100;
+                textBox5.Text = tot.ToString();
+                //double sum = 0;
+                //for (int i = 0; i < listBox4.Items.Count; i++)
+                //{
+                //    sum += Math.Round(Convert.ToDouble(listBox4.Items[i].ToString()), 3);
+                //    variable.finalresult = Math.Round(sum / i, 3);
+                //    textBox5.Text = variable.finalresult.ToString();
+
+                //}
                 //double hasilakhirlevensinonim;
                 //hasilakhirlevensinonim = Math.Round((persensinonim + variable.finalresult) / 2, 3);
                 //textBox7.Text = hasilakhirlevensinonim.ToString();
 
                 double hasilakhirlevensinonim2;
-                hasilakhirlevensinonim2 = Math.Round((persensinonim2 + variable.finalresult) / 2, 3);
+                hasilakhirlevensinonim2 = Math.Round((persensinonim2 + tot) / 2, 3);
                 textBox7.Text = hasilakhirlevensinonim2.ToString();
 
                 //foreach (var item in listBox11.Items)
@@ -1990,7 +1999,7 @@ namespace Plagiarism_Checker
                     variable.scoreleven2 += Convert.ToInt32(listBox5.Items[i].ToString());
                     variable.finallevenscore2 = variable.scoreleven2 / listBox5.Items.Count;
                 }
-                textBox8.Text = variable.finallevelscore.ToString();
+                textBox8.Text = variable.levenkalkulasi.ToString();
 
             }
             else if (storevariable.cekstemmingresult == false)
@@ -2000,6 +2009,7 @@ namespace Plagiarism_Checker
                 groupBox6.Show();
                 label2.Hide();
                 label4.Hide();
+                label5.Hide();
                 //Counting Total words in Textbox
                 String countingwords = textBox1.Text.Trim();
                 string countingwords2 = textBox2.Text.Trim();
@@ -2041,29 +2051,36 @@ namespace Plagiarism_Checker
                 persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount2) * 100;
                 textBox6.Text = persensinonim2.ToString();
                 //Ambil Levenstein distance angka
-                int levangka, totalleven, inverseleven;
+                int levangka=0;
                 for (int i = 0; i < listBox5.Items.Count; i++)
                 {
+                    
                     levangka = int.Parse(listBox5.Items[i].ToString());
+                    
+                        if (levangka==0)
+                        {
+                            variable.levenkalkulasi+=1;
 
-                    totalleven = levangka;
-
-                    inverseleven = totalleven * -1;
-                    double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
-
-                    listBox4.Items.Add(persenleven);
-
+                        }
+                    
+                    //inverseleven = totalleven * -1;
+                    //double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
+                    
 
                 }
-                double sum = 0;
-                for (int i = 0; i < listBox4.Items.Count; i++)
-                {
-                    sum += Math.Round(Convert.ToDouble(listBox4.Items[i].ToString()), 3);
-                    variable.finalresult = Math.Round(sum / i, 3);
-                    textBox5.Text = variable.finalresult.ToString();
-                }
+                double tot = ((double)variable.levenkalkulasi / (double)wordCount2) * 100;
+                textBox5.Text = tot.ToString();
+                //listBox4.Items.Add(tot);
+
+                //double sum = 0;
+                //for (int i = 0; i < listBox4.Items.Count; i++)
+                //{
+                //    sum += Math.Round(Convert.ToDouble(listBox4.Items[i].ToString()), 3);
+                //    variable.finalresult = Math.Round(sum / i, 3);
+                //    textBox5.Text = variable.finalresult.ToString();
+                //}
                 double hasilakhirlevensinonim2;
-                hasilakhirlevensinonim2 = Math.Round((persensinonim2 + variable.finalresult) / 2, 3);
+                hasilakhirlevensinonim2 = Math.Round((tot + persensinonim2) / 2, 3);
                 textBox7.Text = hasilakhirlevensinonim2.ToString();
 
                 if (hasilakhirlevensinonim2 < 30)
@@ -2094,9 +2111,7 @@ namespace Plagiarism_Checker
                     variable.scoreleven += Convert.ToInt32(listBox5.Items[i].ToString());
                     variable.finallevelscore = variable.scoreleven / listBox5.Items.Count;
                 }
-                textBox8.Text = variable.finallevelscore.ToString();
-
-                textBox8.Text = variable.finallevelscore.ToString();
+                textBox8.Text = variable.levenkalkulasi.ToString();
 
             }
         }
