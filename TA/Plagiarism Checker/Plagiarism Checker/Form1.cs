@@ -22,7 +22,6 @@ namespace Plagiarism_Checker
 
         public Form1()
         {
-
             InitializeComponent();
             metroTextBox2.Hide();
             textBox2.Hide();
@@ -30,7 +29,6 @@ namespace Plagiarism_Checker
             metroProgressBar1.Hide();
             groupBox1.Hide();
             metroTile3.Hide();
-
         }
         public OleDbConnection conn;
         public string link = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
@@ -1387,6 +1385,8 @@ namespace Plagiarism_Checker
                 #endregion
                 timer1.Start();
                 metroProgressBar1.Show();
+                metroTile4.Show();
+                
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
                 listBox1.Text.ToLower();
@@ -1462,20 +1462,7 @@ namespace Plagiarism_Checker
                     }
 
                 }
-                //Proses levenstein disini
-
-                //foreach (string cek in listBox2.Items)
-                //{
-                //    int cost = LevenshteinDistance.Compute(cek, listBox7.Items.ToString());
-
-                //    listBox4.Items.Add(cost);
-                //}
-                //foreach (string cek1 in listBox7.Items)
-                //{
-                //    int cost1 = LevenshteinDistance.Compute(cek1, listBox2.Items.ToString());
-
-                //    listBox5.Items.Add(cost1);
-                //}
+                //Proses levenstein disini         
                 for (int i=0; i < listBox7.Items.Count; i++)
                 {
                     for(int j = 0; j < listBox2.Items.Count; j++)
@@ -1488,50 +1475,9 @@ namespace Plagiarism_Checker
                 conn = new OleDbConnection();
                 conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
                 conn.Open();
-
-                OleDbDataAdapter da;
-                //DataTable dt = new DataTable();
+                OleDbDataAdapter da;            
                 string[] tempo = new string[294];
                 int pos = 0;
-                //int nilai = 0;
-                //for (int i = 0; i < listBox2.Items.Count - 1; i++)
-                //{
-                //    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                //    string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox2.Items[i].ToString() + "%'";
-                //    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox2.Items[i].ToString() + "%'";
-                //    OleDbCommand cmd = new OleDbCommand(cek, conn);
-                //    int count = (int)cmd.ExecuteScalar();
-                //    if (count > 0)
-                //    {
-                //        da = new OleDbDataAdapter(sql, conn);
-                //        DataSet ds = new DataSet();
-                //        da.Fill(ds, "persamaan");
-                //        //da.Fill(dt, "persamaan");
-                //        while (pos < ds.Tables["persamaan"].Columns.Count - 1)
-                //        {
-                //            tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                //            pos++;
-                //        }
-                //        for (int j = 0; j < listBox7.Items.Count - 1; j++)
-                //        {
-                //            for (int k = 0; k < tempo.Length; k++)
-                //            {
-                //                if (tempo[k] == listBox7.Items[j].ToString())
-                //                    nilai += 1;
-                //            }
-                //        }
-                //        ds.Clear();
-                //    }
-                //    else
-                //    {
-                //        string add = "insert into Kamus_Tesaurus ([Kata_u]) values (@1)";
-                //        OleDbCommand command = new OleDbCommand(add, conn);
-                //        command.Parameters.AddWithValue("@1", listBox2.Items[i].ToString());
-                //        command.ExecuteNonQuery();
-                //    }
-
-                //}
-                //listBox9.Items.Add(nilai);
                 int nilai = 0;
                 for (int i = 0; i < listBox7.Items.Count; i++)
                 {
@@ -1610,6 +1556,7 @@ namespace Plagiarism_Checker
                 #endregion
                 this.timer1.Start();
                 metroProgressBar1.Show();
+                metroTile4.Show();
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
                 listBox8.Items.Clear();
@@ -1638,12 +1585,7 @@ namespace Plagiarism_Checker
 
                 }
                 //Proses levenstein disini
-                //foreach (string cek in listBox1.Items)
-                //{
-                //    int cost = LevenshteinDistance.Compute(cek, listBox8.Items.ToString());
-
-                //    listBox3.Items.Add(cost);
-                //}
+              
                 for (int i=0; i < listBox8.Items.Count; i++)
                 {
                     for(int j = 0; j < listBox1.Items.Count; j++)
@@ -1661,47 +1603,6 @@ namespace Plagiarism_Checker
                 OleDbDataAdapter da;
                 string[] tempo = new string[147];
                 int pos = 0;
-                //int nilai = 0;
-                //for (int i = 0; i < listBox1.Items.Count - 1; i++)
-                //{
-                //    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                //    string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox1.Items[i].ToString() + "%'";
-                //    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox1.Items[i].ToString() + "%'";
-                //    OleDbCommand cmd = new OleDbCommand(cek, conn);
-                //    int count = (int)cmd.ExecuteScalar();
-
-                //    if (count > 0)
-                //    {
-                //        da = new OleDbDataAdapter(sql, conn);
-                //        DataSet ds = new DataSet();
-                //        da.Fill(ds, "persamaan");
-                //        //da.Fill(dt, "persamaan");
-                //        while (pos < ds.Tables["persamaan"].Columns.Count - 1)
-                //        {
-                //            tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                //            pos++;
-                //        }
-                //        for (int j = 0; j < listBox8.Items.Count - 1; j++)
-                //        {
-                //            for (int k = 0; k < tempo.Length; k++)
-                //            {
-                //                if (tempo[k] == listBox8.Items[j].ToString())
-                //                    nilai += 1;
-                //            }
-                //        }
-                //        ds.Clear();
-
-                //    }
-                //    else
-                //    {
-                //        string add = "insert into Kamus_Tesaurus ([Kata_u]) values (@1)";
-                //        OleDbCommand command = new OleDbCommand(add, conn);
-                //        command.Parameters.AddWithValue("@1", listBox1.Items[i].ToString());
-                //        command.ExecuteNonQuery();
-                //    }
-
-                //}
-                //listBox2.Items.Add(nilai);
                 int nilai = 0;
                 for (int i = 0; i < listBox8.Items.Count - 1; i++)
                 {
@@ -1766,7 +1667,7 @@ namespace Plagiarism_Checker
                 string strText = string.Empty;
                 try
                 {
-                    //textBoxInput.Text = File.ReadAllText(openDlg.FileName);
+                    
                     PdfReader read = new PdfReader(filePath);
                     for (int page = 1; page <= read.NumberOfPages; page++)
                     {
@@ -1846,7 +1747,8 @@ namespace Plagiarism_Checker
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            
+            metroTile4.Hide();
+            metroTile7.Hide();         
             listBox1.Hide();
             listBox2.Hide();
             listBox3.Hide();
@@ -1859,11 +1761,10 @@ namespace Plagiarism_Checker
             materialLabel3.Hide();
             materialLabel4.Hide();
             materialLabel5.Hide();
-            materialLabel8.Hide();
             metroTile5.Hide();
             metroTile6.Hide();
-            listBox4.Show();
-            materialLabel8.Hide();
+            listBox4.Hide();
+            materialLabel1.Hide();
             
         }
 
@@ -1877,6 +1778,7 @@ namespace Plagiarism_Checker
             groupBox7.Show();
             textBox24.Show();
             textBox25.Show();
+            metroTile7.Show();
             if (storevariable.cekstemmingresult == true)
             {
                 groupBox5.Show();
@@ -1923,7 +1825,7 @@ namespace Plagiarism_Checker
                 int totalkatasinonim2 = 0;
                 double persensinonim2 = 0;
                 totalkatasinonim2 = int.Parse(textBox9.Text);
-                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount2) * 100;
+                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount) * 100;
                 textBox6.Text = persensinonim2.ToString();
                 //Ambil Levenstein distance angka
                 int levangka = 0;
@@ -1936,61 +1838,34 @@ namespace Plagiarism_Checker
                     {
                         variable.levenkalkulasi += 1;
 
-                    }
-
-                    //inverseleven = totalleven * -1;
-                    //double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
-
-
+                    }              
                 }
-                double tot = ((double)variable.levenkalkulasi / (double)wordCount2) * 100;
+                double tot = ((double)variable.levenkalkulasi / (double)wordCount) * 100;
                 textBox5.Text = tot.ToString();
-                //double sum = 0;
-                //for (int i = 0; i < listBox4.Items.Count; i++)
-                //{
-                //    sum += Math.Round(Convert.ToDouble(listBox4.Items[i].ToString()), 3);
-                //    variable.finalresult = Math.Round(sum / i, 3);
-                //    textBox5.Text = variable.finalresult.ToString();
-
-                //}
-                //double hasilakhirlevensinonim;
-                //hasilakhirlevensinonim = Math.Round((persensinonim + variable.finalresult) / 2, 3);
-                //textBox7.Text = hasilakhirlevensinonim.ToString();
-
                 double hasilakhirlevensinonim2;
                 hasilakhirlevensinonim2 = Math.Round((persensinonim2 + tot) / 2, 3);
                 textBox7.Text = hasilakhirlevensinonim2.ToString();
 
-                //foreach (var item in listBox11.Items)
-                //{
-                //    sum += Math.Round(Convert.ToDouble(item.ToString()),3);
-                //    double finalresult = sum / listBox11.Items.Count;
-                //    label36.Text = finalresult.ToString();
-                //}
-                if (hasilakhirlevensinonim2 < 30)
+          
+                if (hasilakhirlevensinonim2 >=1 && hasilakhirlevensinonim2 <= 30)
                 {
                     label36.Text = "Low Plagiarism";
-                    label36.ForeColor = Color.Green;
-
-                    //textBox7.BackColor = Color.Green;
-                    //textBox16.BackColor = Color.Green;
+                    label36.ForeColor = Color.GreenYellow;
                 }
-                else if (hasilakhirlevensinonim2 >= 30 && hasilakhirlevensinonim2 <= 70)
+                else if (hasilakhirlevensinonim2 >= 31 && hasilakhirlevensinonim2 <= 70)
                 {
                     label36.Text = "Medium Plagiarism";
                     label36.ForeColor = Color.Yellow;
-
-                    //textBox7.BackColor = Color.Yellow;
-                    //textBox16.BackColor = Color.Yellow;
                 }
                 else if (hasilakhirlevensinonim2 >= 71 && hasilakhirlevensinonim2 <= 100)
                 {
                     label36.Text = "High Plagiarism";
                     label36.ForeColor = Color.Red;
-
-                    //textBox7.BackColor = Color.Red;
-                    //textBox16.BackColor = Color.Red;
-
+                }
+                else if(hasilakhirlevensinonim2==0)
+                {
+                    label36.Text = "No Plagiarism Detected";
+                    label36.ForeColor = Color.Green;
                 }
                 //Ambil Levenstein Score
 
@@ -2048,7 +1923,7 @@ namespace Plagiarism_Checker
                 int totalkatasinonim2 = 0;
                 double persensinonim2 = 0;
                 totalkatasinonim2 = int.Parse(textBox9.Text);
-                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount2) * 100;
+                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount) * 100;
                 textBox6.Text = persensinonim2.ToString();
                 //Ambil Levenstein distance angka
                 int levangka=0;
@@ -2061,37 +1936,21 @@ namespace Plagiarism_Checker
                         {
                             variable.levenkalkulasi+=1;
 
-                        }
-                    
-                    //inverseleven = totalleven * -1;
-                    //double persenleven = Math.Round((Double)inverseleven / (Double)totalleven * 100, 3);
-                    
+                        }                       
 
                 }
-                double tot = ((double)variable.levenkalkulasi / (double)wordCount2) * 100;
+                double tot = ((double)variable.levenkalkulasi / (double)wordCount) * 100;
                 textBox5.Text = tot.ToString();
-                //listBox4.Items.Add(tot);
-
-                //double sum = 0;
-                //for (int i = 0; i < listBox4.Items.Count; i++)
-                //{
-                //    sum += Math.Round(Convert.ToDouble(listBox4.Items[i].ToString()), 3);
-                //    variable.finalresult = Math.Round(sum / i, 3);
-                //    textBox5.Text = variable.finalresult.ToString();
-                //}
                 double hasilakhirlevensinonim2;
                 hasilakhirlevensinonim2 = Math.Round((tot + persensinonim2) / 2, 3);
                 textBox7.Text = hasilakhirlevensinonim2.ToString();
 
-                if (hasilakhirlevensinonim2 < 30)
+                if (hasilakhirlevensinonim2 >=1 && hasilakhirlevensinonim2 <= 30)
                 {
                     label36.Text = "Low Plagiarism";
-                    label36.ForeColor = Color.Green;
-
-                    //textBox7.BackColor = Color.Green;
-                    //textBox16.BackColor = Color.Green;
+                    label36.ForeColor = Color.GreenYellow;
                 }
-                else if (hasilakhirlevensinonim2 >= 30 && hasilakhirlevensinonim2 <= 70)
+                else if (hasilakhirlevensinonim2 >= 31 && hasilakhirlevensinonim2 <= 70)
                 {
                     label36.Text = "Medium Plagiarism";
                     label36.ForeColor = Color.Yellow;
@@ -2102,8 +1961,11 @@ namespace Plagiarism_Checker
                 {
                     label36.Text = "High Plagiarism";
                     label36.ForeColor = Color.Red;
-
-
+                }
+                else if (hasilakhirlevensinonim2 == 0)
+                {
+                    label36.Text = "No Plagiarism Detected";
+                    label36.ForeColor = Color.Green;
                 }
                 //Ambil Levenstein Score
                 for (int i = 0; i < listBox5.Items.Count; i++)
@@ -2190,7 +2052,6 @@ namespace Plagiarism_Checker
                 materialLabel3.Hide();
                 materialLabel4.Hide();
                 materialLabel5.Hide();
-                materialLabel8.Hide();
                 label3.Show();
                 label1.Show();
                 groupBox2.Hide();
@@ -2265,7 +2126,6 @@ namespace Plagiarism_Checker
                 materialLabel3.Hide();
                 materialLabel4.Hide();
                 materialLabel5.Hide();
-                materialLabel8.Hide();
                 label3.Show();
                 label1.Show();
                 groupBox2.Hide();

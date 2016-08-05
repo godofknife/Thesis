@@ -45,7 +45,6 @@
             this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.listBox10 = new System.Windows.Forms.ListBox();
@@ -322,7 +321,6 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.metroTile4);
-            this.tabPage4.Controls.Add(this.materialLabel8);
             this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.Controls.Add(this.materialLabel5);
             this.tabPage4.Controls.Add(this.listBox10);
@@ -358,19 +356,6 @@
             this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile4.UseSelectable = true;
             this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
-            // 
-            // materialLabel8
-            // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(622, 66);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(96, 19);
-            this.materialLabel8.TabIndex = 27;
-            this.materialLabel8.Text = "Tokenization";
             // 
             // label3
             // 
@@ -1287,7 +1272,6 @@
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
         private System.Windows.Forms.TabPage tabPage4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private System.Windows.Forms.Label label3;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private System.Windows.Forms.ListBox listBox10;
