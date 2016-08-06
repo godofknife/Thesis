@@ -1476,7 +1476,7 @@ namespace Plagiarism_Checker
                 conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
                 conn.Open();
                 OleDbDataAdapter da;            
-                string[] tempo = new string[294];
+                string[] tempo = new string[147];
                 int pos = 0;
                 int nilai = 0;
                 for (int i = 0; i < listBox7.Items.Count; i++)
@@ -1492,19 +1492,16 @@ namespace Plagiarism_Checker
                         DataSet ds = new DataSet();
                         da.Fill(ds, "persamaan");
                         //da.Fill(dt, "persamaan");
-                        for (int j = 0; j < ds.Tables["persamaan"].Rows.Count; j++)
-                        {
                             while (pos < ds.Tables["persamaan"].Columns.Count)
                             {
-                                tempo[pos] = ds.Tables["persamaan"].Rows[j][pos].ToString();
+                                tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
                                 pos++;
                             }
-                        }
                         for (int j = 0; j < listBox2.Items.Count; j++)
                         {
                             for (int k = 0; k < tempo.Length; k++)
                             {
-                                if (tempo[k] == listBox2.Items[j].ToString())
+                                if (listBox2.Items[j].ToString() == tempo[k].Trim().ToLower())
                                     nilai += 1;
                             }
                         }
@@ -1604,7 +1601,7 @@ namespace Plagiarism_Checker
                 string[] tempo = new string[147];
                 int pos = 0;
                 int nilai = 0;
-                for (int i = 0; i < listBox8.Items.Count - 1; i++)
+                for (int i = 0; i < listBox8.Items.Count; i++)
                 {
                     sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
                     string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox8.Items[i].ToString() + "%'";
@@ -1617,16 +1614,16 @@ namespace Plagiarism_Checker
                         DataSet ds = new DataSet();
                         da.Fill(ds, "persamaan");
                         //da.Fill(dt, "persamaan");
-                        while (pos < ds.Tables["persamaan"].Columns.Count - 1)
+                        while (pos < ds.Tables["persamaan"].Columns.Count)
                         {
                             tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
                             pos++;
                         }
-                        for (int j = 0; j < listBox1.Items.Count - 1; j++)
+                        for (int j = 0; j < listBox1.Items.Count; j++)
                         {
                             for (int k = 0; k < tempo.Length; k++)
                             {
-                                if (tempo[k] == listBox1.Items[j].ToString())
+                                if (listBox1.Items[j].ToString() == tempo[k].Trim().ToLower())
                                     nilai += 1;
                             }
                         }
