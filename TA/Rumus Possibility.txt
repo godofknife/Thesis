@@ -89,6 +89,18 @@ Ex: 2/(13*3)*100= 5,12 persen
 
 Ex: 2/((12+13)*3)*100= 2,6 persen
 
-(Jumlah semua angka dari listbox / ((total huruf asli file*total banyaknya kata yang akan cek)+(total huruf plagiat file*total banyaknya kata yang akan cek)*100
+(Jumlah huruf 0 dari listbox / ((total huruf asli file*total banyaknya kata yang akan cek)+(total huruf plagiat file*total banyaknya kata yang akan cek)*100
 
 Ex: 2/((12*3)+(13*3))*100= 2,6 persen
+
+(total huruf yang mendapatkan nilai 0 dari listbox / (total huruf plagiat file*total banyaknya kata yang akan cek)*100
+
+Ex: 7/(12*3)*100= 19,4 persen
+
+(total huruf yang mendapatkan nilai 0 dari listbox / (total huruf asli file*total banyaknya kata yang akan cek)*100
+
+Ex: 7/(13*3)*100= 17,9 persen
+
+(total huruf yang mendapatkan nilai 0 dari listbox  / ((total huruf asli file+total huruf plagiat file)*total banyaknya kata yang akan cek)*100
+
+Ex: 7/((13+12)*3)*100= 9,3 persen
