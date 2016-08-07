@@ -1,0 +1,94 @@
+Rumus Non processing Levenstein: (sample dari SAYA DENDAM DIA (asli) DAN SAYA BENCI DIA (plagiat))
+
+(Jumlah huruf 0 di listbox/ total huruf plagiat file) x100
+
+Ex: 2/12 *100= 16,6 persen
+
+atau
+
+(Jumlah huruf 0 di listbox/ (total huruf plagiat file+total huruf asli file)) x100
+
+Ex: 2/25*100= 8 persen
+
+atau
+
+(Jumlah huruf 0 di listbox/ total huruf asli file) x100
+
+Ex: 2/13 *100=15,3 persen
+atau
+
+(total huruf yang mendapatkan nilai 0 di listbox/ total huruf plagiat file) x100
+
+Ex: 7/12*100=58,3 persen
+
+atau
+
+(total huruf yang mendapatkan nilai 0 di listbox/ (total huruf plagiat file+total huruf asli file)) x100
+
+Ex: 7/25*100=28 persen
+
+atau
+
+(total huruf yang mendapatkan nilai 0 di listbox/ total huruf asli file) x100
+
+Ex: 7/13*100=53,8 persen
+
+atau
+
+(Jumlah semua angka dari listbox / total huruf plagiat file)x100
+
+Ex: 29/12*100= 241 persen (TIDAK MUNGKIN)
+
+atau
+
+(Jumlah semua angka dari listbox / (total huruf plagiat file+total huruf asli file))x100
+
+Ex: 29/25*100= 116 persen (TIDAK MUNGKIN)
+
+atau
+
+(Jumlah semua angka dari listbox / total huruf asli file)x100
+
+Ex: 29/13*100=223 persen (TIDAK MUNGKIN)
+
+atau
+
+(Jumlah semua angka dari listbox / (total huruf plagiat file*total banyaknya kata yang akan cek)*100
+
+Ex: 29/(12*3)*100= 80,5 persen
+
+atau
+
+(Jumlah semua angka dari listbox / (total huruf asli file*total banyaknya kata yang akan cek)*100
+
+Ex: 29/(13*3)*100= 74,3 persen
+
+atau
+
+(Jumlah semua angka dari listbox / ((total huruf asli file+total huruf plagiat file)*total banyaknya kata yang akan cek)*100
+
+Ex: 29/((12+13)*3)*100= 38,6 persen
+
+atau
+
+(Jumlah semua angka dari listbox / ((total huruf asli file*total banyaknya kata yang akan cek)+(total huruf plagiat file*total banyaknya kata yang akan cek)*100
+
+Ex: 29/((13*3)+(12*3))*100= 38,6 persen
+
+atau
+
+(Jumlah huruf 0 dari listbox / (total huruf plagiat file*total banyaknya kata yang akan cek)*100
+
+Ex: 2/(12*3)*100= 5,5 persen
+
+(Jumlah huruf 0 dari listbox / (total huruf asli file*total banyaknya kata yang akan cek)*100
+
+Ex: 2/(13*3)*100= 5,12 persen
+
+(Jumlah huruf 0 dari listbox / ((total huruf asli file+total huruf plagiat file)*total banyaknya kata yang akan cek)*100
+
+Ex: 2/((12+13)*3)*100= 2,6 persen
+
+(Jumlah semua angka dari listbox / ((total huruf asli file*total banyaknya kata yang akan cek)+(total huruf plagiat file*total banyaknya kata yang akan cek)*100
+
+Ex: 2/((12*3)+(13*3))*100= 2,6 persen
