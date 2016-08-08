@@ -149,7 +149,7 @@ namespace Plagiarism_Checker
 
         public string RemoveChars(string str)
         {
-            string[] chars = new string[] { ",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", "-", "_", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ";", ":", "(", ")", "[", "]", "{", "}", "=", "+", "?", "`" };
+            string[] chars = new string[] {",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", "-", "_", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ";", ":", "(", ")", "[", "]", "{", "}", "=", "+", "?", "`" };
             for (int i = 0; i < chars.Length; i++)
             {
                 if (str.Contains(chars[i]))
@@ -1564,20 +1564,27 @@ namespace Plagiarism_Checker
                 Char chr = textBox1.Text[0];
                 string[] word = textBox1.Text.Split(' ');
                 string[] word1 = textBox2.Text.Split(' ');
-                string[,] listkata = new string[0, 0];
+                //string[,] listkata = new string[0, 0];
+                string[] temp = new string[0];
+                //for(int i = 0; i < word.Length; i++)
+                //{
+                //    Array.Resize(ref temp, i + 1);
+                //    temp[i] = RemoveChars( word[i]);
+                //}
+                
                 foreach (string item in word)
                 {
-                    if (!string.IsNullOrWhiteSpace(item))
+                    if (!string.IsNullOrWhiteSpace(RemoveChars(item)))
                     {
-                        listBox1.Items.Add(RemoveChars(item));
+                        listBox1.Items.Add(item);
                     }
 
                 }
                 foreach (string item in word1)
                 {
-                    if (!string.IsNullOrWhiteSpace(item))
+                    if (!string.IsNullOrWhiteSpace(RemoveChars(item)))
                     {
-                        listBox8.Items.Add(RemoveChars(item));
+                        listBox8.Items.Add(item);
                     }
 
                 }
