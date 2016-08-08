@@ -1818,12 +1818,6 @@ namespace Plagiarism_Checker
 
                 int angka2 = int.Parse(listBox10.Items[0].ToString());
                 textBox9.Text = angka2.ToString();
-                //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming
-                int totalkatasinonim2 = 0;
-                double persensinonim2 = 0;
-                totalkatasinonim2 = int.Parse(textBox9.Text);
-                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount) * 100;
-                textBox6.Text = persensinonim2.ToString();
                 //Ambil Levenstein distance angka
                 int levangka = 0;
                 for (int i = 0; i < listBox5.Items.Count; i++)
@@ -1837,41 +1831,36 @@ namespace Plagiarism_Checker
 
                     }              
                 }
-                double tot = ((double)variable.levenkalkulasi / (double)wordCount) * 100;
-                textBox5.Text = tot.ToString();
-                double hasilakhirlevensinonim2;
-                hasilakhirlevensinonim2 = Math.Round((persensinonim2 + tot) / 2, 3);
-                textBox7.Text = hasilakhirlevensinonim2.ToString();
 
-          
-                if (hasilakhirlevensinonim2 >=1 && hasilakhirlevensinonim2 <= 30)
+                double totalword = (wordCount + wordCount2);
+                double bagileven = (variable.levenkalkulasi / totalword) * 100;
+                double totalsinonim = (double)angka2;
+                double bagisinonim = (angka2 / totalword) * 100;
+                double hasiltotallevensinonim = bagileven + bagisinonim;
+                textBox8.Text = variable.levenkalkulasi.ToString();
+                textBox5.Text = bagileven.ToString();
+                textBox6.Text = bagisinonim.ToString();
+                textBox7.Text = hasiltotallevensinonim.ToString();
+                if (hasiltotallevensinonim >=1 && hasiltotallevensinonim <= 30)
                 {
                     label36.Text = "Low Plagiarism";
                     label36.ForeColor = Color.GreenYellow;
                 }
-                else if (hasilakhirlevensinonim2 >= 31 && hasilakhirlevensinonim2 <= 70)
+                else if (hasiltotallevensinonim >= 31 && hasiltotallevensinonim <= 70)
                 {
                     label36.Text = "Medium Plagiarism";
                     label36.ForeColor = Color.Yellow;
                 }
-                else if (hasilakhirlevensinonim2 >= 71 && hasilakhirlevensinonim2 <= 100)
+                else if (hasiltotallevensinonim >= 71 && hasiltotallevensinonim <= 100)
                 {
                     label36.Text = "High Plagiarism";
                     label36.ForeColor = Color.Red;
                 }
-                else if(hasilakhirlevensinonim2==0)
+                else if(hasiltotallevensinonim==0)
                 {
                     label36.Text = "No Plagiarism Detected";
                     label36.ForeColor = Color.Green;
                 }
-                //Ambil Levenstein Score
-
-                for (int i = 0; i < listBox5.Items.Count; i++)
-                {
-                    variable.scoreleven2 += Convert.ToInt32(listBox5.Items[i].ToString());
-                    variable.finallevenscore2 = variable.scoreleven2 / listBox5.Items.Count;
-                }
-                textBox8.Text = variable.levenkalkulasi.ToString();
 
             }
             else if (storevariable.cekstemmingresult == false)
@@ -1916,62 +1905,53 @@ namespace Plagiarism_Checker
                 //Ambil nilai dari listbox sinonim untuk Stemming
                 int angka2 = int.Parse(listBox10.Items[0].ToString());
                 textBox9.Text = angka2.ToString();
-                //Ambil nilai untuk hitung berapa persentase kata sinonim yang sama untuk Stemming           
-                int totalkatasinonim2 = 0;
-                double persensinonim2 = 0;
-                totalkatasinonim2 = int.Parse(textBox9.Text);
-                persensinonim2 = ((double)totalkatasinonim2 / (double)wordCount) * 100;
-                textBox6.Text = persensinonim2.ToString();
+                
                 //Ambil Levenstein distance angka
-                int levangka=0;
+                
+                int levangka = 0;
                 for (int i = 0; i < listBox5.Items.Count; i++)
                 {
-                    
+
                     levangka = int.Parse(listBox5.Items[i].ToString());
-                    
-                        if (levangka==0)
-                        {
-                            variable.levenkalkulasi+=1;
 
-                        }                       
+                    if (levangka == 0)
+                    {
+                        variable.levenkalkulasi += 1;
 
-                }
-                double tot = ((double)variable.levenkalkulasi / (double)wordCount) * 100;
-                textBox5.Text = tot.ToString();
-                double hasilakhirlevensinonim2;
-                hasilakhirlevensinonim2 = Math.Round((tot + persensinonim2) / 2, 3);
-                textBox7.Text = hasilakhirlevensinonim2.ToString();
+                    }
 
-                if (hasilakhirlevensinonim2 >=1 && hasilakhirlevensinonim2 <= 30)
+                }                                    
+                double totalword = (wordCount + wordCount2)*2;
+                double bagileven = (variable.levenkalkulasi / totalword)*100;
+                double totalsinonim = (double)angka2;
+                double bagisinonim = (angka2 / totalword*2) / 100;
+                double hasiltotallevensinonim = bagileven + bagisinonim;
+                textBox8.Text = variable.levenkalkulasi.ToString();
+                textBox5.Text = bagileven.ToString();
+                textBox6.Text = bagisinonim.ToString();
+                textBox7.Text = hasiltotallevensinonim.ToString();
+                if (hasiltotallevensinonim >= 1 && hasiltotallevensinonim <= 30)
                 {
                     label36.Text = "Low Plagiarism";
                     label36.ForeColor = Color.GreenYellow;
                 }
-                else if (hasilakhirlevensinonim2 >= 31 && hasilakhirlevensinonim2 <= 70)
+                else if (hasiltotallevensinonim >= 31 && hasiltotallevensinonim <= 70)
                 {
                     label36.Text = "Medium Plagiarism";
                     label36.ForeColor = Color.Yellow;
 
 
                 }
-                else if (hasilakhirlevensinonim2 >= 71 && hasilakhirlevensinonim2 <= 100)
+                else if (hasiltotallevensinonim >= 71 && hasiltotallevensinonim <= 100)
                 {
                     label36.Text = "High Plagiarism";
                     label36.ForeColor = Color.Red;
                 }
-                else if (hasilakhirlevensinonim2 == 0)
+                else if (hasiltotallevensinonim == 0)
                 {
                     label36.Text = "No Plagiarism Detected";
                     label36.ForeColor = Color.Green;
                 }
-                //Ambil Levenstein Score
-                for (int i = 0; i < listBox5.Items.Count; i++)
-                {
-                    variable.scoreleven += Convert.ToInt32(listBox5.Items[i].ToString());
-                    variable.finallevelscore = variable.scoreleven / listBox5.Items.Count;
-                }
-                textBox8.Text = variable.levenkalkulasi.ToString();
-
             }
         }
 
