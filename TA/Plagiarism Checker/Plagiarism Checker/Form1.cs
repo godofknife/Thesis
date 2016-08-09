@@ -1843,7 +1843,7 @@ namespace Plagiarism_Checker
                 double bagileven = (variable.levenkalkulasi / totalword) * 100;
                 double totalsinonim = (double)angka2;
                 double bagisinonim = (angka2 / totalword) * 100;
-                double hasiltotallevensinonim = bagileven + bagisinonim;
+                double hasiltotallevensinonim = (bagileven + bagisinonim)/2;
                 textBox8.Text = variable.levenkalkulasi.ToString();
                 textBox5.Text = bagileven.ToString();
                 textBox6.Text = bagisinonim.ToString();
@@ -1928,10 +1928,10 @@ namespace Plagiarism_Checker
                     }
 
                 }                                    
-                double totalword = (wordCount + wordCount2)*2;
-                double bagileven = (variable.levenkalkulasi / totalword)*100;
+                double totalword = (wordCount + wordCount2);
+                double bagileven = (variable.levenkalkulasi / totalword/2)*100;
                 double totalsinonim = (double)angka2;
-                double bagisinonim = (angka2 / totalword*2) / 100;
+                double bagisinonim = (angka2 / totalword/2) * 100;
                 double hasiltotallevensinonim = bagileven + bagisinonim;
                 textBox8.Text = variable.levenkalkulasi.ToString();
                 textBox5.Text = bagileven.ToString();
