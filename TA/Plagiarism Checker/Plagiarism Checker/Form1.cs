@@ -2011,6 +2011,15 @@ namespace Plagiarism_Checker
             DialogResult dialogResult = MessageBox.Show("You will be Check some file. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
+                label5.Show();
+                label2.Show();
+                metroTile2.Hide();
+                metroTextBox2.Hide();
+                textBox2.Hide();
+                groupBox1.Hide();
+                materialRadioButton1.Checked = false;
+                materialRadioButton2.Checked = false;
+                metroTile3.Hide();
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
                 listBox3.Items.Clear();
@@ -2039,6 +2048,13 @@ namespace Plagiarism_Checker
                 label3.Show();
                 label1.Show();
                 groupBox2.Hide();
+                groupBox5.Hide();
+                groupBox6.Hide();
+                groupBox7.Hide();
+                metroTile6.Hide();
+                metroTile7.Hide();
+                metroTile4.Hide();
+                metroTile5.Hide();
                 TabPage t = tabControl1.TabPages[0];
                 tabControl1.SelectedTab = t;
                 metroTextBox1.Clear();
@@ -2080,10 +2096,14 @@ namespace Plagiarism_Checker
             DialogResult dialogResult = MessageBox.Show("If you go back, all process will be resetted and previous file be load back. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
+                label5.Show();
+                label2.Show();
                 metroTile2.Hide();
                 metroTextBox2.Hide();
                 textBox2.Hide();
                 groupBox1.Hide();
+                materialRadioButton1.Checked = false;
+                materialRadioButton2.Checked = false;
                 metroTile3.Hide();
                 listBox1.Items.Clear();
                 listBox2.Items.Clear();
@@ -2113,16 +2133,27 @@ namespace Plagiarism_Checker
                 label3.Show();
                 label1.Show();
                 groupBox2.Hide();
+                groupBox5.Hide();
+                groupBox6.Hide();
+                groupBox7.Hide();
+                metroTile6.Hide();
+                metroTile7.Hide();
+                metroTile4.Hide();
+                metroTile5.Hide();
+                TabPage t = tabControl1.TabPages[0];
+                tabControl1.SelectedTab = t;
+                metroTextBox1.Clear();
+                metroTextBox2.Clear();
+                textBox1.Clear();
+                textBox2.Clear();
+                metroProgressBar1.Hide();
+                #endregion
+            }
+            else
+            {
 
             }
-            TabPage t = tabControl1.TabPages[0];
-            tabControl1.SelectedTab = t;
-            metroTextBox1.Clear();
-            metroTextBox2.Clear();
-            textBox1.Clear();
-            textBox2.Clear();
-            metroProgressBar1.Hide();
-            #endregion 
+
         }
     }
 

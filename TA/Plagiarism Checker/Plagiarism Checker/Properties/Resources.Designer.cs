@@ -63,10 +63,60 @@ namespace Plagiarism_Checker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _121111044 {
+            get {
+                object obj = ResourceManager.GetObject("121111044", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _121111362 {
+            get {
+                object obj = ResourceManager.GetObject("121111362", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _121113223 {
+            get {
+                object obj = ResourceManager.GetObject("121113223", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bkg_8 {
+            get {
+                object obj = ResourceManager.GetObject("bkg-8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap info {
             get {
                 object obj = ResourceManager.GetObject("info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plagiat atau plagiarisme adalah salah satu bentuk tindakan kecurangan, tetapi hal tersebut sulit untuk dijelaskan sehingga semua orang bahkan anak-anak bisa melakukannya tanpa menyadari dan memahami bahwa hal tersebut sebenarnya tidak dibenarkan. (Steven, Dowshen,2011)
+        ///Plagiat dapat dianggap sebagai tindakan melanggar hukum karena dikategorikan sebagai tindakan mencuri hak cipta seseorang. Di dunia pendidikan, para pelaku plagiat akan mendapatkan hukuman yang cukup berat bila pelaku plagiat adalah seorang  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string info1 {
+            get {
+                return ResourceManager.GetString("info1", resourceCulture);
             }
         }
         
@@ -76,6 +126,26 @@ namespace Plagiarism_Checker.Properties {
         internal static System.Drawing.Bitmap info2 {
             get {
                 object obj = ResourceManager.GetObject("info2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_11 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +176,26 @@ namespace Plagiarism_Checker.Properties {
         internal static System.Drawing.Bitmap Untitled_22 {
             get {
                 object obj = ResourceManager.GetObject("Untitled-22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_23 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_3 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

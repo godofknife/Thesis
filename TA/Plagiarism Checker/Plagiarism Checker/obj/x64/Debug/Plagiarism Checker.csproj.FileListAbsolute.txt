@@ -43,3 +43,13 @@ C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker
 C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
 C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
 C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+G:\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+G:\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+G:\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache

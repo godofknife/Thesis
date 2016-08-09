@@ -1050,7 +1050,7 @@
             this.groupBox6.Size = new System.Drawing.Size(364, 119);
             this.groupBox6.TabIndex = 68;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Informasi File Original";
+            this.groupBox6.Text = "Informasi File yang diUji";
             this.groupBox6.Visible = false;
             // 
             // textBox36

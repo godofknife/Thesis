@@ -19,13 +19,15 @@ namespace Plagiarism_Checker
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            groupBox1.Show();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //axAcroPDF1.src = "";
-            //axAcroPDF1.Visible = true;
+            groupBox1.Hide();
+            textBox1.Clear();
+            textBox1.Show();
+
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -35,7 +37,9 @@ namespace Plagiarism_Checker
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            groupBox1.Hide();
+            textBox1.Show();
+            textBox1.Text = Properties.Resources.info1;
         }
     }
 }
