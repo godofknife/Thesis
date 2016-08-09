@@ -1354,6 +1354,7 @@ namespace Plagiarism_Checker
 
         private void metroTile3_Click_1(object sender, EventArgs e)
         {
+            metroTile3.Enabled = false;
             if (materialRadioButton2.Checked == true && materialRadioButton1.Checked == false)
             {
                 storevariable.cekstemmingresult = true;
