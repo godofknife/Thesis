@@ -20,26 +20,41 @@ namespace Plagiarism_Checker
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             groupBox1.Show();
+            groupBox2.Hide();
+            textBox1.Hide();
+            textBox1.Clear();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             groupBox1.Hide();
-            textBox1.Clear();
+            groupBox2.Hide();
             textBox1.Show();
-
+            textBox1.Clear();
+            textBox1.Text = Properties.Resources.dokumentasi;
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            groupBox2.Show();
+            groupBox1.Hide();
+            textBox1.Hide();
+            
+
 
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             groupBox1.Hide();
+            groupBox2.Hide();
             textBox1.Show();
             textBox1.Text = Properties.Resources.info1;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

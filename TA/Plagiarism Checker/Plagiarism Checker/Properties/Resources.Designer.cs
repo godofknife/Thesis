@@ -93,10 +93,74 @@ namespace Plagiarism_Checker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2 {
+            get {
+                object obj = ResourceManager.GetObject("2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4 {
+            get {
+                object obj = ResourceManager.GetObject("4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5 {
+            get {
+                object obj = ResourceManager.GetObject("5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7 {
+            get {
+                object obj = ResourceManager.GetObject("7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bkg_8 {
             get {
                 object obj = ResourceManager.GetObject("bkg-8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 					  Documentation
+        ///				          Plagiarism Checker System
+        ///			Data from https://github.com/godofknife/Thesis/commits/master
+        ///				Start from 26 April 2016 – 9 August 2016  
+        ///					By Team TA 2016
+        ///-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        ///				             Documentation Notes:
+        ///
+        ///9 August 2016
+        ///~  Fix some bug
+        ///
+        ///8 August 2016
+        ///~  Fix some bug
+        ///
+        ///7 August 2016
+        ///~  Add New Sample (e [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string dokumentasi {
+            get {
+                return ResourceManager.GetString("dokumentasi", resourceCulture);
             }
         }
         
