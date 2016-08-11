@@ -1425,6 +1425,7 @@ namespace Plagiarism_Checker
                     temp[i] = regex.Replace(listBox1.Items[i].ToString(), " ");
                     temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                     listBox3.Items.Add(RemoveChars(temp[i]));
+                    listBox9.Items.Add(RemoveChars(temp[i]));
                 }
                 temp = new string[0];
                 for (int i = 0; i < listBox8.Items.Count; i++)
@@ -1433,6 +1434,7 @@ namespace Plagiarism_Checker
                     temp[i] = regex.Replace(listBox8.Items[i].ToString(), " ");
                     temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                     listBox6.Items.Add(RemoveChars(temp[i]));
+                    listBox12.Items.Add(RemoveChars(temp[i]));
                 }
                 conn.Close();
                 //Proses Stemming Disini
@@ -1449,8 +1451,8 @@ namespace Plagiarism_Checker
                     {
                         if (!string.IsNullOrWhiteSpace(j))
                             listBox2.Items.Add(Stemming(j));
+                        listBox11.Items.Add(Stemming(j));
                     }
-
                 }
                 for (int i = 0; i < listBox6.Items.Count; i++)
                 {
@@ -1460,6 +1462,7 @@ namespace Plagiarism_Checker
                     {
                         if (!string.IsNullOrWhiteSpace(j))
                             listBox7.Items.Add(Stemming(j));
+                        listBox13.Items.Add(Stemming(j));
                     }
 
                 }
