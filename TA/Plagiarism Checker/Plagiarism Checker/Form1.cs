@@ -113,40 +113,7 @@ namespace Plagiarism_Checker
                 //        conn.Close();
             
         }
-        //bool temu = false;
-        //while (pos < dataGridView1.Columns.Count & !temu)
-        //{
-        //    if ((string)dataGridView1[pos, 0].Value.ToString().Trim() == "perubahan")
-        //    {
-        //        temu = true;
-        //        label1.Text = "ketemu";
-        //    }
-        //    else
-        //        pos++;
-        //}
-        //cmd.CommandText = sql;
-        //OleDbDataReader reader = cmd.ExecuteReader();
-
-        //while (pos < ds.Tables["Test"].Columns.Count)
-        //{
-        //    Array.Resize(ref tempo, pos + 1);
-        //    temp[pos] = ds.Tables["Test"].Rows[0][pos].ToString();
-        //    pos++;
-
-        //}
-        //foreach (string i in temp)
-        //{
-        //    listBox3.Items.Add(i);
-        //}
-
-
-        //Array.Resize(ref temp, k + 1);
-        //temp[k] = reader.GetString(0).ToString();
-        //if (temp[k] == "Kemajuan")
-        //    label1.Text = "true";
-
-        //}
-
+        
         public string RemoveChars(string str)
         {
             string[] chars = new string[] {",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", "-", "_", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ";", ":", "(", ")", "[", "]", "{", "}", "=", "+", "?", "`" };
@@ -1395,7 +1362,6 @@ namespace Plagiarism_Checker
                 Char chr = textBox1.Text[0];
                 string[] word = textBox1.Text.Split('.');
                 string[] word1 = textBox2.Text.Split('.');
-                //string[,] listkata = new string[0, 0];
                 foreach (string item in word)
                 {
                     listBox1.Items.Add(item);
@@ -1446,23 +1412,47 @@ namespace Plagiarism_Checker
                 for (int i = 0; i < listBox3.Items.Count; i++)
                 {
 
-                    string[] kata = listBox3.Items[i].ToString().ToLower().Split(' ');
+                    string[] kata = listBox3.Items[i].ToString().ToLower().Trim().Split(' ');
+                    string[] temp2 = new string[0];
+                    for (int j = 0; j < kata.Length; j++)
+                    {
+                        if (!string.IsNullOrWhiteSpace(kata[j]))
+                        {
+                            Array.Resize(ref temp2, j + 1);
+                            temp2[j] = Stemming(kata[j]);
+                        }
+                    }
+                    listBox11.Items.Add( string.Join(" ", temp2));
+                    
                     foreach (string j in kata)
                     {
                         if (!string.IsNullOrWhiteSpace(j))
+                        {
                             listBox2.Items.Add(Stemming(j));
-                        listBox11.Items.Add(Stemming(j));
+                            //listBox11.Items.Add(Stemming(j));
+                        }
                     }
                 }
                 for (int i = 0; i < listBox6.Items.Count; i++)
                 {
 
-                    string[] kata = listBox6.Items[i].ToString().ToLower().Split(' ');
+                    string[] kata = listBox6.Items[i].ToString().ToLower().Trim().Split(' ');
+                    string[] temp2 = new string[0];
+                    for (int j = 0; j < kata.Length; j++)
+                    {
+                        if (!string.IsNullOrWhiteSpace(kata[j]))
+                        {
+                            Array.Resize(ref temp2, j + 1);
+                            temp2[j] = Stemming(kata[j]);
+                        }
+                    }
+                    listBox13.Items.Add(string.Join(" ", temp2));
+
                     foreach (string j in kata)
                     {
                         if (!string.IsNullOrWhiteSpace(j))
                             listBox7.Items.Add(Stemming(j));
-                        listBox13.Items.Add(Stemming(j));
+                        //listBox13.Items.Add(Stemming(j));
                     }
 
                 }
@@ -1488,6 +1478,7 @@ namespace Plagiarism_Checker
                     sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
                     string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox7.Items[i].ToString() + "%'";
                     sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox7.Items[i].ToString() + "%'";
+                    //listBox13.Items[i].ToString().Split(' ');
                     OleDbCommand cmd = new OleDbCommand(cek, conn);
                     int count = (int)cmd.ExecuteScalar();
                     if (count > 0)
