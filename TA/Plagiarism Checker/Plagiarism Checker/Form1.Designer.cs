@@ -44,9 +44,7 @@
             this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.listBox12 = new System.Windows.Forms.ListBox();
             this.listBox13 = new System.Windows.Forms.ListBox();
-            this.listBox9 = new System.Windows.Forms.ListBox();
             this.listBox11 = new System.Windows.Forms.ListBox();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.label3 = new System.Windows.Forms.Label();
@@ -324,9 +322,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.listBox12);
             this.tabPage4.Controls.Add(this.listBox13);
-            this.tabPage4.Controls.Add(this.listBox9);
             this.tabPage4.Controls.Add(this.listBox11);
             this.tabPage4.Controls.Add(this.metroTile4);
             this.tabPage4.Controls.Add(this.label3);
@@ -352,40 +348,22 @@
             this.tabPage4.Text = "Detil Proses";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // listBox12
-            // 
-            this.listBox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox12.FormattingEnabled = true;
-            this.listBox12.ItemHeight = 15;
-            this.listBox12.Location = new System.Drawing.Point(1044, 125);
-            this.listBox12.Name = "listBox12";
-            this.listBox12.Size = new System.Drawing.Size(263, 94);
-            this.listBox12.TabIndex = 22;
-            // 
             // listBox13
             // 
             this.listBox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox13.FormattingEnabled = true;
+            this.listBox13.HorizontalScrollbar = true;
             this.listBox13.ItemHeight = 15;
             this.listBox13.Location = new System.Drawing.Point(1044, 229);
             this.listBox13.Name = "listBox13";
             this.listBox13.Size = new System.Drawing.Size(263, 94);
             this.listBox13.TabIndex = 21;
             // 
-            // listBox9
-            // 
-            this.listBox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox9.FormattingEnabled = true;
-            this.listBox9.ItemHeight = 15;
-            this.listBox9.Location = new System.Drawing.Point(295, 125);
-            this.listBox9.Name = "listBox9";
-            this.listBox9.Size = new System.Drawing.Size(263, 94);
-            this.listBox9.TabIndex = 20;
-            // 
             // listBox11
             // 
             this.listBox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox11.FormattingEnabled = true;
+            this.listBox11.HorizontalScrollbar = true;
             this.listBox11.ItemHeight = 15;
             this.listBox11.Location = new System.Drawing.Point(295, 229);
             this.listBox11.Name = "listBox11";
@@ -530,7 +508,7 @@
             this.listBox6.ItemHeight = 15;
             this.listBox6.Location = new System.Drawing.Point(771, 125);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(263, 94);
+            this.listBox6.Size = new System.Drawing.Size(536, 94);
             this.listBox6.TabIndex = 6;
             // 
             // listBox7
@@ -560,7 +538,7 @@
             this.listBox3.ItemHeight = 15;
             this.listBox3.Location = new System.Drawing.Point(22, 125);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(263, 94);
+            this.listBox3.Size = new System.Drawing.Size(536, 94);
             this.listBox3.TabIndex = 2;
             // 
             // listBox2
@@ -1399,9 +1377,7 @@
         private MetroFramework.Controls.MetroTile metroTile4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.ListBox listBox12;
         private System.Windows.Forms.ListBox listBox13;
-        private System.Windows.Forms.ListBox listBox9;
         private System.Windows.Forms.ListBox listBox11;
     }
 }

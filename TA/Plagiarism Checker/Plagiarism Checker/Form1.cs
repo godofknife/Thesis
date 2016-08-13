@@ -1391,7 +1391,7 @@ namespace Plagiarism_Checker
                     temp[i] = regex.Replace(listBox1.Items[i].ToString(), " ");
                     temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                     listBox3.Items.Add(RemoveChars(temp[i]));
-                    listBox9.Items.Add(RemoveChars(temp[i]));
+                    //listBox9.Items.Add(RemoveChars(temp[i]));
                 }
                 temp = new string[0];
                 for (int i = 0; i < listBox8.Items.Count; i++)
@@ -1400,7 +1400,7 @@ namespace Plagiarism_Checker
                     temp[i] = regex.Replace(listBox8.Items[i].ToString(), " ");
                     temp[i] = removeDoubleSpace.Replace(temp[i].ToString(), " ");
                     listBox6.Items.Add(RemoveChars(temp[i]));
-                    listBox12.Items.Add(RemoveChars(temp[i]));
+                    //listBox12.Items.Add(RemoveChars(temp[i]));
                 }
                 conn.Close();
                 //Proses Stemming Disini
@@ -1469,50 +1469,122 @@ namespace Plagiarism_Checker
                 conn = new OleDbConnection();
                 conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
                 conn.Open();
-                OleDbDataAdapter da;            
+                OleDbDataAdapter da;
+                
                 string[] tempo = new string[147];
                 int pos = 0;
                 int nilai = 0;
-                for (int i = 0; i < listBox7.Items.Count; i++)
+                for (int i = 0; i < listBox13.Items.Count; i++)
                 {
-                    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                    string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox7.Items[i].ToString() + "%'";
-                    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox7.Items[i].ToString() + "%'";
-                    //listBox13.Items[i].ToString().Split(' ');
-                    OleDbCommand cmd = new OleDbCommand(cek, conn);
-                    int count = (int)cmd.ExecuteScalar();
-                    if (count > 0)
+                    string[] tmp1 = new string[0];
+                    foreach (string j in listBox13.Items[i].ToString().Split(' '))
                     {
-                        da = new OleDbDataAdapter(sql, conn);
-                        DataSet ds = new DataSet();
-                        da.Fill(ds, "persamaan");
-                        //da.Fill(dt, "persamaan");
+                        if (!string.IsNullOrWhiteSpace(j))
+                        {
+                            Array.Resize(ref tmp1, pos + 1);
+                            tmp1[pos] = j; pos++;
+                        }
+                    }
+                    pos = 0;
+                    for (int j = 0; j < tmp1.Length; j++)
+                    {
+                        sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+                        string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + tmp1[j] + "%'";
+                        sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + tmp1[j] + "%'";
+                        OleDbCommand cmd = new OleDbCommand(cek, conn);
+                        int count = (int)cmd.ExecuteScalar();
+                        if (count > 0)
+                        {
+                            da = new OleDbDataAdapter(sql, conn);
+                            DataSet ds = new DataSet();
+                            da.Fill(ds, "persamaan");
                             while (pos < ds.Tables["persamaan"].Columns.Count)
                             {
                                 tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
                                 pos++;
                             }
-                        for (int j = 0; j < listBox2.Items.Count; j++)
-                        {
-                            for (int k = 0; k < tempo.Length; k++)
+                            pos = 0;
+                            string[] tmp2 = new string[0];
+                            for (int k = 0; k < listBox11.Items.Count; k++)
                             {
-                                if (listBox2.Items[j].ToString() == tempo[k].Trim().ToLower())
-                                    nilai += 1;
+                                foreach (string l in listBox11.Items[k].ToString().Split(' '))
+                                {
+                                    if (!string.IsNullOrWhiteSpace(l))
+                                    {
+                                        Array.Resize(ref tmp2, pos + 1);
+                                        tmp2[pos] = l;pos++;
+                                    }
+                                }
+                                //pos = 0;
                             }
+                            Boolean cek1 = true ;
+                            for (int l = 0; l < tmp2.Length; l++)
+                            {
+                                cek1 = true;
+                                for (int m = 0; m < tempo.Length; m++)
+                                {
+                                    if (tempo[m].Trim().ToLower() == tmp2[l] && cek1 == true)
+                                    {
+                                        nilai += 1;
+                                        
+                                    }
+                                    cek1 = false;
+                                }
+                            }
+                            ds.Clear();
                         }
-                        ds.Clear();
-                    }
-                    else
-                    {
-                        string add = "insert into Kamus_Tesaurus ([Kata_u]) values (@1)";
-                        OleDbCommand command = new OleDbCommand(add, conn);
-                        command.Parameters.AddWithValue("@1", listBox7.Items[i].ToString());
-                        command.ExecuteNonQuery();
-                    }
+                        else
+                        {
+                            string add = "insert into Kamus_Tesaurus ([Kata_u]) values (@1)";
+                            OleDbCommand command = new OleDbCommand(add, conn);
+                            command.Parameters.AddWithValue("@1", listBox7.Items[i].ToString());
+                            command.ExecuteNonQuery();
+                        }
 
+                    }
                 }
                 listBox10.Items.Add(nilai);
                 conn.Close();
+                //for (int i = 0; i < listBox7.Items.Count; i++)
+                //{
+                //    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+                //    string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox7.Items[i].ToString() + "%'";
+                //    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox7.Items[i].ToString() + "%'";
+                //    //listBox13.Items[i].ToString().Split(' ');
+                //    OleDbCommand cmd = new OleDbCommand(cek, conn);
+                //    int count = (int)cmd.ExecuteScalar();
+                //    if (count > 0)
+                //    {
+                //        da = new OleDbDataAdapter(sql, conn);
+                //        DataSet ds = new DataSet();
+                //        da.Fill(ds, "persamaan");
+                //        //da.Fill(dt, "persamaan");
+                //            while (pos < ds.Tables["persamaan"].Columns.Count)
+                //            {
+                //                tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+                //                pos++;
+                //            }
+                //        for (int j = 0; j < listBox2.Items.Count; j++)
+                //        {
+                //            for (int k = 0; k < tempo.Length; k++)
+                //            {
+                //                if (listBox2.Items[j].ToString() == tempo[k].Trim().ToLower())
+                //                    nilai += 1;
+                //            }
+                //        }
+                //        ds.Clear();
+                //    }
+                //    else
+                //    {
+                //        string add = "insert into Kamus_Tesaurus ([Kata_u]) values (@1)";
+                //        OleDbCommand command = new OleDbCommand(add, conn);
+                //        command.Parameters.AddWithValue("@1", listBox7.Items[i].ToString());
+                //        command.ExecuteNonQuery();
+                //    }
+
+                //}
+                //listBox10.Items.Add(nilai);
+                //conn.Close();
             }
             else if (materialRadioButton1.Checked == true && materialRadioButton2.Checked == false)
             {
@@ -1520,19 +1592,15 @@ namespace Plagiarism_Checker
 
                 //Tokenization
                 #region
-                listBox3.Hide();
                 listBox2.Hide();
-                listBox6.Hide();
                 listBox7.Hide();
+                listBox3.Show();
+                listBox6.Show();
                 metroTile5.Show();
                 label3.Hide();
                 listBox1.Show();
-               
-    
                 listBox5.Show();
-             
                 listBox8.Show();
-       
                 listBox10.Show();
                 materialLabel1.Show();
                 materialLabel4.Hide();
@@ -1540,11 +1608,11 @@ namespace Plagiarism_Checker
                 materialLabel3.Hide();
                 materialLabel5.Show();
                 materialLabel5.Text = "Levensthein Distance";
-                this.materialLabel5.Location = new Point(188, 200);
+                this.materialLabel5.Location = new Point(188, 270);
                 materialLabel2.Text = "Synonym";
-                this.materialLabel2.Location = new Point(188, 280);
-                this.listBox5.Location = new Point(359, 154);
-                this.listBox10.Location = new Point(359, 250);
+                this.materialLabel2.Location = new Point(188, 350);
+                this.listBox5.Location = new Point(359, 250);
+                this.listBox10.Location = new Point(359, 330);
                 #endregion
                 this.timer1.Start();
                 metroProgressBar1.Show();
@@ -1556,9 +1624,13 @@ namespace Plagiarism_Checker
                 listBox10.Items.Clear();
                 listBox1.Text.ToLower();
                 listBox2.Text.ToLower();
+                listBox11.Hide();
+                listBox13.Hide();
                 Char chr = textBox1.Text[0];
                 string[] word = textBox1.Text.Split(' ');
                 string[] word1 = textBox2.Text.Split(' ');
+                string[] word2 = textBox1.Text.Split('.');
+                string[] word3 = textBox2.Text.Split('.');
                 //string[,] listkata = new string[0, 0];
                 string[] temp = new string[0];
                 //for(int i = 0; i < word.Length; i++)
@@ -1566,8 +1638,8 @@ namespace Plagiarism_Checker
                 //    Array.Resize(ref temp, i + 1);
                 //    temp[i] = RemoveChars( word[i]);
                 //}
-                
-                foreach (string item in word)
+
+                foreach (string item in word2)
                 {
                     if (!string.IsNullOrWhiteSpace(RemoveChars(item)))
                     {
@@ -1575,7 +1647,7 @@ namespace Plagiarism_Checker
                     }
 
                 }
-                foreach (string item in word1)
+                foreach (string item in word3)
                 {
                     if (!string.IsNullOrWhiteSpace(RemoveChars(item)))
                     {
@@ -1583,13 +1655,29 @@ namespace Plagiarism_Checker
                     }
 
                 }
-                //Proses levenstein disini
-              
-                for (int i=0; i < listBox8.Items.Count; i++)
+                foreach (string item in word)
                 {
-                    for(int j = 0; j < listBox1.Items.Count; j++)
+                    if (!string.IsNullOrWhiteSpace(RemoveChars(item)))
                     {
-                        int cost1 = LevenshteinDistance.Compute(listBox8.Items[i].ToString(), listBox1.Items[j].ToString());
+                        listBox3.Items.Add(item);
+                    }
+
+                }
+                foreach (string item in word1)
+                {
+                    if (!string.IsNullOrWhiteSpace(RemoveChars(item)))
+                    {
+                        listBox6.Items.Add(item);
+                    }
+
+                }
+                //Proses levenstein disini
+
+                for (int i = 0; i < listBox6.Items.Count; i++)
+                {
+                    for (int j = 0; j < listBox3.Items.Count; j++)
+                    {
+                        int cost1 = LevenshteinDistance.Compute(listBox6.Items[i].ToString(), listBox3.Items[j].ToString());
                         listBox5.Items.Add(cost1);
                     }
                 }
@@ -1605,38 +1693,74 @@ namespace Plagiarism_Checker
                 int nilai = 0;
                 for (int i = 0; i < listBox8.Items.Count; i++)
                 {
-                    sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                    string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox8.Items[i].ToString() + "%'";
-                    sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox8.Items[i].ToString() + "%'";
-                    OleDbCommand cmd = new OleDbCommand(cek, conn);
-                    int count = (int)cmd.ExecuteScalar();
-                    if (count > 0)
+                    string[] tmp1 = new string[0];
+                    foreach (string j in listBox8.Items[i].ToString().Split(' '))
                     {
-                        da = new OleDbDataAdapter(sql, conn);
-                        DataSet ds = new DataSet();
-                        da.Fill(ds, "persamaan");
-                        //da.Fill(dt, "persamaan");
-                        while (pos < ds.Tables["persamaan"].Columns.Count)
+                        if (!string.IsNullOrWhiteSpace(j))
                         {
-                            tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                            pos++;
+                            Array.Resize(ref tmp1, pos + 1);
+                            tmp1[pos] = j; pos++;
                         }
-                        for (int j = 0; j < listBox1.Items.Count; j++)
-                        {
-                            for (int k = 0; k < tempo.Length; k++)
-                            {
-                                if (listBox1.Items[j].ToString() == tempo[k].Trim().ToLower())
-                                    nilai += 1;
-                            }
-                        }
-                        ds.Clear();
                     }
-                    else
+                    pos = 0;
+                    for (int j = 0; j < tmp1.Length; j++)
                     {
-                        string add = "insert into Kamus_Tesaurus ([Kata_u]) values (@1)";
-                        OleDbCommand command = new OleDbCommand(add, conn);
-                        command.Parameters.AddWithValue("@1", listBox8.Items[i].ToString());
-                        command.ExecuteNonQuery();
+                        sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+                        string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + tmp1[j] + "%'";
+                        sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + tmp1[j] + "%'";
+                        OleDbCommand cmd = new OleDbCommand(cek, conn);
+                        int count = (int)cmd.ExecuteScalar();
+                        if (count > 0)
+                        {
+                            da = new OleDbDataAdapter(sql, conn);
+                            DataSet ds = new DataSet();
+                            da.Fill(ds, "persamaan");
+                            //da.Fill(dt, "persamaan");
+                            while (pos < ds.Tables["persamaan"].Columns.Count)
+                            {
+                                tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+                                pos++;
+                            }
+                            pos = 0;
+                            string[] tmp2 = new string[0];
+                            for (int k = 0; k < listBox1.Items.Count; k++)
+                            {
+                                foreach (string l in listBox1.Items[k].ToString().Split(' '))
+                                {
+                                    if (!string.IsNullOrWhiteSpace(l))
+                                    {
+                                        Array.Resize(ref tmp2, pos + 1);
+                                        tmp2[pos] = l; pos++;
+
+                                    }
+                                }
+                                Boolean cek1 = true;
+                                for (int l = 0; l < tmp2.Length; l++)
+                                {
+                                    cek1 = true;
+                                    for (int m = 0; m < tempo.Length; m++)
+                                        if (tempo[m].Trim().ToLower() == tmp2[l] && cek1 == true)
+                                        {
+                                            nilai += 1;
+                                        }
+                                    cek1 = false;
+                                }
+                            }
+
+                            ds.Clear();
+
+                        }
+
+
+
+                        else
+                        {
+                            string add = "insert into Kamus_Tesaurus ([Kata_u]) values (@1)";
+                            OleDbCommand command = new OleDbCommand(add, conn);
+                            command.Parameters.AddWithValue("@1", listBox8.Items[i].ToString());
+                            command.ExecuteNonQuery();
+                        }
+
                     }
 
                 }
