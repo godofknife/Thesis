@@ -1474,8 +1474,10 @@ namespace Plagiarism_Checker
                 string[] tempo = new string[147];
                 int pos = 0;
                 int nilai = 0;
+                
                 for (int i = 0; i < listBox13.Items.Count; i++)
                 {
+                    Boolean cek1 = true;
                     string[] tmp1 = new string[0];
                     foreach (string j in listBox13.Items[i].ToString().Split(' '))
                     {
@@ -1486,62 +1488,65 @@ namespace Plagiarism_Checker
                         }
                     }
                     pos = 0;
-                    for (int j = 0; j < tmp1.Length; j++)
+                    if (cek1 == true)
                     {
-                        sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                        string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + tmp1[j] + "%'";
-                        sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + tmp1[j] + "%'";
-                        OleDbCommand cmd = new OleDbCommand(cek, conn);
-                        int count = (int)cmd.ExecuteScalar();
-                        if (count > 0)
+                        for (int j = 0; j < tmp1.Length; j++)
                         {
-                            da = new OleDbDataAdapter(sql, conn);
-                            DataSet ds = new DataSet();
-                            da.Fill(ds, "persamaan");
-                            while (pos < ds.Tables["persamaan"].Columns.Count)
+                            sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
+                            string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '" + tmp1[j] + "%'";
+                            sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '" + tmp1[j] + "%'";
+                            OleDbCommand cmd = new OleDbCommand(cek, conn);
+                            int count = (int)cmd.ExecuteScalar();
+                            if (count > 0)
                             {
-                                tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                                pos++;
-                            }
-                            pos = 0;
-                            string[] tmp2 = new string[0];
-                            for (int k = 0; k < listBox11.Items.Count; k++)
-                            {
-                                foreach (string l in listBox11.Items[k].ToString().Split(' '))
+                                da = new OleDbDataAdapter(sql, conn);
+                                DataSet ds = new DataSet();
+                                da.Fill(ds, "persamaan");
+                                while (pos < ds.Tables["persamaan"].Columns.Count)
                                 {
-                                    if (!string.IsNullOrWhiteSpace(l))
+                                    tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
+                                    pos++;
+                                }
+                                pos = 0;
+                                string[] tmp2 = new string[0];
+                                for (int k = 0; k < listBox11.Items.Count; k++)
+                                {
+                                    foreach (string l in listBox11.Items[k].ToString().Split(' '))
                                     {
-                                        Array.Resize(ref tmp2, pos + 1);
-                                        tmp2[pos] = l;pos++;
+                                        if (!string.IsNullOrWhiteSpace(l))
+                                        {
+                                            Array.Resize(ref tmp2, pos + 1);
+                                            tmp2[pos] = l; pos++;
+                                        }
+                                    }
+                                    //pos = 0;
+                                }
+                                for (int l = 0; l < tmp2.Length; l++)
+                                {
+                                    //cek1 = true;
+                                    for (int m = 1; m < tempo.Length; m++)
+                                    {
+                                        if (tempo[m].Trim().ToLower() == tmp2[l] && cek1 == true)
+                                        {
+                                            nilai += 1;
+                                            cek1 = false;
+                                        }
+                                        //cek1 = false;
                                     }
                                 }
-                                //pos = 0;
+                                ds.Clear();
                             }
-                            Boolean cek1 = true ;
-                            for (int l = 0; l < tmp2.Length; l++)
+                            else
                             {
-                                cek1 = true;
-                                for (int m = 0; m < tempo.Length; m++)
-                                {
-                                    if (tempo[m].Trim().ToLower() == tmp2[l] && cek1 == true)
-                                    {
-                                        nilai += 1;
-                                        
-                                    }
-                                    cek1 = false;
-                                }
+                                string add = "insert into Unneeded ([Added]) values (@1)";
+                                OleDbCommand command = new OleDbCommand(add, conn);
+                                command.Parameters.AddWithValue("@1", tmp1[j]);
+                                command.ExecuteNonQuery();
                             }
-                            ds.Clear();
-                        }
-                        else
-                        {
-                            string add = "insert into Unneeded ([Added]) values (@1)";
-                            OleDbCommand command = new OleDbCommand(add, conn);
-                            command.Parameters.AddWithValue("@1", listBox7.Items[i].ToString());
-                            command.ExecuteNonQuery();
-                        }
 
+                        }
                     }
+                    
                 }
                 listBox10.Items.Add(nilai);
                 conn.Close();
