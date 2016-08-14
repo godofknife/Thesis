@@ -1713,8 +1713,8 @@ namespace Plagiarism_Checker
                         for (int j = 0; j < tmp1.Length; j++)
                         {
                             sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                            string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + tmp1[j] + "%'";
-                            sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + tmp1[j] + "%'";
+                            string cek = "SELECT count(*) FROM Kamus_Tesaurus Where Kata_u LIKE  '" + tmp1[j] + "%'";
+                            sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '" + tmp1[j] + "%'";
                             OleDbCommand cmd = new OleDbCommand(cek, conn);
                             int count = (int)cmd.ExecuteScalar();
                             if (count > 0)
@@ -1743,7 +1743,7 @@ namespace Plagiarism_Checker
                                 }
                                 for (int l = 0; l < tmp2.Length; l++)
                                 {
-                                    for (int m = 0; m < tempo.Length; m++)
+                                    for (int m = 1; m < tempo.Length; m++)
                                     {
                                         if (tempo[m].Trim().ToLower() == tmp2[l] && cek1 == true)
                                         {
@@ -1758,14 +1758,14 @@ namespace Plagiarism_Checker
                             {
                                 string add = "insert into Unneeded ([Added]) values (@1)";
                                 OleDbCommand command = new OleDbCommand(add, conn);
-                                command.Parameters.AddWithValue("@1", listBox6.Items[i].ToString());
+                                command.Parameters.AddWithValue("@1", tmp1[j]);
                                 command.ExecuteNonQuery();
                             }
                         }
                     }
-                    listBox10.Items.Add(nilai);
-                    conn.Close();
                 }
+                listBox10.Items.Add(nilai);
+                conn.Close();
             }
         }
 
