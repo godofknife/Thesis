@@ -1,0 +1,98 @@
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\itextsharp.dll
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\MaterialSkin.dll
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\MetroFramework.Design.dll
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\MetroFramework.dll
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\MetroFramework.Fonts.dll
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+C:\Users\Wisely\Downloads\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+D:\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+D:\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+D:\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+D:\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+D:\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+C:\Users\Wisely\Documents\GitHub\Thesis\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+G:\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+G:\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+G:\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+G:\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+C:\Users\ASUS_A455LD\Documents\GitHub\TA\TA\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+D:\Riba\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+D:\Riba\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+D:\Riba\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+C:\Users\Wisely\Downloads\To test the Program\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+C:\Users\Wisely\Downloads\To test the Program\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+C:\Users\Wisely\Downloads\To test the Program\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+C:\Users\Wisely\Downloads\To test the Program\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+C:\Users\Wisely\Downloads\To test the Program\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+C:\Users\Wisely\Downloads\To test the Program\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Downloads\To test the Program\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+C:\Users\Wisely\Downloads\To test the Program\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+C:\Users\Wisely\Downloads\To test the Program\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+C:\Users\Wisely\Downloads\To test the Program\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\Wisely\Downloads\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+C:\Users\Wisely\Downloads\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+C:\Users\Wisely\Downloads\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+C:\Users\Wisely\Downloads\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+C:\Users\Wisely\Downloads\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+C:\Users\Wisely\Downloads\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+C:\Users\Wisely\Downloads\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+C:\Users\Wisely\Downloads\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+C:\Users\Wisely\Downloads\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+C:\Users\Wisely\Downloads\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache

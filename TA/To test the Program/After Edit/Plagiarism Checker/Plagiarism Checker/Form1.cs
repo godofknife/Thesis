@@ -1338,7 +1338,8 @@ namespace Plagiarism_Checker
                 listBox6.Show();
                 listBox7.Show();
                 listBox8.Show();
-
+                listBox11.Show();
+                listBox13.Show();
                 listBox10.Show();
                 materialLabel1.Show();
                 materialLabel4.Show();
@@ -1538,10 +1539,20 @@ namespace Plagiarism_Checker
                             }
                             else
                             {
-                                string add = "insert into Unneeded ([Added]) values (@1)";
-                                OleDbCommand command = new OleDbCommand(add, conn);
-                                command.Parameters.AddWithValue("@1", tmp1[j]);
-                                command.ExecuteNonQuery();
+                                cek = "SELECT count(*) FROM Unneeded Where Added LIKE  '" + tmp1[j] + "%'";
+                                sql = "SELECT * FROM Unneeded Where Added LIKE  '" + tmp1[j] + "%'";
+                                cmd = new OleDbCommand(cek, conn);
+                                count = (int)cmd.ExecuteScalar();
+                                if (count > 0)
+                                {
+                                }
+                                else
+                                {
+                                    string add = "insert into Unneeded ([Added]) values (@1)";
+                                    OleDbCommand command = new OleDbCommand(add, conn);
+                                    command.Parameters.AddWithValue("@1", tmp1[j]);
+                                    command.ExecuteNonQuery();
+                                }
                             }
 
                         }
@@ -1756,10 +1767,20 @@ namespace Plagiarism_Checker
                             }
                             else
                             {
-                                string add = "insert into Unneeded ([Added]) values (@1)";
-                                OleDbCommand command = new OleDbCommand(add, conn);
-                                command.Parameters.AddWithValue("@1", tmp1[j]);
-                                command.ExecuteNonQuery();
+                                cek = "SELECT count(*) FROM Unneeded Where Added LIKE  '" + tmp1[j] + "%'";
+                                sql = "SELECT * FROM Unneeded Where Added LIKE  '" + tmp1[j] + "%'";
+                                cmd = new OleDbCommand(cek, conn);
+                                count = (int)cmd.ExecuteScalar();
+                                if (count > 0)
+                                {
+                                }
+                                else
+                                {
+                                    string add = "insert into Unneeded ([Added]) values (@1)";
+                                    OleDbCommand command = new OleDbCommand(add, conn);
+                                    command.Parameters.AddWithValue("@1", tmp1[j]);
+                                    command.ExecuteNonQuery();
+                                }
                             }
                         }
                     }
@@ -1880,6 +1901,8 @@ namespace Plagiarism_Checker
             listBox7.Hide();
             listBox8.Hide();
             listBox10.Hide();
+            listBox11.Hide();
+            listBox13.Hide();
             materialLabel2.Hide();
             materialLabel3.Hide();
             materialLabel4.Hide();
