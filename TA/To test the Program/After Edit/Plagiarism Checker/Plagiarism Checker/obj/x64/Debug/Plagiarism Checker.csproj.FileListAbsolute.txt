@@ -96,3 +96,13 @@ D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism
 D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
 D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
 D:\GitHub\Thesis\TA\To test the Program\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
+C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
