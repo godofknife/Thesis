@@ -106,3 +106,13 @@ C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64
 C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
 C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache
 C:\Users\ACER\Downloads\New folder\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+G:\After Edit\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe.config
+G:\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.exe
+G:\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.pdb
+G:\After Edit\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.exe
+G:\After Edit\Plagiarism Checker\Plagiarism Checker\bin\x64\Debug\Plagiarism Checker.pdb
+G:\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csprojResolveAssemblyReference.cache
+G:\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.About.resources
+G:\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Form1.resources
+G:\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism_Checker.Properties.Resources.resources
+G:\After Edit\Plagiarism Checker\Plagiarism Checker\obj\x64\Debug\Plagiarism Checker.csproj.GenerateResource.Cache

@@ -48,75 +48,9 @@ namespace Plagiarism_Checker
             metroTile3.Show();
         }
 
-        private void metroTile3_Click(object sender, EventArgs e)
-        {
-
-           
-                //        conn = new OleDbConnection();
-                //        conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Kamus.accdb; Persist Security Info=False;";
-                //        conn.Open();
-
-                //        OleDbDataAdapter da;
-                //        //DataTable dt = new DataTable();
-                //        string[] tempo = new string[147];
-                //        int pos = 0;
-                //        int nilai = 0;
-                //        for (int i = 0; i < listBox1.Items.Count - 1; i++)
-                //        {
-                //            sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                //            sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox1.Items[i].ToString() + "%'";
-                //            da = new OleDbDataAdapter(sql, conn);
-                //            DataSet ds = new DataSet();
-                //            da.Fill(ds, "persamaan");
-                //            //da.Fill(dt, "persamaan");
-                //            while (pos < ds.Tables["persamaan"].Columns.Count - 1)
-                //            {
-                //                tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                //                pos++;
-                //            }
-                //            for (int j = 0; j < listBox8.Items.Count - 1; j++)
-                //            {
-                //                for (int k = 0; k < tempo.Length; k++)
-                //                {
-                //                    if (tempo[k] == listBox8.Items[j].ToString())
-                //                        nilai += 1;
-                //                }
-                //            }
-                //            ds.Clear();
-                //        }
-                //        listBox2.Items.Add(nilai);
-                //        nilai = 0;
-                //        for (int i = 0; i < listBox8.Items.Count - 1; i++)
-                //        {
-                //            sql = string.Empty; Array.Clear(tempo, 0, tempo.Length); pos = 0;
-                //            sql = "SELECT * FROM Kamus_Tesaurus Where Kata_u LIKE  '%" + listBox8.Items[i].ToString() + "%'";
-                //            da = new OleDbDataAdapter(sql, conn);
-                //            DataSet ds = new DataSet();
-                //            da.Fill(ds, "persamaan");
-                //            //da.Fill(dt, "persamaan");
-                //            while (pos < ds.Tables["persamaan"].Columns.Count - 1)
-                //            {
-                //                tempo[pos] = ds.Tables["persamaan"].Rows[0][pos].ToString();
-                //                pos++;
-                //            }
-                //            for (int j = 0; j < listBox1.Items.Count - 1; j++)
-                //            {
-                //                for (int k = 0; k < tempo.Length; k++)
-                //                {
-                //                    if (tempo[k] == listBox1.Items[j].ToString())
-                //                        nilai += 1;
-                //                }
-                //            }
-                //            ds.Clear();
-                //        }
-                //        listBox7.Items.Add(nilai);
-                //        conn.Close();
-            
-        }
-        
         public string RemoveChars(string str)
         {
-            string[] chars = new string[] {",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", "-", "_", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ";", ":", "(", ")", "[", "]", "{", "}", "=", "+", "?", "`" };
+            string[] chars = new string[] { ",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", "-", "_", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ";", ":", "(", ")", "[", "]", "{", "}", "=", "+", "?", "`" };
             for (int i = 0; i < chars.Length; i++)
             {
                 if (str.Contains(chars[i]))
@@ -164,19 +98,14 @@ namespace Plagiarism_Checker
             }
             return arr;
         }
-
         #endregion
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-           
-        }            
 
         private void tabControl1_ParentChanged(object sender, EventArgs e)
         {
             listBox1.Hide();
             listBox2.Hide();
             listBox3.Hide();
- 
+
             listBox5.Hide();
             listBox6.Hide();
             listBox7.Hide();
@@ -189,12 +118,7 @@ namespace Plagiarism_Checker
             materialLabel4.Hide();
             materialLabel5.Hide();
         }
-        //Leveinstein here
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-         
-        }
         //Stemming Procedure Starts Here
         private void listKamus()
         {
@@ -213,12 +137,11 @@ namespace Plagiarism_Checker
                 i++;
             }
             db.Close();
-
         }
+
         private bool cekKataDasar(string kata)
         {
             int banyak = jlhlist("SELECT count(*) FROM tb_rootword");
-            //MessageBox.Show(banyak.ToString());
             for (int i = 0; i < banyak - 1; i++)
             {
                 if (kata == kamus[i])
@@ -235,10 +158,8 @@ namespace Plagiarism_Checker
             if (matchkahlah.Success)
             {
                 string key = matchkahlah.Groups[1].Value;
-
                 return HapusAkhiranKepunyaan(key);
             }
-
             return HapusAkhiranKepunyaan(kata);
         }
 
@@ -265,7 +186,6 @@ namespace Plagiarism_Checker
                 {
                     return kata1;
                 }
-
             }
 
             if (Regex.IsMatch(kata, "(i|an)$"))
@@ -279,7 +199,6 @@ namespace Plagiarism_Checker
             }
             return kataasal;
         }
-
 
         private string hapus_derivation_prefix(string kata)
         {
@@ -298,7 +217,6 @@ namespace Plagiarism_Checker
                     return kata2;
                 }
             }
-
 
             #region cek te- me- be- pe-
             if (Regex.IsMatch(kata, "^([tmbp]e)")) //cek te- me- be- pe-
@@ -385,10 +303,7 @@ namespace Plagiarism_Checker
                             return kata2;
                         }
                     }
-
-
                 }
-
                 #endregion
 
                 #region awalan te-
@@ -475,7 +390,6 @@ namespace Plagiarism_Checker
                         return kata2;
                     }
                 }
-
                 #endregion
 
                 #region awalan me-
@@ -529,7 +443,6 @@ namespace Plagiarism_Checker
                         {
                             return kata2;
                         }
-
                     }
                     if (Regex.IsMatch(kata, "^(men)[cdjszt]"))
                     {
@@ -926,7 +839,7 @@ namespace Plagiarism_Checker
                 }
             }
 
-            #endregion
+                #endregion
             #endregion
 
             #region memper- dkk
@@ -977,7 +890,6 @@ namespace Plagiarism_Checker
                 {
                     return kata2;
                 }
-
             }
             if (Regex.IsMatch(kata, "^(menter)"))
             {
@@ -1001,7 +913,6 @@ namespace Plagiarism_Checker
                 {
                     return kata2;
                 }
-
             }
             if (Regex.IsMatch(kata, "^(member)"))
             {
@@ -1025,7 +936,6 @@ namespace Plagiarism_Checker
                 {
                     return kata2;
                 }
-
             }
 
             #endregion
@@ -1199,7 +1109,6 @@ namespace Plagiarism_Checker
                 {
                     return kata2;
                 }
-
             }
             #endregion
 
@@ -1209,8 +1118,6 @@ namespace Plagiarism_Checker
                 return kataasal;
             }
             return kataasal;
-
-
         }
 
         private string Stemming(string kata)
@@ -1283,40 +1190,9 @@ namespace Plagiarism_Checker
             metroTile3.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-          
-        }
-
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             metroTile3.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-           
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void metroTile3_Click_1(object sender, EventArgs e)
@@ -1365,12 +1241,14 @@ namespace Plagiarism_Checker
                 string[] word1 = textBox2.Text.Split('.');
                 foreach (string item in word)
                 {
-                    listBox1.Items.Add(item);
+                    if (!string.IsNullOrWhiteSpace(item))
+                        listBox1.Items.Add(item);
 
                 }
                 foreach (string item in word1)
                 {
-                    listBox8.Items.Add(item);
+                    if (!string.IsNullOrWhiteSpace(item))
+                        listBox8.Items.Add(item);
                 }
 
                 //Proses Stopwords Disini
@@ -1427,7 +1305,7 @@ namespace Plagiarism_Checker
 
                     foreach (string j in kata)
                     {
-                        if (!string.IsNullOrWhiteSpace(j))
+                        if (!string.IsNullOrWhiteSpace(j) && !listBox2.Items.Contains(Stemming(j)))
                         {
                             listBox2.Items.Add(Stemming(j));
                             //listBox11.Items.Add(Stemming(j));
@@ -1436,7 +1314,6 @@ namespace Plagiarism_Checker
                 }
                 for (int i = 0; i < listBox6.Items.Count; i++)
                 {
-
                     string[] kata = listBox6.Items[i].ToString().ToLower().Trim().Split(' ');
                     string[] temp2 = new string[0];
                     for (int j = 0; j < kata.Length; j++)
@@ -1448,14 +1325,12 @@ namespace Plagiarism_Checker
                         }
                     }
                     listBox13.Items.Add(string.Join(" ", temp2));
-
                     foreach (string j in kata)
                     {
-                        if (!string.IsNullOrWhiteSpace(j))
+                        if (!string.IsNullOrWhiteSpace(j) && !listBox7.Items.Contains(Stemming(j)))
                             listBox7.Items.Add(Stemming(j));
                         //listBox13.Items.Add(Stemming(j));
                     }
-
                 }
                 //Proses levenstein disini         
                 for (int i = 0; i < listBox7.Items.Count; i++)
@@ -1673,7 +1548,7 @@ namespace Plagiarism_Checker
                 }
                 foreach (string item in word)
                 {
-                    if (!string.IsNullOrWhiteSpace(RemoveChars(item)))
+                    if (!string.IsNullOrWhiteSpace(RemoveChars(item)) && !listBox3.Items.Contains(item))
                     {
                         listBox3.Items.Add(RemoveChars(item));
                     }
@@ -1681,7 +1556,7 @@ namespace Plagiarism_Checker
                 }
                 foreach (string item in word1)
                 {
-                    if (!string.IsNullOrWhiteSpace(RemoveChars(item)))
+                    if (!string.IsNullOrWhiteSpace(RemoveChars(item)) && !listBox6.Items.Contains(item))
                     {
                         listBox6.Items.Add(RemoveChars(item));
                     }
@@ -1811,7 +1686,7 @@ namespace Plagiarism_Checker
                 string strText = string.Empty;
                 try
                 {
-                    
+
                     PdfReader read = new PdfReader(filePath);
                     for (int page = 1; page <= read.NumberOfPages; page++)
                     {
@@ -1892,7 +1767,7 @@ namespace Plagiarism_Checker
         private void Form1_Load_1(object sender, EventArgs e)
         {
             metroTile4.Hide();
-            metroTile7.Hide();         
+            metroTile7.Hide();
             listBox1.Hide();
             listBox2.Hide();
             listBox3.Hide();
@@ -1911,7 +1786,7 @@ namespace Plagiarism_Checker
             metroTile6.Hide();
             listBox4.Hide();
             materialLabel1.Hide();
-            
+
         }
 
         private void metroTile5_Click(object sender, EventArgs e)
@@ -1935,19 +1810,26 @@ namespace Plagiarism_Checker
 
                 //levensthein
                 float hasiltotalleven = 0;
-                int pos = 0; float[] hasilleven = new float[0];
-                for(int i = 0; i < listBox7.Items.Count; i++)
+                for (int i = 0; i < listBox5.Items.Count; i++)
                 {
-                    for(int j=0; j < listBox2.Items.Count; j++)
-                    {
-                        Array.Resize(ref hasilleven, pos + 1);
-                        hasilleven[pos] = 100f - (1 - (float.Parse(listBox5.Items[pos].ToString()) / Math.Max(listBox7.Items[i].ToString().Length,
-                            listBox2.Items[j].ToString().Length))) * 100f;
-                        pos++;
-                    }
+                    if ((int)listBox5.Items[i] == 0)
+                        hasiltotalleven += 1;
                 }
-                hasiltotalleven = hasilleven.Sum() / hasilleven.Count();
-                textBox5.Text = hasiltotalleven.ToString();
+                //label20.Text = hasiltotalleven.ToString();
+                textBox5.Text = (hasiltotalleven / Math.Max(listBox2.Items.Count, listBox7.Items.Count) * 100f).ToString();
+                //int pos = 0; float[] hasilleven = new float[0];
+                //for(int i = 0; i < listBox7.Items.Count; i++)
+                //{
+                //    for(int j=0; j < listBox2.Items.Count; j++)
+                //    {
+                //        Array.Resize(ref hasilleven, pos + 1);
+                //        hasilleven[pos] = 100f - (1 - (float.Parse(listBox5.Items[pos].ToString()) / Math.Max(listBox7.Items[i].ToString().Length,
+                //            listBox2.Items[j].ToString().Length))) * 100f;
+                //        pos++;
+                //    }
+                //}
+                //hasiltotalleven = hasilleven.Sum() / hasilleven.Count();
+                //textBox5.Text = hasiltotalleven.ToString();
 
                 //sinonim
                 float hasilsinonim = ((float.Parse(listBox10.Items[0].ToString())) / listBox13.Items.Count) * 100f;
@@ -2044,20 +1926,26 @@ namespace Plagiarism_Checker
 
                 //levensthein
                 float hasiltotalleven = 0;
-                int pos = 0; float[] hasilleven = new float[0];
-                for (int i = 0; i < listBox6.Items.Count; i++)
+                //int pos = 0; float[] hasilleven = new float[0];
+                //for (int i = 0; i < listBox6.Items.Count; i++)
+                //{
+                //    for (int j = 0; j < listBox3.Items.Count; j++)
+                //    {
+                //        Array.Resize(ref hasilleven, pos + 1);
+                //        hasilleven[pos] = 100f - (1 - (float.Parse(listBox5.Items[pos].ToString()) / Math.Max(listBox6.Items[i].ToString().Length,
+                //            listBox3.Items[j].ToString().Length))) * 100f;
+                //        pos++;
+                //    }
+                //}
+                //hasiltotalleven = hasilleven.Sum() / hasilleven.Count();
+                //textBox5.Text = hasiltotalleven.ToString();
+                for (int i = 0; i < listBox5.Items.Count; i++)
                 {
-                    for (int j = 0; j < listBox3.Items.Count; j++)
-                    {
-                        Array.Resize(ref hasilleven, pos + 1);
-                        hasilleven[pos] = 100f - (1 - (float.Parse(listBox5.Items[pos].ToString()) / Math.Max(listBox6.Items[i].ToString().Length,
-                            listBox3.Items[j].ToString().Length))) * 100f;
-                        pos++;
-                    }
+                    if ((int)listBox5.Items[i] == 0)
+                        hasiltotalleven += 1;
                 }
-                hasiltotalleven = hasilleven.Sum() / hasilleven.Count();
-                textBox5.Text = hasiltotalleven.ToString();
-
+                //label20.Text = hasiltotalleven.ToString();
+                textBox5.Text = (hasiltotalleven / Math.Max(listBox3.Items.Count, listBox6.Items.Count) * 100f).ToString();
                 //sinonim
                 float hasilsinonim = ((float.Parse(listBox10.Items[0].ToString())) / listBox8.Items.Count) * 100f;
                 textBox6.Text = hasilsinonim.ToString();
@@ -2212,6 +2100,8 @@ namespace Plagiarism_Checker
                 listBox8.Items.Clear();
 
                 listBox10.Items.Clear();
+                listBox11.Items.Clear();
+                listBox13.Items.Clear();
                 listBox1.Hide();
                 listBox2.Hide();
                 listBox3.Hide();
@@ -2298,6 +2188,8 @@ namespace Plagiarism_Checker
                 listBox8.Items.Clear();
 
                 listBox10.Items.Clear();
+                listBox11.Items.Clear();
+                listBox13.Items.Clear();
                 listBox1.Hide();
                 listBox2.Hide();
                 listBox3.Hide();
@@ -2330,7 +2222,7 @@ namespace Plagiarism_Checker
                 textBox1.Clear();
                 textBox2.Clear();
                 metroProgressBar1.Hide();
-                #endregion
+            #endregion
             }
             else
             {
