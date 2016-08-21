@@ -1815,104 +1815,93 @@ namespace Plagiarism_Checker
                     if ((int)listBox5.Items[i] == 0)
                         hasiltotalleven += 1;
                 }
-                //label20.Text = hasiltotalleven.ToString();
-                textBox5.Text = (hasiltotalleven / Math.Max(listBox2.Items.Count, listBox7.Items.Count) * 100f).ToString();
-                //int pos = 0; float[] hasilleven = new float[0];
-                //for(int i = 0; i < listBox7.Items.Count; i++)
-                //{
-                //    for(int j=0; j < listBox2.Items.Count; j++)
-                //    {
-                //        Array.Resize(ref hasilleven, pos + 1);
-                //        hasilleven[pos] = 100f - (1 - (float.Parse(listBox5.Items[pos].ToString()) / Math.Max(listBox7.Items[i].ToString().Length,
-                //            listBox2.Items[j].ToString().Length))) * 100f;
-                //        pos++;
-                //    }
-                //}
-                //hasiltotalleven = hasilleven.Sum() / hasilleven.Count();
-                //textBox5.Text = hasiltotalleven.ToString();
+                float persenleven;
+                persenleven = (hasiltotalleven / Math.Max(listBox2.Items.Count, listBox7.Items.Count) * 100f);
+                textBox5.Text = persenleven.ToString();
+                textBox8.Text = hasiltotalleven.ToString();
 
                 //sinonim
                 float hasilsinonim = ((float.Parse(listBox10.Items[0].ToString())) / listBox13.Items.Count) * 100f;
                 textBox6.Text = hasilsinonim.ToString();
 
                 ////Counting Total words in Textbox
-                //String countingwords = textBox1.Text.Trim();
-                //string countingwords2 = textBox2.Text.Trim();
-                //int wordCount = 0, index = 0;
-                //int wordCount2 = 0, index2 = 0;
-                //while (index < countingwords.Length)
-                //{
-                //    // check if current char is part of a word
-                //    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == false)
-                //        index++;
+                String countingwords = textBox1.Text.Trim();
+                string countingwords2 = textBox2.Text.Trim();
+                int wordCount = 0, index = 0;
+                int wordCount2 = 0, index2 = 0;
+                while (index < countingwords.Length)
+                {
+                    // check if current char is part of a word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == false)
+                        index++;
 
-                //    wordCount++;
+                    wordCount++;
 
-                //    // skip whitespace until next word
-                //    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == true)
-                //        index++;
-                //}
-                //textBox10.Text = wordCount.ToString();
-                //while (index2 < countingwords2.Length)
-                //{
-                //    // check if current char is part of a word
-                //    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == false)
-                //        index2++;
+                    // skip whitespace until next word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == true)
+                        index++;
+                }
+                textBox10.Text = wordCount.ToString();
+                while (index2 < countingwords2.Length)
+                {
+                    // check if current char is part of a word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == false)
+                        index2++;
 
-                //    wordCount2++;
+                    wordCount2++;
 
-                //    // skip whitespace until next word
-                //    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == true)
-                //        index2++;
-                //}
-                //textBox17.Text = wordCount2.ToString();
+                    // skip whitespace until next word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == true)
+                        index2++;
+                }
+                textBox17.Text = wordCount2.ToString();
                 ////Ambil nilai dari listbox sinonim untuk Stemming
 
-                //int angka2 = int.Parse(listBox10.Items[0].ToString());
-                //textBox9.Text = angka2.ToString();
-                ////Ambil Levenstein distance angka
-                //int levangka = 0;
-                //for (int i = 0; i < listBox5.Items.Count; i++)
-                //{
+                int angka2 = int.Parse(listBox10.Items[0].ToString());
+                textBox9.Text = angka2.ToString();
 
-                //    levangka = int.Parse(listBox5.Items[i].ToString());
+                //Penentuan Akhir
+                if (persenleven >= 1 && persenleven <= 30)
+                {
+                    label36.Text = "Low Plagiarism";
+                    label36.ForeColor = Color.GreenYellow;
+                }
+                else if (persenleven >= 31 && persenleven <= 70)
+                {
+                    label36.Text = "Medium Plagiarism";
+                    label36.ForeColor = Color.Yellow;
+                }
+                else if (persenleven >= 71 && persenleven <= 100)
+                {
+                    label36.Text = "High Plagiarism";
+                    label36.ForeColor = Color.Red;
+                }
+                else if (persenleven == 0)
+                {
+                    label36.Text = "No Plagiarism Detected";
+                    label36.ForeColor = Color.Green;
+                }
 
-                //    if (levangka == 0)
-                //    {
-                //        variable.levenkalkulasi += 1;
-
-                //    }              
-                //}
-
-                //double totalword = (wordCount + wordCount2);
-                //double bagileven = (variable.levenkalkulasi / totalword) * 100;
-                //double totalsinonim = (double)angka2;
-                //double bagisinonim = (angka2 / totalword) * 100;
-                //double hasiltotallevensinonim = (bagileven + bagisinonim)/2;
-                //textBox8.Text = variable.levenkalkulasi.ToString();
-                //textBox5.Text = bagileven.ToString();
-                //textBox6.Text = bagisinonim.ToString();
-                //textBox7.Text = hasiltotallevensinonim.ToString();
-                //if (hasiltotallevensinonim >=1 && hasiltotallevensinonim <= 30)
-                //{
-                //    label36.Text = "Low Plagiarism";
-                //    label36.ForeColor = Color.GreenYellow;
-                //}
-                //else if (hasiltotallevensinonim >= 31 && hasiltotallevensinonim <= 70)
-                //{
-                //    label36.Text = "Medium Plagiarism";
-                //    label36.ForeColor = Color.Yellow;
-                //}
-                //else if (hasiltotallevensinonim >= 71 && hasiltotallevensinonim <= 100)
-                //{
-                //    label36.Text = "High Plagiarism";
-                //    label36.ForeColor = Color.Red;
-                //}
-                //else if(hasiltotallevensinonim==0)
-                //{
-                //    label36.Text = "No Plagiarism Detected";
-                //    label36.ForeColor = Color.Green;
-                //}
+                if (hasilsinonim >= 1 && hasilsinonim <= 30)
+                {
+                    label35.Text = "Low Plagiarism";
+                    label35.ForeColor = Color.GreenYellow;
+                }
+                else if (hasilsinonim >= 31 && hasilsinonim <= 70)
+                {
+                    label35.Text = "Medium Plagiarism";
+                    label35.ForeColor = Color.Yellow;
+                }
+                else if (hasilsinonim >= 71 && hasilsinonim <= 100)
+                {
+                    label35.Text = "High Plagiarism";
+                    label35.ForeColor = Color.Red;
+                }
+                else if (hasilsinonim == 0)
+                {
+                    label35.Text = "No Plagiarism Detected";
+                    label35.ForeColor = Color.Green;
+                }
 
             }
             else if (storevariable.cekstemmingresult == false)
@@ -1926,108 +1915,94 @@ namespace Plagiarism_Checker
 
                 //levensthein
                 float hasiltotalleven = 0;
-                //int pos = 0; float[] hasilleven = new float[0];
-                //for (int i = 0; i < listBox6.Items.Count; i++)
-                //{
-                //    for (int j = 0; j < listBox3.Items.Count; j++)
-                //    {
-                //        Array.Resize(ref hasilleven, pos + 1);
-                //        hasilleven[pos] = 100f - (1 - (float.Parse(listBox5.Items[pos].ToString()) / Math.Max(listBox6.Items[i].ToString().Length,
-                //            listBox3.Items[j].ToString().Length))) * 100f;
-                //        pos++;
-                //    }
-                //}
-                //hasiltotalleven = hasilleven.Sum() / hasilleven.Count();
-                //textBox5.Text = hasiltotalleven.ToString();
                 for (int i = 0; i < listBox5.Items.Count; i++)
                 {
                     if ((int)listBox5.Items[i] == 0)
                         hasiltotalleven += 1;
                 }
-                //label20.Text = hasiltotalleven.ToString();
-                textBox5.Text = (hasiltotalleven / Math.Max(listBox3.Items.Count, listBox6.Items.Count) * 100f).ToString();
+                float persenleven;
+                persenleven = (hasiltotalleven / Math.Max(listBox3.Items.Count, listBox6.Items.Count) * 100f);
+                textBox5.Text = persenleven.ToString();
+                textBox8.Text = hasiltotalleven.ToString();
                 //sinonim
                 float hasilsinonim = ((float.Parse(listBox10.Items[0].ToString())) / listBox8.Items.Count) * 100f;
                 textBox6.Text = hasilsinonim.ToString();
                 ////Counting Total words in Textbox
-                //String countingwords = textBox1.Text.Trim();
-                //string countingwords2 = textBox2.Text.Trim();
-                //int wordCount = 0, index = 0;
-                //int wordCount2 = 0, index2 = 0;
-                //while (index < countingwords.Length)
-                //{
-                //    // check if current char is part of a word
-                //    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == false)
-                //        index++;
+                String countingwords = textBox1.Text.Trim();
+                string countingwords2 = textBox2.Text.Trim();
+                int wordCount = 0, index = 0;
+                int wordCount2 = 0, index2 = 0;
+                while (index < countingwords.Length)
+                {
+                    // check if current char is part of a word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == false)
+                        index++;
 
-                //    wordCount++;
+                    wordCount++;
 
-                //    // skip whitespace until next word
-                //    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == true)
-                //        index++;
-                //}
-                //textBox10.Text = wordCount.ToString();
-                //while (index2 < countingwords2.Length)
-                //{
-                //    // check if current char is part of a word
-                //    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == false)
-                //        index2++;
+                    // skip whitespace until next word
+                    while (index < countingwords.Length && Char.IsWhiteSpace(countingwords[index]) == true)
+                        index++;
+                }
+                textBox10.Text = wordCount.ToString();
+                while (index2 < countingwords2.Length)
+                {
+                    // check if current char is part of a word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == false)
+                        index2++;
 
-                //    wordCount2++;
+                    wordCount2++;
 
-                //    // skip whitespace until next word
-                //    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == true)
-                //        index2++;
-                //}
-                //textBox17.Text = wordCount2.ToString();
-                ////Ambil nilai dari listbox sinonim untuk Stemming
-                //int angka2 = int.Parse(listBox10.Items[0].ToString());
-                //textBox9.Text = angka2.ToString();
+                    // skip whitespace until next word
+                    while (index2 < countingwords2.Length && Char.IsWhiteSpace(countingwords2[index2]) == true)
+                        index2++;
+                }
+                textBox17.Text = wordCount2.ToString();
+                //Ambil nilai dari listbox sinonim untuk Stemming
+                int angka2 = int.Parse(listBox10.Items[0].ToString());
+                textBox9.Text = angka2.ToString();
+                //Penentuan Akhir
+                if (persenleven >= 1 && persenleven <= 30)
+                {
+                    label36.Text = "Low Plagiarism";
+                    label36.ForeColor = Color.GreenYellow;
+                }
+                else if (persenleven >= 31 && persenleven <= 70)
+                {
+                    label36.Text = "Medium Plagiarism";
+                    label36.ForeColor = Color.Yellow;
+                }
+                else if (persenleven >= 71 && persenleven <= 100)
+                {
+                    label36.Text = "High Plagiarism";
+                    label36.ForeColor = Color.Red;
+                }
+                else if (persenleven == 0)
+                {
+                    label36.Text = "No Plagiarism Detected";
+                    label36.ForeColor = Color.Green;
+                }
 
-                ////Ambil Levenstein distance angka
-
-                //int levangka = 0;
-                //for (int i = 0; i < listBox5.Items.Count; i++)
-                //{
-
-                //    levangka = int.Parse(listBox5.Items[i].ToString());
-
-                //    if (levangka == 0)
-                //    {
-                //        variable.levenkalkulasi += 1;
-
-                //    }
-
-                //}                                    
-                //double totalword = (wordCount + wordCount2);
-                //double bagileven = (variable.levenkalkulasi / totalword/2)*100;
-                //double totalsinonim = (double)angka2;
-                //double bagisinonim = (angka2 / totalword/2) * 100;
-                //double hasiltotallevensinonim = bagileven + bagisinonim;
-                //textBox8.Text = variable.levenkalkulasi.ToString();
-                //textBox5.Text = bagileven.ToString();
-                //textBox6.Text = bagisinonim.ToString();
-                //textBox7.Text = hasiltotallevensinonim.ToString();
-                //if (hasiltotallevensinonim >= 1 && hasiltotallevensinonim <= 30)
-                //{
-                //    label36.Text = "Low Plagiarism";
-                //    label36.ForeColor = Color.GreenYellow;
-                //}
-                //else if (hasiltotallevensinonim >= 31 && hasiltotallevensinonim <= 70)
-                //{
-                //    label36.Text = "Medium Plagiarism";
-                //    label36.ForeColor = Color.Yellow;
-                //}
-                //else if (hasiltotallevensinonim >= 71 && hasiltotallevensinonim <= 100)
-                //{
-                //    label36.Text = "High Plagiarism";
-                //    label36.ForeColor = Color.Red;
-                //}
-                //else if (hasiltotallevensinonim == 0)
-                //{
-                //    label36.Text = "No Plagiarism Detected";
-                //    label36.ForeColor = Color.Green;
-                //}
+                if (hasilsinonim >= 1 && hasilsinonim <= 30)
+                {
+                    label35.Text = "Low Plagiarism";
+                    label35.ForeColor = Color.GreenYellow;
+                }
+                else if (hasilsinonim >= 31 && hasilsinonim <= 70)
+                {
+                    label35.Text = "Medium Plagiarism";
+                    label35.ForeColor = Color.Yellow;
+                }
+                else if (hasilsinonim >= 71 && hasilsinonim <= 100)
+                {
+                    label35.Text = "High Plagiarism";
+                    label35.ForeColor = Color.Red;
+                }
+                else if (hasilsinonim == 0)
+                {
+                    label35.Text = "No Plagiarism Detected";
+                    label35.ForeColor = Color.Green;
+                }
             }
         }
 
