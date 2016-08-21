@@ -1241,13 +1241,13 @@ namespace Plagiarism_Checker
                 string[] word1 = textBox2.Text.Split('.');
                 foreach (string item in word)
                 {
-                    if (!string.IsNullOrWhiteSpace(item))
+                    if (!string.IsNullOrWhiteSpace(item.ToString()))
                         listBox1.Items.Add(item);
 
                 }
                 foreach (string item in word1)
                 {
-                    if (!string.IsNullOrWhiteSpace(item))
+                    if (!string.IsNullOrWhiteSpace(item.ToString()))
                         listBox8.Items.Add(item);
                 }
 
