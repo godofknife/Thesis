@@ -95,6 +95,9 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
@@ -122,9 +125,6 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -937,6 +937,37 @@
             this.groupBox7.Text = "Info";
             this.groupBox7.Visible = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(132, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(127, 21);
+            this.label7.TabIndex = 68;
+            this.label7.Text = "Tidak ada Plagiat";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(63, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 21);
+            this.label6.TabIndex = 67;
+            this.label6.Text = "0%";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.White;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(9, 21);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(24, 24);
+            this.textBox3.TabIndex = 66;
+            // 
             // label73
             // 
             this.label73.AutoSize = true;
@@ -1218,37 +1249,6 @@
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(9, 21);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(24, 24);
-            this.textBox3.TabIndex = 66;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(63, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 21);
-            this.label6.TabIndex = 67;
-            this.label6.Text = "0%";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(132, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 21);
-            this.label7.TabIndex = 68;
-            this.label7.Text = "Tidak ada Plagiat";
             // 
             // Form1
             // 

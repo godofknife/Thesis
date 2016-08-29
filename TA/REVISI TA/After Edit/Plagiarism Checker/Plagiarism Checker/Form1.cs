@@ -1203,7 +1203,7 @@ namespace Plagiarism_Checker
                 storevariable.cekstemmingresult = true;
                 //Tokenization
                 #region
-
+                
                 listBox10.Items.Clear();
                 label3.Hide();
                 listBox1.Show();
@@ -1760,7 +1760,19 @@ namespace Plagiarism_Checker
             textBox17.Visible = true;
             label36.Visible = true;
             label35.Visible = true;
-
+            label14.Show();
+            label15.Show();
+            label16.Show();
+            label17.Show();
+            label18.Show();
+            label19.Show();
+            label37.Show();
+            label38.Show();
+            textBox8.Show();
+            textBox9.Show();
+            textBox10.Show();
+            textBox17.Show();
+      
 
         }
 
@@ -1800,6 +1812,8 @@ namespace Plagiarism_Checker
             textBox24.Show();
             textBox25.Show();
             metroTile7.Show();
+            label36.Show();
+            label35.Show();
             if (storevariable.cekstemmingresult == true)
             {
                 groupBox5.Show();
@@ -2052,7 +2066,7 @@ namespace Plagiarism_Checker
 
         private void metroTile6_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("You will be Check some file. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("You will Check new file. Continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
                 label5.Show();
@@ -2109,6 +2123,23 @@ namespace Plagiarism_Checker
                 textBox1.Clear();
                 textBox2.Clear();
                 metroProgressBar1.Hide();
+                metroProgressBar1.Value = 0;
+                label35.Hide();
+                label36.Hide();
+                label14.Hide();
+                label15.Hide();
+                label16.Hide();
+                label17.Hide();
+                label18.Hide();
+                label19.Hide();
+                label37.Hide();
+                label38.Hide();
+                textBox8.Hide();
+                textBox9.Hide();
+                textBox10.Hide();
+                textBox17.Hide();
+                listBox11.Hide();
+                listBox13.Hide();
             }
             else
             {
