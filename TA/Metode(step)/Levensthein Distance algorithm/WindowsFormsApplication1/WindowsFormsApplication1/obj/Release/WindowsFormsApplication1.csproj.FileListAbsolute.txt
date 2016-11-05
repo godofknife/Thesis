@@ -1,1 +1,0 @@
-c:\users\ian\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe.config
